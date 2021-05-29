@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 import MainNav from "./mainNav"
 
 const Header = ({ siteTitle }) => {
@@ -33,13 +32,6 @@ const Header = ({ siteTitle }) => {
             textDecoration: `none`,
           }}
         >
-
-          <StaticImage
-            src="../images/CoachsCall-Type-Logo-no-margin.png"
-            alt="The Coach's Call crest"
-            placeholder="blurred"
-            width={250}
-          />
 
         </Link>
       </h1>

@@ -2,9 +2,9 @@ const { resolve } = require(`path`)
 const { platform } = require(`os`)
 module.exports = {
   siteMetadata: {
-    title: `Coach's Call`,
-    description: `Glorifying God and Experiencing Joy Through Sports`,
-    author: `John Levis`,
+    title: `Jacob Stephens' Personal Site`,
+    description: `A web designing board game player`,
+    author: `Jacob Stephens`,
   },
   flags: {
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
@@ -16,7 +16,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: `https://content.coachscall.org/graphql`,
+        url: `https://jacobcstephens.com/graphql`,
         develop: {
           hardCacheMediaFiles: true,
         },
@@ -41,14 +41,6 @@ module.exports = {
       options: {
         name: `videos`,
         path: `${__dirname}/src/videos`,
-      },
-    },
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        typekit: {
-          id: process.env.GATSBY_TYPEKIT_ID,
-        },
       },
     },
     `gatsby-plugin-styled-components`,
@@ -105,13 +97,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Coach's Call`,
-        short_name: `Coach's Call`,
+        name: `Jacob Stephens' Personal Site`,
+        short_name: `Jacob Stephens`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#002856`,
+        background_color: `#ffffff`, // white
+        theme_color: `##0C6456`, // dark green
         display: `standalone`,
-        icon: `src/images/CoachsCall-Crest-Logo-icon-square.png`,
+        icon: `src/images/vine-leaf.png`,
         icon_options: {
           purpose: `any maskable`,
         },

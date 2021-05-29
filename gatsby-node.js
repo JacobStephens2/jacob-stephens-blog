@@ -108,7 +108,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     if (page.uri == "/") {
       createPage({
         path: page.uri,
-        component: path.resolve(`./src/templates/home.js`),
+        component: path.resolve(`./src/templates/page.js`),
         context: {
           // Data passed to context is available
           // in page queries as GraphQL variables.

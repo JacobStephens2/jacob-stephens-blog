@@ -8,7 +8,7 @@ const Footer = () => {
       <div>
         © {new Date().getFullYear()}
         {` `}
-        <a href="https://www.jacobstephens.net">Coach's Call</a>
+        <a href="https://www.jacobstephens.net">Jacob Stephens</a>
         &ensp;|&ensp;
         <a href="/privacy-policy">Privacy Policy</a>
       </div>
