@@ -7,10 +7,10 @@ const Header = ({ siteTitle }) => {
   return (
   <header
     style={{
-      background:  `var(--white)`,
+      background:  `var(--dark-green)`,
       marginBottom: `1rem`,
       position: `fixed`,
-      width: `100%`,
+      width: `100vw`,
       zIndex: `2`,
     }}
   >
@@ -18,12 +18,13 @@ const Header = ({ siteTitle }) => {
       style={{
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `1rem 1rem 0 25px`,
+        padding: `1rem 1rem 0 0`,
       }}
     >
       <h1 style={{
         display: `inline-block`,
         margin: 0,
+        marginLeft: `1rem`,
         }}>
         <Link
           to="/"
@@ -32,7 +33,7 @@ const Header = ({ siteTitle }) => {
             textDecoration: `none`,
           }}
         >
-
+          {siteTitle}
         </Link>
       </h1>
         <MainNav style={{ zIndex: 99,}} />

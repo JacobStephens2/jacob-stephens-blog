@@ -101,7 +101,7 @@ module.exports = {
         short_name: `Jacob Stephens`,
         start_url: `/`,
         background_color: `#ffffff`, // white
-        theme_color: `##0C6456`, // dark green
+        theme_color: `#0C6456`, // dark green
         display: `standalone`,
         icon: `src/images/vine-leaf.png`,
         icon_options: {

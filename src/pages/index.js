@@ -7,11 +7,22 @@ import Seo from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <h1>Welcome to Jacob Stephens' personal site.</h1>
+    <ul>
+      <Link to="/posts/">Posts</Link>
+    </ul>
+    <ul>
+      <Link to="/about/">About</Link>
+    </ul>
+    <ul>
+      <Link to="/meet/">Meet</Link>
+    </ul>
+    <ul>
+      <Link to="/message/">Message</Link>
+    </ul>
+    <ul>
+      <a href="https://boardgamegeek.com/geekmarket/user/JacobCStephens13?pageid=1">Board Games for sale</a>
+    </ul>
   </Layout>
 )
 

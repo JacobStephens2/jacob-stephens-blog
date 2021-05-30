@@ -34,7 +34,8 @@ import "@wordpress/block-library/build-style/style.css"
 	<Header siteTitle={data.wp.generalSettings.title || `Title`} />
 	   <div
 		 style={{
-		   margin: `0 auto`,
+		   margin: `0 auto 0`,
+		   paddingTop: 77,
 		   maxWidth: 960,
 		 }}
 	   >

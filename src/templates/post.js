@@ -2,17 +2,17 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
-import style from "./single.module.css"
+import * as style from "./single.module.css"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Catlist from "../components/catlist"
 import PostNav from "../components/postNav"
 
-export default ({ data }) => {
+const PostPage = ({ data }) => {
   const post = data.thePost
   return (
     <Layout>
-      <SEO title={post.title} />
+      <Seo title={post.title} />
       <article className={style.article}>
         {post.featuredImage && (
           <figure className={style.featimg}>
@@ -50,6 +50,8 @@ export default ({ data }) => {
     </Layout>
   )
 }
+
+export default PostPage;
 
 export const query = graphql`
   query($databaseId: Int!, $nextId: Int, $prevId: Int) {

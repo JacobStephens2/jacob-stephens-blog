@@ -3,9 +3,9 @@ import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import Catlist from "../components/catlist"
 
-import style from "./single.module.css"
+import * as style from "./single.module.css"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Pagination from "../components/pagination"
 
 const ArticleIndex = ({ data, pageContext }) => {
@@ -13,7 +13,7 @@ const ArticleIndex = ({ data, pageContext }) => {
   const posts = data.allWpPost.nodes
   return (
     <Layout>
-      <SEO title={`Category: ${catName}`} />
+      <Seo title={`Category: ${catName}`} />
       <section className={style.articlelist}>
         <h1>Category: {catName}</h1>
         {posts.map((post, index) => (
