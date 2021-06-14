@@ -36,15 +36,6 @@ const PostPage = ({ data }) => {
           className={style.article__content}
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
-        <div>
-          Tagged:{" "}
-          {post.tags.nodes.map((tag, index) => [
-            index > 0 && ", ",
-            <Link key={index} to={tag.link}>
-              {tag.name}
-            </Link>,
-          ])}
-        </div>
       </article>
       <PostNav prevPost={data.prevPost} nextPost={data.nextPost} />
     </Layout>
