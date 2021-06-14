@@ -1,5 +1,6 @@
 const { resolve } = require(`path`)
 const { platform } = require(`os`)
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = {
   siteMetadata: {
     title: `Jacob Stephens' Personal Site`,
@@ -43,6 +44,7 @@ module.exports = {
         path: `${__dirname}/src/videos`,
       },
     },
+    `mini-css-extract-plugin`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,

@@ -1,7 +1,7 @@
 .mainnav {
-  margin: 0rem auto 0.8rem;
+  margin: 0 auto 0;
   font-family: Arial, Helvetica, sans-serif;
-  max-width: 960px;
+  max-width: var(--content-w-narrow);
 }
 
 .mainnav ul {
@@ -20,11 +20,11 @@
 
 .mainnav a {
   display: block;
-  color: var(--white); /* White */
+  color: var(--cream); /* White */
   border: 1px solid hsla(0, 0%, 100%, 0);
 }
 
 .mainnav a:hover,
 .mainnav a:focus {
-  border-color: var(--white); /* White */
+  border-color: var(--cream); /* White */
 }

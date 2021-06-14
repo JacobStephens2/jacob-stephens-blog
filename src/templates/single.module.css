@@ -5,9 +5,9 @@
 }
 
 .article {
-  max-width: var(--content-w-regular);
+  max-width: var(--content-w-narrow);
   margin: 0 auto;
-  padding: 0 0 1rem;
+  padding: 0 1rem 1rem;
 }
 
 .featimg {
@@ -20,17 +20,11 @@
   margin-bottom: 1rem;
   padding-top: 10px;
   font-size: 2rem;
-  text-align: center;
-}
-
-.article__meta::before {
-  display: block;
-  margin: 0 auto 1rem;
-  content: "- — -";
+  text-align: left;
 }
 
 .article__meta {
-  text-align: center;
+  text-align: left;
 }
 .article__meta,
 .article__tax {
@@ -39,18 +33,19 @@
 
 .article__content {
   max-width: var(--content-w-narrow);
-  margin: 3rem auto 0;
+  margin: 1.5rem auto 0;
 }
 
 .articlelist {
-  margin: 0 auto;
+  margin: 0;
   padding: 0 1rem;
+  max-width: var(--content-w-narrow);
 }
 
 .articlelist h2 {
   font-size: 1.5rem;
   text-align: left;
-  padding: 0 1rem;
+  padding: 0;
 }
 
 .articlelist ul {
@@ -63,21 +58,21 @@ a {
 }
 
 .listitem .article__content {
-  margin: 1rem 1rem 0;
+  margin: 1rem 0 0;
 }
 
 .listitem::after {
   content: "";
   display: block;
   width: 10rem;
-  margin: 2.5rem auto;
+  margin: 0.9rem auto 1.2rem;
   border-bottom: 1px solid black;
 }
 
 .container {
   position: relative;
   text-align: center;
-  color: var(--white);
+  color: var(--cream);
 }
 
 .dark__overlay {
@@ -102,7 +97,7 @@ a {
 
 .hero__text {
   text-align: center;
-  color: var(--white);
+  color: var(--cream);
   width: 80vw;
   position: absolute;
   left: 0;
@@ -138,7 +133,7 @@ a {
 .container__top {
   position: relative;
   text-align: center;
-  color: var(--white);
+  color: var(--cream);
   padding-top: 6px;
 }
 

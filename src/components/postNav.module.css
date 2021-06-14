@@ -1,7 +1,10 @@
 .postnav {
-  margin: 3rem auto;
+  margin: 3rem auto 0;
   display: flex;
+  justify-content: center;
+  padding-bottom: 0.5rem;
   gap: 1rem;
+  max-width: var(--content-w-narrow);
 }
 
 .postnav a {

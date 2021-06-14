@@ -2,12 +2,14 @@
   display: flex;
   justify-content: space-around;
   background-color: var(--dark-green);
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
-  color: var(--white);
-  margin-top: 1rem;
+  color: var(--cream);
+  width: 100%;
+  max-width: var(--content-w-narrow);
+  border-top: 1rem solid var(--cream);
 }
 
 .footer a {
-  color: var(--white);
+  color: var(--cream);
 }
