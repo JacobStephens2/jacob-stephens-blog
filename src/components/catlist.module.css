@@ -2,3 +2,7 @@
   text-align: left;
   padding-bottom: 10px;
 }
+
+.article .article__catlist {
+  padding-top: 1rem;
+}

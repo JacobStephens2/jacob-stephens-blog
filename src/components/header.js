@@ -18,7 +18,6 @@ const Header = ({ siteTitle }) => {
       paddingBottom: 0,
       position: `fixed`,
       width: `100%`,
-      maxWidth: `var(--content-w-narrow)`,
       zIndex: `2`,
     }}
   >

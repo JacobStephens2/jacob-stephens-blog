@@ -7,7 +7,7 @@
 .article {
   max-width: var(--content-w-narrow);
   margin: 0 auto;
-  padding: 0 1rem 1rem;
+  padding: 0 0 1rem;
 }
 
 .featimg {
@@ -38,7 +38,7 @@
 
 .articlelist {
   margin: 0;
-  padding: 0 1rem;
+  padding: 0;
   max-width: var(--content-w-narrow);
 }
 

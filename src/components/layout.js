@@ -35,8 +35,7 @@ import "@wordpress/block-library/build-style/style.css"
 	   <div
 		 style={{
 		   margin: `0 auto 0`,
-		   paddingTop: 90,
-		   maxWidth: `var(--content-w-narrow)`,
+		   paddingTop: 105,
 		   background: `var(--cream)`,
 		 }}
 	   >

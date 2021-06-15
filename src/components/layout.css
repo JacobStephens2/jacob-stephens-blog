@@ -353,7 +353,7 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  margin-left: 1rem;
+  margin-left: 0;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0.5rem;
@@ -608,5 +608,7 @@ pre tt:after {
 }
 
 main {
-  margin: 0;
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: var(--content-w-narrow);
 }
