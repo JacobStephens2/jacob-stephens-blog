@@ -9,7 +9,8 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--dark-green);
+  color: var(--cream);
+  background: var(--dark-green);
   font-family: var(--primary-font), serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -497,6 +498,7 @@ th {
 }
 li {
   margin-bottom: calc(1.45rem / 2);
+  list-style-type: none;
 }
 ol li {
   padding-left: 0;
@@ -611,4 +613,5 @@ main {
   margin: 0 auto;
   padding: 0 1rem;
   max-width: var(--content-w-narrow);
+  color: var(--dark-green);
 }

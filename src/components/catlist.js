@@ -7,9 +7,9 @@ const Catlist = ({ postObject }) => {
     <div className={style.article__catlist}>
       {postObject.categories.nodes.map((category, index) => [
         index > 0 && ", ",
-        <p>
+        <div className={style.catName}>
           {category.name}
-        </p>,
+        </div>,
       ])}
     </div>
   )

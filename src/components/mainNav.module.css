@@ -1,7 +1,6 @@
 .mainnav {
   margin: 0 auto 0;
   font-family: Arial, Helvetica, sans-serif;
-  max-width: var(--content-w-narrow);
 }
 
 .mainnav ul {

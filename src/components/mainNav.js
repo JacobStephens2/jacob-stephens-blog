@@ -7,7 +7,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import UniversalLink from "../utils/UniversalLink"
 import { FlatListToHierarchical } from "../utils/FlatListToHierarchical"
 import { slide as Menu } from 'react-burger-menu'
-import { Link } from "gatsby"
 
 
 import * as style from "./mainNav.module.css"
@@ -31,7 +30,6 @@ const MenuLoop = ({ menuItems }) => {
           </li>
         )
       })}
-      <Link to="/posts/">Posts</Link>
     </ul>
   )
 }

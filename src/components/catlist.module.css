@@ -6,3 +6,7 @@
 .article .article__catlist {
   padding-top: 1rem;
 }
+
+.catName {
+  display: inline;
+}
