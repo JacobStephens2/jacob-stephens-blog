@@ -8,21 +8,21 @@ const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <h1>Welcome to Jacob Stephens' personal&nbsp;site.</h1>
-    <ul>
+    <li>
       <Link to="/posts/">Posts</Link>
-    </ul>
-    <ul>
+    </li>
+    <li>
       <Link to="/about/">About</Link>
-    </ul>
-    <ul>
+    </li>
+    <li>
       <Link to="/meet/">Meet</Link>
-    </ul>
-    <ul>
+    </li>
+    <li>
       <Link to="/message/">Message</Link>
-    </ul>
-    <ul>
+    </li>
+    <li>
       <a href="https://boardgamegeek.com/geekmarket/user/JacobCStephens13?pageid=1">Board Games for sale at BoardGameGeek</a>
-    </ul>
+    </li>
   </Layout>
 )
 
