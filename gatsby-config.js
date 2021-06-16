@@ -37,13 +37,6 @@ module.exports = {
         path: `${__dirname}/content/articles`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `videos`,
-        path: `${__dirname}/src/videos`,
-      },
-    },
     `mini-css-extract-plugin`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
