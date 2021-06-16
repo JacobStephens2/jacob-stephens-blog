@@ -7,12 +7,14 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Catlist from "../components/catlist"
 import PostNav from "../components/postNav"
+import PostNavSlim from "../components/postNavSlim"
 
 const PostPage = ({ data }) => {
   const post = data.thePost
   return (
     <Layout>
       <Seo title={post.title} />
+      <PostNavSlim prevPost={data.prevPost} nextPost={data.nextPost} />
       <article className={style.article}>
         {post.featuredImage && (
           <figure className={style.featimg}>
@@ -22,7 +24,6 @@ const PostPage = ({ data }) => {
             />
           </figure>
         )}
-        <Catlist postObject={post} />
         <h1 className={style.article__title}>{post.title}</h1>
         <div className={style.article__meta}>
           by {post.author.node.name}. Published{" "}
@@ -36,6 +37,7 @@ const PostPage = ({ data }) => {
           className={style.article__content}
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
+        <Catlist postObject={post} />
       </article>
       <PostNav prevPost={data.prevPost} nextPost={data.nextPost} />
     </Layout>

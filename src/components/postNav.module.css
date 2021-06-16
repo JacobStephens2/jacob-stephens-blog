@@ -1,5 +1,5 @@
 .postnav {
-  margin: 3rem auto 0;
+  margin: 0 auto 0;
   display: flex;
   justify-content: center;
   padding-bottom: 0.5rem;
@@ -9,9 +9,9 @@
 
 .postnav a {
   width: 50%;
-  padding: 1rem;
+  padding: 0.4rem 0.7rem;
   border: 1px solid var(--dark-green);
-  border-radius: 1rem;
+  border-radius: 0.6rem;
   text-decoration: none;
 }
 

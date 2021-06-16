@@ -30,13 +30,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `articles`,
-        path: `${__dirname}/content/articles`,
-      },
-    },
     `mini-css-extract-plugin`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
@@ -86,6 +79,15 @@ module.exports = {
       resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: [require(`postcss-preset-env`)({ stage: 0})],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-D1JL7BTX37", // Google Analytics / GA
+        ],
       },
     },
     `gatsby-plugin-gatsby-cloud`,

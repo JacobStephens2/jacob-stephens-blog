@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import MainNav from "./mainNav"
+import * as style from "./header.module.css"
 
 const Header = ({ siteTitle }) => {
   return (
@@ -22,18 +23,12 @@ const Header = ({ siteTitle }) => {
     }}
   >
     <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: `var(--content-w-narrow)`,
-        padding: `1rem 0 0 0`,
-        position: `relative`,
-      }}
+      className={style.headerBox}
     >
       <h1 style={{
         display: `inline-block`,
         margin: 0,
         paddingBottom: `1rem`,
-        paddingLeft: `1rem`,
         }}>
         <Link
           to="/"

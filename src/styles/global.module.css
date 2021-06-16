@@ -30,3 +30,4 @@
 @custom-media --viewport-narrow-max (max-width: 40rem);
 @custom-media --viewport-narrow-min (min-width: 40rem);
 @custom-media --viewport-wide (min-width: 60rem);
+@custom-media --viewport-narrow-content (max-width: 741px);

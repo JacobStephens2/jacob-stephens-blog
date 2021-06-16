@@ -40,17 +40,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // Query all the data
   const queryResult = await graphql(`
     {
-      markdownQuery: allMarkdownRemark(
-        sort: { order: ASC, fields: [frontmatter___date] }
-      ) {
-        edges {
-          node {
-            fields {
-              slug
-            }
-          }
-        }
-      }
       pageQuery: allWpPage {
         nodes {
           databaseId

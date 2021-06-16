@@ -7,15 +7,13 @@ const PostNav = ({ prevPost, nextPost }) => {
       <nav className={style.postnav}>
         {prevPost && (
           <Link to={`${prevPost.uri}`}>
-            <div className={style.postnav__head}>Previous Post:</div>
-            <div className={style.postnav__title}>{prevPost.title}</div>
+            <div className={style.postnav__head}>Previous Post</div>
           </Link>
         )}
 
         {nextPost && (
           <Link to={`${nextPost.uri}`}>
-            <div className={style.postnav__head}>Next Post:</div>
-            <div className={style.postnav__title}>{nextPost.title}</div>
+            <div className={style.postnav__head}>Next Post</div>
           </Link>
         )}
       </nav>

@@ -16,6 +16,10 @@
   margin-right: -2rem;
 }
 
+.homeSection {
+  max-width: var(--content-w-narrow);
+}
+
 .article__title {
   margin-bottom: 1rem;
   padding-top: 10px;

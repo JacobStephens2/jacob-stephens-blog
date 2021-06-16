@@ -1,0 +1,12 @@
+.headerBox {
+  margin: 0 auto;
+  max-width: var(--content-w-narrow);
+  padding: 1rem 0 0;
+  position: relative;
+}
+
+@media (--viewport-narrow-content) {
+  .headerBox {
+    padding: 1rem 1rem 0 !important;
+  }
+}
