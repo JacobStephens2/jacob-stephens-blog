@@ -17,7 +17,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: `https://jacobcstephens.com/graphql`,
+        url: `https://content.jacobcstephens.com/graphql`,
         develop: {
           hardCacheMediaFiles: true,
         },
