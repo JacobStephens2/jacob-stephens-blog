@@ -614,10 +614,5 @@ main {
   padding: 0;
   color: var(--dark-green);
   max-width: var(--content-w-narrow);
-}
-
-@media (--viewport-narrow-content) {
-  main {
-    padding: 0 1rem;
-  }
+  padding: 0 1rem;
 }
