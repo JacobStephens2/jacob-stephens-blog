@@ -21,7 +21,7 @@ const IndexPage = () => (
           <Link to="/message/">Message</Link>
         </li>
         <li>
-          <a href="https://boardgamegeek.com/geekmarket/user/JacobCStephens13?pageid=1">Board Games for sale at BoardGameGeek</a>
+          <a href="https://boardgamegeek.com/geekmarket/user/jacobstephens13?pageid=1">Board Games for sale at BoardGameGeek</a>
         </li>
       </ul>
     </section>
