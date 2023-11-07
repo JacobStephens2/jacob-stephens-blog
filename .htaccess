@@ -1,0 +1,9 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^jacobstephens\.net$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.jacobstephens\.net$
+RewriteRule ^poker\-tournament\/?(.*)$ "https\:\/\/poker\.stewardgoods\.com\/tournament$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^jacobstephens\.net$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.jacobstephens\.net$
+RewriteRule ^poker\-discord\/?(.*)$ "https\:\/\/discord\.gg\/bxFEdktvcp$1" [R=301,L]
+
