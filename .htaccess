@@ -1,4 +1,3 @@
-
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^jacobstephens\.net$ [OR]
 RewriteCond %{HTTP_HOST} ^www\.jacobstephens\.net$
@@ -7,3 +6,4 @@ RewriteCond %{HTTP_HOST} ^jacobstephens\.net$ [OR]
 RewriteCond %{HTTP_HOST} ^www\.jacobstephens\.net$
 RewriteRule ^poker\-discord\/?(.*)$ "https\:\/\/discord\.gg\/bxFEdktvcp$1" [R=301,L]
 
+# Deny from all

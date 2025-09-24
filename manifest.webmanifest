@@ -1,1 +1,59 @@
-{"name":"Jacob Stephens' Personal Site","short_name":"Jacob Stephens","start_url":"/","background_color":"#0C6456","theme_color":"#fafac8","display":"standalone","cacheDigest":"91a7ecdf3a763105403a045c4e841c56","icons":[{"purpose":"any maskable","src":"icons/icon-48x48.png?v=91a7ecdf3a763105403a045c4e841c56","sizes":"48x48","type":"image/png"},{"purpose":"any maskable","src":"icons/icon-72x72.png?v=91a7ecdf3a763105403a045c4e841c56","sizes":"72x72","type":"image/png"},{"purpose":"any maskable","src":"icons/icon-96x96.png?v=91a7ecdf3a763105403a045c4e841c56","sizes":"96x96","type":"image/png"},{"purpose":"any maskable","src":"icons/icon-144x144.png?v=91a7ecdf3a763105403a045c4e841c56","sizes":"144x144","type":"image/png"},{"purpose":"any maskable","src":"icons/icon-192x192.png?v=91a7ecdf3a763105403a045c4e841c56","sizes":"192x192","type":"image/png"},{"purpose":"any maskable","src":"icons/icon-256x256.png?v=91a7ecdf3a763105403a045c4e841c56","sizes":"256x256","type":"image/png"},{"purpose":"any maskable","src":"icons/icon-384x384.png?v=91a7ecdf3a763105403a045c4e841c56","sizes":"384x384","type":"image/png"},{"purpose":"any maskable","src":"icons/icon-512x512.png?v=91a7ecdf3a763105403a045c4e841c56","sizes":"512x512","type":"image/png"}]}
+{
+    "name": "Jacob Stephens' Personal Site",
+    "short_name": "Jacob Stephens",
+    "start_url": "/",
+    "background_color": "#0C6456",
+    "theme_color": "#fafac8",
+    "display": "standalone",
+    "cacheDigest": "91a7ecdf3a763105403a045c4e841c56",
+    "icons": [
+        {
+            "purpose": "any maskable",
+            "src": "icons/icon-48x48.png?v=91a7ecdf3a763105403a045c4e841c56",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "purpose": "any maskable",
+            "src": "icons/icon-72x72.png?v=91a7ecdf3a763105403a045c4e841c56",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "purpose": "any maskable",
+            "src": "icons/icon-96x96.png?v=91a7ecdf3a763105403a045c4e841c56",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "purpose": "any maskable",
+            "src": "icons/icon-144x144.png?v=91a7ecdf3a763105403a045c4e841c56",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "purpose": "any maskable",
+            "src": "icons/icon-192x192.png?v=91a7ecdf3a763105403a045c4e841c56",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "purpose": "any maskable",
+            "src": "icons/icon-256x256.png?v=91a7ecdf3a763105403a045c4e841c56",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "purpose": "any maskable",
+            "src": "icons/icon-384x384.png?v=91a7ecdf3a763105403a045c4e841c56",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "purpose": "any maskable",
+            "src": "icons/icon-512x512.png?v=91a7ecdf3a763105403a045c4e841c56",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
