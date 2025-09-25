@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charSet="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <?php include '../../components/post_head_contents.html'; ?>
+  <meta name="generator" content="Gatsby 3.7.2" />
+  <style data-styled="" data-styled-version="5.3.0"></style>
+  <title data-react-helmet="true">Finding Greener Alternatives for the AP Chromatography Lab | Jacob Stephens&#x27;
+    Personal Site</title>
+  <meta data-react-helmet="true" name="description" content="A web designing board game player" />
+  <meta data-react-helmet="true" property="og:title"
+    content="Finding Greener Alternatives for the AP Chromatography Lab" />
+  <meta data-react-helmet="true" property="og:description" content="A web designing board game player" />
+  <meta data-react-helmet="true" property="og:type" content="website" />
+  <meta data-react-helmet="true" name="twitter:card" content="summary" />
+  <meta data-react-helmet="true" name="twitter:creator" content="Jacob Stephens" />
+  <meta data-react-helmet="true" name="twitter:title"
+    content="Finding Greener Alternatives for the AP Chromatography Lab" />
+  <meta data-react-helmet="true" name="twitter:description" content="A web designing board game player" />
+  <script
+    type="module">const e = "undefined" != typeof HTMLImageElement && "loading" in HTMLImageElement.prototype; e && document.body.addEventListener("load", (function (e) { if (void 0 === e.target.dataset.mainImage) return; if (void 0 === e.target.dataset.gatsbyImageSsr) return; const t = e.target; let a = null, n = t; for (; null === a && n;)void 0 !== n.parentNode.dataset.gatsbyImageWrapper && (a = n.parentNode), n = n.parentNode; const o = a.querySelector("[data-placeholder-image]"), r = new Image; r.src = t.currentSrc, r.decode().catch((() => { })).then((() => { t.style.opacity = 1, o && (o.style.opacity = 0, o.style.transition = "opacity 500ms linear") })) }), !0);</script>
+  <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com" />
+  <link rel="icon" href="/favicon-32x32.png?v=91a7ecdf3a763105403a045c4e841c56" type="image/png" />
+  <link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous" />
+  <meta name="theme-color" content="#fafac8" />
+  <link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=91a7ecdf3a763105403a045c4e841c56" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=91a7ecdf3a763105403a045c4e841c56" />
+  <link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=91a7ecdf3a763105403a045c4e841c56" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=91a7ecdf3a763105403a045c4e841c56" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=91a7ecdf3a763105403a045c4e841c56" />
+  <link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=91a7ecdf3a763105403a045c4e841c56" />
+  <link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=91a7ecdf3a763105403a045c4e841c56" />
+  <link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=91a7ecdf3a763105403a045c4e841c56" />
+  <link as="script" rel="preload" href="/webpack-runtime-8a47a20bd333eb60ab2e.js" />
+  <link as="script" rel="preload" href="/framework-dbb71ad78d33dc3746f8.js" />
+  <link as="script" rel="preload" href="/app-8d8158e1150371e0c9ca.js" />
+  <link as="script" rel="preload" href="/777cf710-bdf39bcd2d5fe8ec650f.js" />
+  <link as="script" rel="preload" href="/commons-187e9f092fef749039ba.js" />
+  <link as="script" rel="preload" href="/284da15516917c324477a862d7d87aa18092acdc-2259aaa5118560e2fcbc.js" />
+  <link as="script" rel="preload" href="/component---src-templates-post-js-97d8f17007822468a535.js" />
+  <link as="fetch" rel="preload"
+    href="/page-data/posts/finding-greener-alternatives-to-ap-chromatography-lab/page-data.json"
+    crossorigin="anonymous" />
+  <link as="fetch" rel="preload" href="/page-data/sq/d/2089240339.json" crossorigin="anonymous" />
+  <link as="fetch" rel="preload" href="/page-data/sq/d/3862348194.json" crossorigin="anonymous" />
+  <link as="fetch" rel="preload" href="/page-data/sq/d/63159454.json" crossorigin="anonymous" />
+  <link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div id="___gatsby">
+    <div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
+      <div style="display:flex;justify-content:center">
+        <header
+          style="background:var(--dark-green);margin-bottom:1rem;padding-bottom:0;position:fixed;width:100%;z-index:2">
+          <div class="header-module--headerBox--3n_iF">
+            <h1 style="display:inline-block;margin:0;padding-bottom:1rem"><a
+                style="color:var(--cream);text-decoration:none" href="/">Jacob Stephens</a></h1>
+            <nav class="mainNav-module--mainnav--3r8uo">
+              <div>
+                <div class="bm-overlay"
+                  style="position:fixed;z-index:1000;width:100%;height:100%;background:rgba(0, 0, 0, 0.3);opacity:0;-moz-transform:translate3d(100%, 0, 0);-ms-transform:translate3d(100%, 0, 0);-o-transform:translate3d(100%, 0, 0);-webkit-transform:translate3d(100%, 0, 0);transform:translate3d(100%, 0, 0);transition:opacity 0.3s, transform 0s 0.3s">
+                </div>
+                <div>
+                  <div class="bm-burger-button" style="z-index:1000"></div>
+                </div>
+                <div id="" class="bm-menu-wrap"
+                  style="position:fixed;right:0;z-index:1100;width:300px;height:100%;-moz-transform:translate3d(100%, 0, 0);-ms-transform:translate3d(100%, 0, 0);-o-transform:translate3d(100%, 0, 0);-webkit-transform:translate3d(100%, 0, 0);transform:translate3d(100%, 0, 0);transition:all 0.5s"
+                  aria-hidden="true">
+                  <div class="bm-menu" style="height:100%;box-sizing:border-box;overflow:auto">
+                    <nav class="bm-item-list" style="height:100%">
+                      <ul>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/message/">Message</a></li>
+                        <li><a href="/posts/">Posts</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div>
+                    <div class="bm-cross-button" style="position:absolute;width:24px;height:24px;right:8px;top:8px">
+                      <button id="react-burger-cross-btn"
+                        style="position:absolute;left:0;top:0;z-index:1;width:100%;height:100%;margin:0;padding:0;border:none;font-size:0;background:transparent;cursor:pointer"
+                        tabindex="-1">Close Menu</button><span style="position:absolute;top:6px;right:14px"><span
+                          class="bm-cross"
+                          style="position:absolute;width:3px;height:14px;transform:rotate(45deg)"></span><span
+                          class="bm-cross"
+                          style="position:absolute;width:3px;height:14px;transform:rotate(-45deg)"></span></span></div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
+      </div>
+      <div style="margin:0 auto 0;padding-top:99px;background:var(--cream)">
+        <main>
+          <?php include '../../components/post_nav.html'; ?>
+          <article class="single-module--article--1iUKO">
+            <h1 class="single-module--article__title--1m8hL">Finding Greener Alternatives for the AP Chromatography Lab
+            </h1>
+            <div class="single-module--article__meta--2B_eP">by <!-- -->Jacob Stephens<!-- -->. Published<!-- -->
+              <!-- -->May 11, 2014</div>
+            <div class="single-module--article__content--7dEpL">
+              <p>Jacob Stephens &amp; Benjamin Tartter</p>
+
+
+
+              <h2><strong>Introduction</strong></h2>
+
+
+
+              <p>A lab on chromatography is important to AP Chemistry because chromatography illustrates how compounds
+                can be separated and gives practice in theoretical consideration of polar interactions. This lab
+                provides 5 solvents &amp; 1 compound mixture to students, from which they can create a procedure
+                involving chromatographing with at least two solvents.</p>
+
+
+
+              <!--more-->
+
+
+
+              <p>The lab we modified can be found in the College Board’s AP 2014 Chemistry Lab Manual, <em>AP Chemistry
+                  Guided Inquiry Experiments: Applying the Science Practices</em>. The lab is labeled as “Investigation
+                5 – Sticky Question: How Do You Separate molecules That Are Attracted to One Another?”</p>
+
+
+
+              <p>We replaced the hexane/petroleum ether with heptane/ethyl acetate, because these chemicals are safer to
+                human health &amp; the environment. We’re also adding a 6<sup>th</sup> solvent:
+                isopropanol/H­<sub>2</sub>O. The professor prepares these solvent mixtures before class, &amp; we did
+                research to find the most effective mixture ratios between heptane &amp; ethyl acetate, as well as
+                another solvent we are adding (isopropanol/H<sub>2</sub>O). The most effective ratio is the one which
+                shows the best separation. Finally, we tested additional compounds to be chromatographed: spinach &amp;
+                marker ink. The reason for this is that the food dyes of the provided lab do not easily breakdown in the
+                environment.</p>
+
+
+
+              <p>Balanced chemical reactions will be outlined in the discussion of our research.</p>
+
+
+
+              <p></p>
+
+
+
+              <h2>Materials</h2>
+
+
+
+              <ul>
+                <li>10 mason jars used as development chambers</li>
+                <li>pencil</li>
+                <li>metric ruler</li>
+                <li>labels</li>
+                <li>lab filter paper to make 40 plates (we cut 25 x 75 mm plates from ~6&#215;6” round sheets)</li>
+                <li>aluminum foil</li>
+                <li>black sharpie marker</li>
+                <li>spinach</li>
+                <li>10 ml ethanol</li>
+                <li>37.5 ml heptane</li>
+                <li>37.5 ml ethyl acetate</li>
+                <li>37.5 ml isopropanol</li>
+                <li>37.5 ml H<sub>2</sub>O</li>
+              </ul>
+
+
+
+              <h2>Methods</h2>
+
+
+
+              <ol type="1">
+                <li>Create 10 development chambers; prepare 15 ml mixtures of 90:10, 80:20, &amp; 50:50 heptane/ethyl
+                  acetate &amp; H<sub>2</sub>O/isopropanol, where there are mixtures including the majority chemical of
+                  both chemicals included in the mixture (there will be a 90% heptane chamber, as well as a 10% heptane
+                  chamber).</li>
+                <li>Prepare spinach/ethanol mixture for spotting the spinach. Crush 2 spinach leaves into a beaker with
+                  solvent that evaporates quickly (we used ethanol).</li>
+                <li>Using glass capillary tubes from a digimelt device, spot the plates. Touch the tube to the surface
+                  of the spinach solution, then briefly touch the plate, making sure the spot location is above the line
+                  which the plate will be drenched in when inserted into the chamber.</li>
+                <li>Allow evaporative solvent to dry off of the plate.</li>
+                <li>Line sides of chambers with filter paper, making sure the height of the filter paper is great enough
+                  to keep the plates from touching them when inserted into the chamber. We cut 2 inch filter paper
+                  linings.</li>
+                <li>Seal container with aluminum foil. Allow to sit for 2 hours before chromatographing. This allows the
+                  solvent to evenly evaporate throughout the chamber.</li>
+                <li>Place plate into the solvent, then watch until solvent reaches a line approximately 1 cm from the
+                  top of the plate.</li>
+                <li>Remove plate and allow solvent to evaporate off.</li>
+                <li>Measure distance from original spot to each distinct moved spot as well as the distances between
+                  these spots.</li>
+              </ol>
+
+
+
+              <h2>Expected Outcome</h2>
+
+
+
+              <p>Our expected outcome is that the compounds we separated will be just as effectively separated by our
+                solvents. We predict that 50 % heptane/ethyl acetate will yiled the best separation for spinach &amp;
+                ink.</p>
+
+
+
+              <h2>Results</h2>
+
+
+
+              <p>We created two series of development chambers. One set contained ethyl acetate and heptane mix and the
+                other contained water and isopropanol. Each series contained five chambers which differed in solution
+                ratios (9:1, 8:2, 5:5, 2:8, 1:9).</p>
+
+
+
+              <figure class="wp-block-image size-large"><span
+                  class="wp-image-297 inline-gatsby-image-wrapper gatsby-image-wrapper"
+                  style="position:relative;overflow:hidden;max-width:100%;width:640px" data-reactroot=""><span
+                    aria-hidden="true" style="width:100%;padding-bottom:75%"></span><img aria-hidden="true"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAAD2ElEQVQ4y1XPe0zVZRzH8d9WM8bO5ff8ruf8DucozEutnOUiTXPhpRU1KYtFauOP5hSkgcsLB2kKqZnD1axWGczUeUGYWyFos+blKGqJaLblBYw5DRI4wDnnB3IR3+0cbas/Xvs832fPPvs+Un9vD9FojJgdZWDQZnBkgKGRuwzfG2RkdIh794f/Yyghfj8cfzfUnzA8PMDI6CCjjCLZ4U5ikTCxWJiY3UNfXyfRaBjb7qG3r4u+SBf2QC/RWDcxO4zd30NfpBPbDtPf30Ms1kWk92+ivXeIRnqQbt9ope3PVpqbL3Dy5AnaO25x+ffL1DfU03LjOmfPn6O9s4Pzl5pounSBjjt/0XimkY72m1y8eIHvdu1j58797Nl1gOp9dUgb1m2huGQDefmr2bW7mv67Ntdab3D6bCN/tFzl0M8/0W2HOVD3PccbTxEZiBAKneT2rTZ+u/gr6emzmPrM85wOHePqlWtIumLh86bi94/n28odXG9toe7IYVputnH8lzNsr97HlVttVFZXs62qkvZwN7v37+XI0QZCp06Qnj6D116Zxw81O7k/MoTk9wYwNC+LFueSnbOYtevK2bh1C2VbK9j89ZcsXx+k9vQJlqxZzbKSVYSam8jNe49t33xBQeEKhDDJyHiBtSuXsreqCmnSuPEsz19Ow+F65mdlsaf2IDtqqtn41Wfs/vEIry/J5WDzObLzl1H6eQU1x4+StTCH2oZDFK8twTRSGPOYg7cXvEpZsBjp6aemEAod46PyIIausKSgiKLSD5k+bzaLCotIeeJJFixdyqTnZjD95UzmvpXNhMlTWFESZNqMmei6hRAGbrfCyvfzkCakTSQzcz6paRPRdIvZL2Uy+dnp6NZY8levYYxLZ96bObxbuII5WdnkrQoiSY9StDLIOwtzSU524bP8JCU50HUvktfwYppehGpgWWP5eNMWZmXMxfSnsr7iU4QVYOqLc1hUUMDs+W9Q+slmpEeSKPygmLLyTSQnx4s8mKYPp0uLF3qwLB8pKQH8/nFMmzYTjy+AaloEJjyO6vUjPCkolh/NCmCkjEU1fegeH4FxaRiGFyE0VM1MLCR5TROPaWKYHkyPhVBUNMNEi591M1GsenwonnhaD2bTi6KbyEJFUTUURUUIBVlWkQxdJ07TNTRDQzcNNENHNQxU00ToRoIcp/1LR6gaQlGQhYxbyIlCVdWRdFVDVRUURSBUGaE+SFkVyKqS4FIEbiWeCk4hcAn5AdmNOyFeKhK/kxRZoAgXsuzELTtxJThwCSdO2YHT7cDhjqfzof/PLrfrYakbWQj+AQV1lAG212y2AAAAAElFTkSuQmCC"
+                    alt=""
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transition-delay:500ms" />
+                  <picture>
+                    <source srcSet="/static/27752169223039ada5e361fffc255a03/7b64c/1-two-series-five-dev-chambers-dye-spinach.png 160w,
+/static/27752169223039ada5e361fffc255a03/4e610/1-two-series-five-dev-chambers-dye-spinach.png 320w,
+/static/27752169223039ada5e361fffc255a03/1bed9/1-two-series-five-dev-chambers-dye-spinach.png 640w"
+                      sizes="(max-width: 640px) 100vw, 640px" /><img sizes="(max-width: 640px) 100vw, 640px" srcSet="/static/27752169223039ada5e361fffc255a03/7b64c/1-two-series-five-dev-chambers-dye-spinach.png 160w,
+/static/27752169223039ada5e361fffc255a03/4e610/1-two-series-five-dev-chambers-dye-spinach.png 320w,
+/static/27752169223039ada5e361fffc255a03/1bed9/1-two-series-five-dev-chambers-dye-spinach.png 640w"
+                      src="/static/27752169223039ada5e361fffc255a03/1bed9/1-two-series-five-dev-chambers-dye-spinach.png"
+                      alt="" loading="eager"
+                      style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition:opacity 500ms" />
+                  </picture><noscript>
+                    <picture>
+                      <source srcset="/static/27752169223039ada5e361fffc255a03/7b64c/1-two-series-five-dev-chambers-dye-spinach.png 160w,
+/static/27752169223039ada5e361fffc255a03/4e610/1-two-series-five-dev-chambers-dye-spinach.png 320w,
+/static/27752169223039ada5e361fffc255a03/1bed9/1-two-series-five-dev-chambers-dye-spinach.png 640w"
+                        sizes="(max-width: 640px) 100vw, 640px" /><img loading="eager"
+                        sizes="(max-width: 640px) 100vw, 640px" srcset="/static/27752169223039ada5e361fffc255a03/7b64c/1-two-series-five-dev-chambers-dye-spinach.png 160w,
+/static/27752169223039ada5e361fffc255a03/4e610/1-two-series-five-dev-chambers-dye-spinach.png 320w,
+/static/27752169223039ada5e361fffc255a03/1bed9/1-two-series-five-dev-chambers-dye-spinach.png 640w"
+                        src="/static/27752169223039ada5e361fffc255a03/1bed9/1-two-series-five-dev-chambers-dye-spinach.png"
+                        alt=""
+                        style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" />
+                    </picture>
+                  </noscript>
+                </span>
+                <figcaption>Figure 1. Setup of two series of five development chambers, waste container and spinach
+                  solution container on left, three dye mixture chromatographs in front.</figcaption>
+              </figure>
+
+
+
+              <figure class="wp-block-image size-large"><span
+                  class="wp-image-298 inline-gatsby-image-wrapper gatsby-image-wrapper"
+                  style="position:relative;overflow:hidden;max-width:100%;width:844px" data-reactroot=""><span
+                    aria-hidden="true" style="width:100%;padding-bottom:74.88151658767772%"></span><img
+                    aria-hidden="true"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAAD6klEQVQ4yzWU60+TBxSHX4WWvtcWaKVixjT1totOAuIl02lWgkzUZWGDubjM+WFmizrjNbigbiBDATEUvICTgCDUt1iutqV3Ci2XCC7L/oD9I8/Ssn14cs7JOfmdc778BLMlH9Wci2K2oJjNyJqWif/noqIgaWoGUVUwyTImZZV0T1TSPQ3FkouWZ0PIteRjyc1D0TRMkoQoy2Qbjaw1GMgyGhEVmawcI2uM2Zk6R5IwiiIGU05mPr1Ys1hQzRY0Sx6CzVpAXr4Vx+YtlO7ew/b3P6C8opLPqo5z4NBhbOsLKSkro3TvHj4qKcFmt2O3F+JwbCHftg4hOxth7VpyTBLpbwX7ukKs1gKam1tJJOZ50t2Lzx8mkVxgKhRh286dPOsfIBVM8nJ8nN+am/B5pghPBPmqtpZTNd9w8exPFBcXYxIVhAKbHYdjKz5fiKWlP3n46A8mfSFmFt/wKhDE8eEOuoeGmJld4sXoGPVNdwhHZpiNzHHp6hUGu57yT/ItN65fw2gUEax5BTidlSTnFonFUrS0dzHlixAPzqMHQmzbVcITXcc/M8/waz/n6+rwjvuI+uP83nyX9vvtJOMxHnd0kGuxpgXXc/HiVd6u/E0gEONum4tAaJbo9Dzu6TDvlezhkcfD5Ow8Q9NBvjt3gSHvJEF/lN6+ftrutZIIhpj06GwqciBsenc7T3t6WVn+i7GxAI3N7YQTCwSjKfRwlB37DtCpexhJJBmOxKg+fYZnbg/+qTBu9wgdDzqITPlI+AM4P3Ei7N19kHAwyuLCCro+ya93WomnlgnNLPIyGGHXx4dwuXXGk0uMxOc49vUpXM/6iQZmGdHH6HR1ERidYDme4NwPPyJ8e/J7FlKLpFJvGHzxitsNLUzH5nD1PGUkEmf34XIee7y09HQzPB2mquYkjW0d9PUO4h7S6ep8hD4wSGh0jM6W+wgN9U0kE0kG+wfo73vJ3RYXswsreAMhRoJRDh45yuNhnW7dgzccp+LEF1y5cQvv2GtGvRM8dD3E/XyAgZ4nxCYCCMO9A7xZXCYRT/G8b4hrl6/T2NDMzdsNnL90GeeRCk7U1HK0uobKz6spcmylbP9BTp85y5fVtTg/LeeXa3W0NjbR1ngPoe7CJW7W1VN/4xY/n7vA8aNVHKmo5FhVFU6nk9KyMjYUbUTNzccgKpgUM9kmGWFNFmuyDBiMJmRZRcmgIewv3ceuHcVs27odh2Mz7xRtxF64AWuBHYvVhqSZEVVtFU3DIErkSPKqKcgKoiSRYxL/Q0JQZTOqqqGqKoqqIspShoyryHLGDEyygqRqmBQVk5yeSYutkrlO0TIaZs3Mv7xNfYTW0FJaAAAAAElFTkSuQmCC"
+                    alt=""
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transition-delay:500ms" />
+                  <picture>
+                    <source srcSet="/static/4087dff12f43c8c90e67cfd39c185cdd/2be58/2-sharpie-chromatographs.png 211w,
+/static/4087dff12f43c8c90e67cfd39c185cdd/993bf/2-sharpie-chromatographs.png 422w,
+/static/4087dff12f43c8c90e67cfd39c185cdd/b4e2e/2-sharpie-chromatographs.png 844w"
+                      sizes="(max-width: 844px) 100vw, 844px" /><img sizes="(max-width: 844px) 100vw, 844px" srcSet="/static/4087dff12f43c8c90e67cfd39c185cdd/2be58/2-sharpie-chromatographs.png 211w,
+/static/4087dff12f43c8c90e67cfd39c185cdd/993bf/2-sharpie-chromatographs.png 422w,
+/static/4087dff12f43c8c90e67cfd39c185cdd/b4e2e/2-sharpie-chromatographs.png 844w"
+                      src="/static/4087dff12f43c8c90e67cfd39c185cdd/b4e2e/2-sharpie-chromatographs.png" alt=""
+                      loading="eager"
+                      style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition:opacity 500ms" />
+                  </picture><noscript>
+                    <picture>
+                      <source srcset="/static/4087dff12f43c8c90e67cfd39c185cdd/2be58/2-sharpie-chromatographs.png 211w,
+/static/4087dff12f43c8c90e67cfd39c185cdd/993bf/2-sharpie-chromatographs.png 422w,
+/static/4087dff12f43c8c90e67cfd39c185cdd/b4e2e/2-sharpie-chromatographs.png 844w"
+                        sizes="(max-width: 844px) 100vw, 844px" /><img loading="eager"
+                        sizes="(max-width: 844px) 100vw, 844px" srcset="/static/4087dff12f43c8c90e67cfd39c185cdd/2be58/2-sharpie-chromatographs.png 211w,
+/static/4087dff12f43c8c90e67cfd39c185cdd/993bf/2-sharpie-chromatographs.png 422w,
+/static/4087dff12f43c8c90e67cfd39c185cdd/b4e2e/2-sharpie-chromatographs.png 844w"
+                        src="/static/4087dff12f43c8c90e67cfd39c185cdd/b4e2e/2-sharpie-chromatographs.png" alt=""
+                        style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" />
+                    </picture>
+                  </noscript>
+                </span>
+                <figcaption>Figure 2. Sharpie marker chromatographs.</figcaption>
+              </figure>
+
+
+
+              <figure class="wp-block-image size-large is-resized"><span
+                  class="wp-image-299 inline-gatsby-image-wrapper gatsby-image-wrapper"
+                  style="position:relative;overflow:hidden;max-width:100%;width:542px" data-reactroot=""><span
+                    aria-hidden="true" style="width:100%;padding-bottom:75%"></span><img aria-hidden="true"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAAD/0lEQVQ4yzXTa2yTdRTH8ScRA7oy2j3P83+u7bo7m2MMWCAqMxozxEgkMSaGhDghEkDMlIDgxj3c1AyGYkQDUWICTGHGMKCwFoibY+5Gyy7d6Lqul23MqcQ3EuObr1mNLz4557z4nZw3R7JVE13WkJ0ubJeDZeYTvFnyGJuXy1QuLsQ03BiGnabP0C00zUSIGQaqaqAKE9P0kuOdj2QJC1u3cVuedFgWJg6XwTyniiEEum6iaUaarv2/zEBRBIqsosgaQjXSWY8777+FQtZwZGSSOdeJKgsMYaAJHUU1kBWNLFmkq6LqKIqerrIikGWBqurp6y3TjW16kTSXYFHZYjas38iaN9ZSXl6BZWZjGG6EbmPa3jRVt9Oz0CzmORXmzs3C4XAye3YGs2bNweVU8Fi5SK4MF3s+3MP0gz8ID0S50txCi7+Vr7+9wPa6vVz23+RHf4CanbU0+a7zw1UfBw4e5asvz3C8voEN6zewf9duVq1chcgykXLNHHyXfcSiSTru9NLV3UcsMUVrZ5BPTp5iaOpXOu5H2FffQPdIlMjkA9q77pJIThC9P8LF8xf458+HBNvbKcopRlrxXBXhvjCR4TEC/la6ewYYjo3z3WUfOw8cITQ+QXskwvaDR/B1dnEvnqAj2EeoL8zoSIzdtXto87fw9+/T7NuxG+lg3X6SsSShu4PcutlOb3CIodgEn50+y6ZttfQkUnQlx6n9+BhNt1sJxVP0hiOEBoaZTD3g0IHDfNFwgkfTU9zvuYfU6gvQH7xHd2eIK80BBgbHiMSn2Hf0ONVbttI1mqAjGufIqTM03rhFbzRBz2CEYN8wqfgk35w+y7q11fwWG2V6NIkUDfUzEOrh9s2fCfjbCQb7iaWmeHfbLqo3v0/v2Bi/jIxwpqmZxmt+QqMxwrEU4eEYvV2dtN36iWeWLqevo4PE4BDSO+u3sLVmJ5s21nC1OcDVawH8t++wctXrvLbmLS76/Jw8e47N22rZ+N4ODtV/St3ew1y6dIWW6zfobLvDC5Uv8nn9cVLhKJJwmbicOpaZR1HRQvLzF5CTV4rlmY87pwR3bimaXUCW8OJSs8l0GTzpkDHNXMpKK6h6vorighIWFpexorIKaUFhOSVF5RQWLMDrLcbtKcS08tDNXFQ9G0XYyKqVpgg3ykyvmMhZBs5MhTmPO8iYk4kuG+Ta+Uj5diEew4uhudFUC6GYqDPUmb/1oGnZqKoHV5aFKjy43QXk55WwZNEyVr+ymppNW2g4/BHN5xsZ7r6LVGAVMt9bwlP5ZZQVL6G8dClLyp+mYvGzLK2o5OWXXmVd9dvUfVDLyWMn+P7cOdoCAQa7O4kP9PMwHuPRxDiPJpL8NZniX8fLm5A5/aggAAAAAElFTkSuQmCC"
+                    alt=""
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transition-delay:500ms" />
+                  <picture>
+                    <source srcSet="/static/48026830135942437af9f60db938d38c/94eb7/3-dye-mix-diluted-ethanol-chromatographs.png 136w,
+/static/48026830135942437af9f60db938d38c/79613/3-dye-mix-diluted-ethanol-chromatographs.png 271w,
+/static/48026830135942437af9f60db938d38c/97cec/3-dye-mix-diluted-ethanol-chromatographs.png 542w,
+/static/48026830135942437af9f60db938d38c/4fe98/3-dye-mix-diluted-ethanol-chromatographs.png 722w"
+                      sizes="(max-width: 542px) 100vw, 542px" /><img sizes="(max-width: 542px) 100vw, 542px" srcSet="/static/48026830135942437af9f60db938d38c/94eb7/3-dye-mix-diluted-ethanol-chromatographs.png 136w,
+/static/48026830135942437af9f60db938d38c/79613/3-dye-mix-diluted-ethanol-chromatographs.png 271w,
+/static/48026830135942437af9f60db938d38c/97cec/3-dye-mix-diluted-ethanol-chromatographs.png 542w,
+/static/48026830135942437af9f60db938d38c/4fe98/3-dye-mix-diluted-ethanol-chromatographs.png 722w"
+                      src="/static/48026830135942437af9f60db938d38c/97cec/3-dye-mix-diluted-ethanol-chromatographs.png"
+                      alt="" loading="eager"
+                      style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition:opacity 500ms" />
+                  </picture><noscript>
+                    <picture>
+                      <source srcset="/static/48026830135942437af9f60db938d38c/94eb7/3-dye-mix-diluted-ethanol-chromatographs.png 136w,
+/static/48026830135942437af9f60db938d38c/79613/3-dye-mix-diluted-ethanol-chromatographs.png 271w,
+/static/48026830135942437af9f60db938d38c/97cec/3-dye-mix-diluted-ethanol-chromatographs.png 542w,
+/static/48026830135942437af9f60db938d38c/4fe98/3-dye-mix-diluted-ethanol-chromatographs.png 722w"
+                        sizes="(max-width: 542px) 100vw, 542px" /><img loading="eager"
+                        sizes="(max-width: 542px) 100vw, 542px" srcset="/static/48026830135942437af9f60db938d38c/94eb7/3-dye-mix-diluted-ethanol-chromatographs.png 136w,
+/static/48026830135942437af9f60db938d38c/79613/3-dye-mix-diluted-ethanol-chromatographs.png 271w,
+/static/48026830135942437af9f60db938d38c/97cec/3-dye-mix-diluted-ethanol-chromatographs.png 542w,
+/static/48026830135942437af9f60db938d38c/4fe98/3-dye-mix-diluted-ethanol-chromatographs.png 722w"
+                        src="/static/48026830135942437af9f60db938d38c/97cec/3-dye-mix-diluted-ethanol-chromatographs.png"
+                        alt=""
+                        style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" />
+                    </picture>
+                  </noscript>
+                </span>
+                <figcaption>Figure 3. Dye mixture diluted in ethanol chromatographs.</figcaption>
+              </figure>
+
+
+
+              <figure class="wp-block-image size-large is-resized"><span
+                  class="wp-image-300 inline-gatsby-image-wrapper gatsby-image-wrapper"
+                  style="position:relative;overflow:hidden;max-width:100%;width:743px" data-reactroot=""><span
+                    aria-hidden="true" style="width:100%;padding-bottom:74.73118279569893%"></span><img
+                    aria-hidden="true"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEB0lEQVQ4yx2Q209TBwCHT3SZAwXa06uFWlsU2kJLL7QwnFk0S7aHRUWUOTUbRuaV6dSoqOjmg3FOdzHLHraYYaLT6bxLtHIT5NoLvR4PLS1u4JzZ/olvoQ9fvvxevoefsKmpkfWNa1i5sgGlqKZwYQmiSotao0el0qFS69DqFqPVzmFApzOg05fmrdXoEZVqFCUiFRYL9ooqBFGhZP68NxAEAUGYT0mJyIIFhcyb9yZFRQoUCnV+FxYWsahIkXdBwSKKFpWgVKjysZJiEUWxEqvFgmCvcLBvzwGOHD5OW9t+iotVrG/8iI6O03x97jt27d3Hjj1trGtqZtV777Oh+WNaW3eyZfNWrJV23C4vzmoXGpUetahH2L/7C17NvOblzGs6f72CSmXgYVcPM6/+YzyapPPa7yRyOcKyzOXrN5Bz0/z9+l/+uHmbG3M7kWBidIx331mFSqFH+OHc90hxCVnKcubMBcqMy+gdGCOUnKR3LMSdnj6GkymGUymu3nvASCyBNDXN40Av57/5llw6w2w6zemOUyx8S4HQff8R0XCcXHaWI4c7sNrchOKTjMZlnkaT9MUSPE2mGJInuR54wpOxILF0ltFQlEOHjiLFk/wpSwwEAiwxWBBiYyHCwQlkOcfatc3UN6xmQsoyFJPoj6foTaToTiQZSGe4Gujm7tNBglKacEJi567P6e/pI/c8xcupNBvXbESIjgSJhKKEQwnebljNBx9uIPI8y2AsRU8syZN4ksfxJAOZLD/fuce1R92MSRkS6Rytn+3l/LkL/DWVYXZS5tqlKwiR4SDhYJTx8RhubwNNm1oIpaboC8V4HIxwfzxIVyRGv5zh0r0uLt99yOBEkric5Uj7SZrWNzOTnUKORHiRSiNMDIdIxCRGRsIYTZXsP3ickUiKwNA4D4ZHuT34jK5ghH5pkrvPRrkZ6OPRwAihmMStWw/weOoYHxoiE0+QTcgI1zt/49IvnZw4cRrdYjPNm1po3bWPzdt20LjlE9Zt+ZS2Y6c4dvYCOw8eZfP23Rxo/5KTX52lvf0UWq2Rny7+yD/TL5iVXyA4rG4sFjulpeWUl1dRaqxAozejMVhQG8rziPqlKHUmRJ0JpdaIUmNEIS5GodQjinpqHB5atrawbet2hEpzNbbKGmxWNzari+pqH1UOP3ZnHTann+V2L8vsHixWN6ZlDpaYbZgsdizldkym5ZQazIhKPYUFChYWKBE8VX7cDh8upw93jR+3qx6Xqx5HjZ9qp4+qPP481rl4hTMfs5itLDVVUFa6FL22DK3agE5ThuC1eah11OJ1+vC5/fg89dR663A63HnmTvd666mrW0GdfwW+2no8Lh8Oew2V5ZWYjRb0GgMqUYtKqeV/Q06pQpem60cAAAAASUVORK5CYII="
+                    alt=""
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transition-delay:500ms" />
+                  <picture>
+                    <source srcSet="/static/97ec2f2154fcdd3cacfbc20b04fbe0b8/bf0a7/4-black-ink-marker-chromatographs.png 186w,
+/static/97ec2f2154fcdd3cacfbc20b04fbe0b8/1bda3/4-black-ink-marker-chromatographs.png 372w,
+/static/97ec2f2154fcdd3cacfbc20b04fbe0b8/b217e/4-black-ink-marker-chromatographs.png 743w,
+/static/97ec2f2154fcdd3cacfbc20b04fbe0b8/28aea/4-black-ink-marker-chromatographs.png 990w"
+                      sizes="(max-width: 743px) 100vw, 743px" /><img sizes="(max-width: 743px) 100vw, 743px" srcSet="/static/97ec2f2154fcdd3cacfbc20b04fbe0b8/bf0a7/4-black-ink-marker-chromatographs.png 186w,
+/static/97ec2f2154fcdd3cacfbc20b04fbe0b8/1bda3/4-black-ink-marker-chromatographs.png 372w,
+/static/97ec2f2154fcdd3cacfbc20b04fbe0b8/b217e/4-black-ink-marker-chromatographs.png 743w,
+/static/97ec2f2154fcdd3cacfbc20b04fbe0b8/28aea/4-black-ink-marker-chromatographs.png 990w"
+                      src="/static/97ec2f2154fcdd3cacfbc20b04fbe0b8/b217e/4-black-ink-marker-chromatographs.png" alt=""
+                      loading="eager"
+                      style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition:opacity 500ms" />
+                  </picture><noscript>
+                    <picture>
+                      <source srcset="/static/97ec2f2154fcdd3cacfbc20b04fbe0b8/bf0a7/4-black-ink-marker-chromatographs.png 186w,
+/static/97ec2f2154fcdd3cacfbc20b04fbe0b8/1bda3/4-black-ink-marker-chromatographs.png 372w,
+/static/97ec2f2154fcdd3cacfbc20b04fbe0b8/b217e/4-black-ink-marker-chromatographs.png 743w,
+/static/97ec2f2154fcdd3cacfbc20b04fbe0b8/28aea/4-black-ink-marker-chromatographs.png 990w"
+                        sizes="(max-width: 743px) 100vw, 743px" /><img loading="eager"
+                        sizes="(max-width: 743px) 100vw, 743px" srcset="/static/97ec2f2154fcdd3cacfbc20b04fbe0b8/bf0a7/4-black-ink-marker-chromatographs.png 186w,
+/static/97ec2f2154fcdd3cacfbc20b04fbe0b8/1bda3/4-black-ink-marker-chromatographs.png 372w,
+/static/97ec2f2154fcdd3cacfbc20b04fbe0b8/b217e/4-black-ink-marker-chromatographs.png 743w,
+/static/97ec2f2154fcdd3cacfbc20b04fbe0b8/28aea/4-black-ink-marker-chromatographs.png 990w"
+                        src="/static/97ec2f2154fcdd3cacfbc20b04fbe0b8/b217e/4-black-ink-marker-chromatographs.png"
+                        alt=""
+                        style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" />
+                    </picture>
+                  </noscript>
+                </span>
+                <figcaption>Figure 4. Black ink marker chromatographs.</figcaption>
+              </figure>
+
+
+
+              <figure class="wp-block-image size-large is-resized"><span
+                  class="wp-image-301 inline-gatsby-image-wrapper gatsby-image-wrapper"
+                  style="position:relative;overflow:hidden;max-width:100%;width:578px" data-reactroot=""><span
+                    aria-hidden="true" style="width:100%;padding-bottom:74.48275862068965%"></span><img
+                    aria-hidden="true"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAAD2ElEQVQ4y0WU+0/TVxiHvyDY9nvtBcSpGECLXHSbiWbTeZlzCYlRIcrMDAwDMowMphBH4nS6MEncJHGKIBOwKApY7IXe+6Wl9AKDLe4n/59naZtlPzw5P3xOnvOenPO+giipiLKGKKsYJTmPnMf036rIiFlUBUlV82hZNGRNQ7FYMNtKKSnbjlBUtBmhcBNCQQEGUcxLJBGjJCEq/wtENSsX85ks5Q7IZzKyqqBazFhKShGOHznOudONtLS0UV5ZhUGSUa0lqFYbmwwGhIJChE1FFJtEFIsVzWZDs5UgqVruNiZZQlJkFE1DNVsRdG+IjZUUa6l1Dh0+xsDAT0xPvmRicprv+m7Q9m0XvX397P/kEI3NF5h942TB6eLTw0cwyQqa2YooK8iKiqbZEKLeABG/Hz2yzImTDTz94wWJcJxASGd6wU1kdY0/37+n+4cBzrW0srK+QSK1yqX2DsbHxnDNzTN45w4Wqw1VtWQr9BN2e4npSc6cPZ8ThoI6rqDO3eGHzATDeNIZbj0Y5uzFFsKZNfRkhvbOLqYmJnn/7h2r8Rg1e2owmWSEpUU/EV+AJT3Jha/bcMw4CUTivI3GuTE4xExUZyGV5tcpB80dnXgSSWKrG3Rf6+eXwSHW02n+TidpPH2GzQYRQc8KvT706AqdXT043SG8WaG+zJWBm0z4gryKJxj3LNLac5030Tj66gZ3h+7T03OdjXSGf9Yy3B4YoKjIiBD1+Ak5XejRJD/euofbt4Q7uIQnlqTlai+P5py8iiVwhHSu3b3HXDhGMJHh4ZNxWr9pZ3UlxV+pJBMjT1DV3CsHCbp9hENxHo9M4PXHcPki+JbTnL90md+ev2B2KYEjEOHn30eZD8VY1BO8nnfT2NRMNBgmE4sTcXuoqrAjhFx+nPMuRp88Y2RkgkBwmbfeCL5YilPNFxl8NMqrYBSHJ8DI9CzP593MuXy43EGamr7i9fQMK+Eo67Fljn/2OcK5s+c5evQL7Lvr6e+7ydycF8cLJ1MzC3x5qonbQw9wOL08n/cw5phl8qWTSccss6/fcrnjCk8fj5H9KeuxBP3dfQhGg4goKSiqhR07K7HvqafKXkuFvZbyqmoOHDrGiYbTHDnRQN1HB9l/4DAffnyQ6pq9lJZto/dqLw/vD/Ps0SjfX+lF2L61nC2lWzGbbfkBIcoYRDnXaoWbjQjFBgqKDRQZRQySksuMkpLbly1EkvOIkoyimhH2VtdTV11Hfc0+amv2sae6jt27aqiotFO+cxfbdlSy5YNyLCVlqGYbimZBUlRM2eEhiSiKgpztZ0nEZDLxL5ZmfL4emKdrAAAAAElFTkSuQmCC"
+                    alt=""
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transition-delay:500ms" />
+                  <picture>
+                    <source srcSet="/static/71931b27e48aa0c824e29d669bcec443/f554a/5-marker-chromatographs.png 145w,
+/static/71931b27e48aa0c824e29d669bcec443/da63f/5-marker-chromatographs.png 289w,
+/static/71931b27e48aa0c824e29d669bcec443/56022/5-marker-chromatographs.png 578w,
+/static/71931b27e48aa0c824e29d669bcec443/3ae48/5-marker-chromatographs.png 770w"
+                      sizes="(max-width: 578px) 100vw, 578px" /><img sizes="(max-width: 578px) 100vw, 578px" srcSet="/static/71931b27e48aa0c824e29d669bcec443/f554a/5-marker-chromatographs.png 145w,
+/static/71931b27e48aa0c824e29d669bcec443/da63f/5-marker-chromatographs.png 289w,
+/static/71931b27e48aa0c824e29d669bcec443/56022/5-marker-chromatographs.png 578w,
+/static/71931b27e48aa0c824e29d669bcec443/3ae48/5-marker-chromatographs.png 770w"
+                      src="/static/71931b27e48aa0c824e29d669bcec443/56022/5-marker-chromatographs.png" alt=""
+                      loading="eager"
+                      style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition:opacity 500ms" />
+                  </picture><noscript>
+                    <picture>
+                      <source srcset="/static/71931b27e48aa0c824e29d669bcec443/f554a/5-marker-chromatographs.png 145w,
+/static/71931b27e48aa0c824e29d669bcec443/da63f/5-marker-chromatographs.png 289w,
+/static/71931b27e48aa0c824e29d669bcec443/56022/5-marker-chromatographs.png 578w,
+/static/71931b27e48aa0c824e29d669bcec443/3ae48/5-marker-chromatographs.png 770w"
+                        sizes="(max-width: 578px) 100vw, 578px" /><img loading="eager"
+                        sizes="(max-width: 578px) 100vw, 578px" srcset="/static/71931b27e48aa0c824e29d669bcec443/f554a/5-marker-chromatographs.png 145w,
+/static/71931b27e48aa0c824e29d669bcec443/da63f/5-marker-chromatographs.png 289w,
+/static/71931b27e48aa0c824e29d669bcec443/56022/5-marker-chromatographs.png 578w,
+/static/71931b27e48aa0c824e29d669bcec443/3ae48/5-marker-chromatographs.png 770w"
+                        src="/static/71931b27e48aa0c824e29d669bcec443/56022/5-marker-chromatographs.png" alt=""
+                        style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" />
+                    </picture>
+                  </noscript>
+                </span>
+                <figcaption>Figure 5. Marker chromatographs.</figcaption>
+              </figure>
+
+
+
+              <figure class="wp-block-image size-large is-resized"><span
+                  class="wp-image-302 inline-gatsby-image-wrapper gatsby-image-wrapper"
+                  style="position:relative;overflow:hidden;max-width:100%;width:678px" data-reactroot=""><span
+                    aria-hidden="true" style="width:100%;padding-bottom:74.70588235294117%"></span><img
+                    aria-hidden="true"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAAD+ElEQVQ4y02P+1NUZRjHzzgpy+45Z89egA0IE4vRQTBU5A4hKqiNaKNiNhlWNoxp6jo2YgQTkA5eiMmZsFTIpka51QRDXkCQBWF1z2FZBJbdZcFb45/xadio6YfPPO88z/t+nu8ryKIZSTQhSSZEWQlhCGEMIf5XF/rSQk+S0YsyBtGIKCnIsgXFZENQZDMmxYrRaEYy/iOV5jEqoYf/Cv+PKM+LpAWhhEGUQ4EUJQLBoJdYtGgxi5foCAvXhzbrDCJhegNhBhG9bCRckkPMn3WiFJrrJQnd/J1wfUg8H8SoWBBSktdQW1NLQ8MlPj9qRzKaeTV2Ka8te4Oo2DgMRhOKNRLJbEUnGTFFRGGyRhKmF7FE2oiyRYe+LIpGTPMJPyn9mNnADHNzz6mtrSO/oIjOWz30DI1wrPxL9pQeoKm9lWttrazNzOEz+wm67tzm/MV6qqur6b1zi1+uN5GSnIJkMCOcqznD2KibyUkfpQc+pfjdEib8c3iCc9Q2fMfRikq0509xv3jGrg9LqThzluDLl7jcbpqbm5kNTPPy2Qz7SvaiWyIjdLa1obpUvNMz7Ni5h5279qFN+njonaah+SfKTp1iwD/N0IyfDw4fwV75NZ7ZWQacTm7cvMnjsVGezkxx/PARwl4xILgGHaiqitszQXbuRnbt3Y825Wd4ysv3N1qw13zDQMCPIxjg0OkK7JXVjD95wpBLpav7Tzxujb+e+KmrqUa3WEQYHR5mVBvF6VRZlZxKyfsfoU76GZ6YovmPLirqG+j3ehkKBjl9vh57VQ1js3OMaGP09Q/gejjCsxkv13+8jFmOQHjkGEJTNfr6B4mJS+DAwSNoE34Gxx7Tevce56820esZx+HzcbbxCieqatB8AUZUN/cHHDxwDOAbd9Pd0U5MVBzC+EMVn9dPx2+dWCLjOFh2DNXjpc+p0eN00dTxO72jYwx7fTT+2kJVXT0eX5BHmgfVpeEd9/Ai6OfxIycJy1ci7C4uYd97pRQW7SA6NoGyQyfwTAQYcnlo777Dpaaf6eofpPv+A75tvIa9vIrbvQ567vbT3trBxXMXuH7lKp0traxdvR7hzWWJLI9PZMWKFJKS09iw8R32l5axtXgPqZn5pGVvILdgC1l5m0nNyCMpJY1VyetYuXI18fEJhIfLSKJCdFQsMbY4hPQ1OWzZtJ3CTdvJyipgfdrbvJWSwbrUHDKy8snOLiAjI5eMzDzS03NZszaNhIREoqOXYrXYiLDasJgjsJgiiLTYEG42/oDrXh/lx09SvG0nXxw/SWX5V1xubGTv7hK2FW1ha2ER24qK2FxQQGZ6OkmJSbweF48tKhqLyYpZsWBRLFhNVv4GHP2Q7y13zLUAAAAASUVORK5CYII="
+                    alt=""
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transition-delay:500ms" />
+                  <picture>
+                    <source srcSet="/static/32975babe9834cd024e61a1765949d11/eaec9/6-sharpie-pen-chromatographs.png 170w,
+/static/32975babe9834cd024e61a1765949d11/6a7c4/6-sharpie-pen-chromatographs.png 339w,
+/static/32975babe9834cd024e61a1765949d11/34428/6-sharpie-pen-chromatographs.png 678w,
+/static/32975babe9834cd024e61a1765949d11/799c6/6-sharpie-pen-chromatographs.png 904w"
+                      sizes="(max-width: 678px) 100vw, 678px" /><img sizes="(max-width: 678px) 100vw, 678px" srcSet="/static/32975babe9834cd024e61a1765949d11/eaec9/6-sharpie-pen-chromatographs.png 170w,
+/static/32975babe9834cd024e61a1765949d11/6a7c4/6-sharpie-pen-chromatographs.png 339w,
+/static/32975babe9834cd024e61a1765949d11/34428/6-sharpie-pen-chromatographs.png 678w,
+/static/32975babe9834cd024e61a1765949d11/799c6/6-sharpie-pen-chromatographs.png 904w"
+                      src="/static/32975babe9834cd024e61a1765949d11/34428/6-sharpie-pen-chromatographs.png" alt=""
+                      loading="eager"
+                      style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition:opacity 500ms" />
+                  </picture><noscript>
+                    <picture>
+                      <source srcset="/static/32975babe9834cd024e61a1765949d11/eaec9/6-sharpie-pen-chromatographs.png 170w,
+/static/32975babe9834cd024e61a1765949d11/6a7c4/6-sharpie-pen-chromatographs.png 339w,
+/static/32975babe9834cd024e61a1765949d11/34428/6-sharpie-pen-chromatographs.png 678w,
+/static/32975babe9834cd024e61a1765949d11/799c6/6-sharpie-pen-chromatographs.png 904w"
+                        sizes="(max-width: 678px) 100vw, 678px" /><img loading="eager"
+                        sizes="(max-width: 678px) 100vw, 678px" srcset="/static/32975babe9834cd024e61a1765949d11/eaec9/6-sharpie-pen-chromatographs.png 170w,
+/static/32975babe9834cd024e61a1765949d11/6a7c4/6-sharpie-pen-chromatographs.png 339w,
+/static/32975babe9834cd024e61a1765949d11/34428/6-sharpie-pen-chromatographs.png 678w,
+/static/32975babe9834cd024e61a1765949d11/799c6/6-sharpie-pen-chromatographs.png 904w"
+                        src="/static/32975babe9834cd024e61a1765949d11/34428/6-sharpie-pen-chromatographs.png" alt=""
+                        style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" />
+                    </picture>
+                  </noscript>
+                </span>
+                <figcaption>Figure 6. Sharpie pen chromatographs.</figcaption>
+              </figure>
+
+
+
+              <figure class="wp-block-image size-large is-resized"><span
+                  class="wp-image-303 inline-gatsby-image-wrapper gatsby-image-wrapper"
+                  style="position:relative;overflow:hidden;max-width:100%;width:660px" data-reactroot=""><span
+                    aria-hidden="true" style="width:100%;padding-bottom:52.12121212121212%"></span><img
+                    aria-hidden="true"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC30lEQVQozx2NW0xTBwBA77dDELpySx/33t72gq3WUoV2lY2x1IwAisHER1AMIkFtFh/IYiOxybKYYdwMMSHRdIySqbCZipqABl8IVZBgfcCYQhwmGBB1A6OSuH2cRc//OUf4Lhym6UQj13q76Ru8w/HmX2i/0MbhHxu4/+cwM3MvmZ6dZvO2ahoaG5j5Z5K5d2/putLJ0cbv6eg8yze1dfzw01FqdgUREokEUy+naes4xY3+m0xMTZP4Y5hNlRUMPBjiydQk48+eULpxA5EzzTx6Os7c/BsOHznCsaZjPJ4YIz4wyMnmCA7nCoSBgV5ORiNETp/g4tUY3X03uRLvobymikh7lA/c+2sUbyBAS6yFB+Oj9A7dZsv2Sn79PUrzqSgjY/co27Ae1eZCuHw5xuz8LC1treSt+pKL17rovhXH9Vk++SWlxK53EzwUxqC5KKvcSle8h5rafdicHiKtEfrvDnIwHEKSVTKz3AhFRYVU7azG48sjQ8piSc5KfF8VY87KJtWyGPvylZRVVCO7crE4c8gNFGHJ8mC2ufD48qnaEcS93Ids1VDtToSSNasJ1taS6cxmkaiwP1TPyNgw9mw/CwwqFcG9/Ac4/QUUrt/CzOxrCorKEBUHDreP/qEEdaF6UtL02DQnQrTlOJd6zqFmuvgkNYNQ/SGeT01g9/hJEhW8X6/l0atxCjeV411Vypt/5ymv2kGaScOsLuHuwxF+i3WQlKxDUjSEvs7ztP7chEFSSdYZ2fNtPTOv51nq/4IUo4ri9hKffMrW/QcwO3P5+/0L6sJhFuplUkWJ9nPneTg6SoZJxmBSEC5d6GD3vj3oDBmIZoVA8Rp2hw6iOJahVzREuwN3fgDFnYNedVCweh1LvXmkW2ykmxRy/Z9TWFyCZLUhWTUEe6aKwWLEKEkYZQW9yULSpyJ6SUG0aqQrGilGmTRJ/ThYKJpJNcqIlg+eFZ3BRLJOh0lWPkb/BzCCwxuY+YxBAAAAAElFTkSuQmCC"
+                    alt=""
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transition-delay:500ms" />
+                  <picture>
+                    <source srcSet="/static/d25607e7a9ba260e44096fa7fea46552/bd361/7-dye-mixes-red-blue-yel-chromatographs.png 165w,
+/static/d25607e7a9ba260e44096fa7fea46552/704d3/7-dye-mixes-red-blue-yel-chromatographs.png 330w,
+/static/d25607e7a9ba260e44096fa7fea46552/c6e1a/7-dye-mixes-red-blue-yel-chromatographs.png 660w,
+/static/d25607e7a9ba260e44096fa7fea46552/e4c64/7-dye-mixes-red-blue-yel-chromatographs.png 880w"
+                      sizes="(max-width: 660px) 100vw, 660px" /><img sizes="(max-width: 660px) 100vw, 660px" srcSet="/static/d25607e7a9ba260e44096fa7fea46552/bd361/7-dye-mixes-red-blue-yel-chromatographs.png 165w,
+/static/d25607e7a9ba260e44096fa7fea46552/704d3/7-dye-mixes-red-blue-yel-chromatographs.png 330w,
+/static/d25607e7a9ba260e44096fa7fea46552/c6e1a/7-dye-mixes-red-blue-yel-chromatographs.png 660w,
+/static/d25607e7a9ba260e44096fa7fea46552/e4c64/7-dye-mixes-red-blue-yel-chromatographs.png 880w"
+                      src="/static/d25607e7a9ba260e44096fa7fea46552/c6e1a/7-dye-mixes-red-blue-yel-chromatographs.png"
+                      alt="" loading="eager"
+                      style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition:opacity 500ms" />
+                  </picture><noscript>
+                    <picture>
+                      <source srcset="/static/d25607e7a9ba260e44096fa7fea46552/bd361/7-dye-mixes-red-blue-yel-chromatographs.png 165w,
+/static/d25607e7a9ba260e44096fa7fea46552/704d3/7-dye-mixes-red-blue-yel-chromatographs.png 330w,
+/static/d25607e7a9ba260e44096fa7fea46552/c6e1a/7-dye-mixes-red-blue-yel-chromatographs.png 660w,
+/static/d25607e7a9ba260e44096fa7fea46552/e4c64/7-dye-mixes-red-blue-yel-chromatographs.png 880w"
+                        sizes="(max-width: 660px) 100vw, 660px" /><img loading="eager"
+                        sizes="(max-width: 660px) 100vw, 660px" srcset="/static/d25607e7a9ba260e44096fa7fea46552/bd361/7-dye-mixes-red-blue-yel-chromatographs.png 165w,
+/static/d25607e7a9ba260e44096fa7fea46552/704d3/7-dye-mixes-red-blue-yel-chromatographs.png 330w,
+/static/d25607e7a9ba260e44096fa7fea46552/c6e1a/7-dye-mixes-red-blue-yel-chromatographs.png 660w,
+/static/d25607e7a9ba260e44096fa7fea46552/e4c64/7-dye-mixes-red-blue-yel-chromatographs.png 880w"
+                        src="/static/d25607e7a9ba260e44096fa7fea46552/c6e1a/7-dye-mixes-red-blue-yel-chromatographs.png"
+                        alt=""
+                        style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" />
+                    </picture>
+                  </noscript>
+                </span>
+                <figcaption>Figure 7. Red, blue, and yellow dye mixture chromatographs. Left to right isopropanol to
+                  water ratios: 9-1, 8-2, 5-5, 2-8, 9-1.</figcaption>
+              </figure>
+
+
+
+              <h2><strong>Annotated Bibliography</strong></h2>
+
+
+
+              <p><em>AP Chemistry Guided Inquiry Experiments: Applying the Science Practices. CollegeBoard. 2013. Print.
+                  We used an article from this manual, investigation 5, as the lab which we worked to improve.
+                </em><em></em></p>
+
+
+
+              <p>Levy, Irv. Conversation. 2014, Wenham.</p>
+
+
+
+              <p>Cannon, Amy. Interviewed by AP Lab Cohort 2014. 2014, Wenham.</p>
+
+
+
+              <h2>Critiques</h2>
+
+
+
+              <ul>
+                <li>The filter paper strips needed to be cut by hand. They also took a decent amount of the lab time
+                  that could have been used on performing experiments. The amount of strips needed ended up being quite
+                  a considerable amount.</li>
+                <li>The dotting of the paper is a delicate task. Multiple batches of chromatography batches were messed
+                  up due to either putting too much material on the paper, or too little.</li>
+                <li>The material being analyzed by the chromatography should not be a material that has unknown
+                  qualities when the solvents and ratios of them are still being tested. Using three distinct primary
+                  colors of food dye mixed together as the material gave us a standard by which we knew when they were
+                  fully separated. The colors were also easier to distinguish.</li>
+                <li>We should have spent more time analyzing the solvents we used to ensure that they matched the
+                  solvents that are currently used for Chromatography. This would have saved us a lot of initial time;
+                  also, looking into the ratio that is used in a normal chromatography solvent mixture would have saved
+                  time and materials.</li>
+                <li>When using heptane over hexane, due to hexane being on a danger scale higher than heptane, the user
+                  should still understand that heptane is still hazardous and be careful about inhaling the fumes or
+                  working outside of the hood.</li>
+                <li>Research team did not give themselves a big enough time window to complete experiments and find a
+                  successful replacement for the widely used chromatography solvent mixture.</li>
+                <li>The slides came out either streaked, blank or with the entire material moved to the top of the slide
+                  with no separation.</li>
+              </ul>
+
+
+
+              <h2><strong>Future work</strong></h2>
+
+
+
+              <ul>
+                <li>Strips can be cut outside of the lab and in free time. If a team plans to cut their own strips they
+                  should be generous with the amount of strips they predict they will need and cut them outside of the
+                  lab at their own leisure.</li>
+                <li>Future teams should ensure that they know which solvents would theoretically work best and
+                  understand why. They should also have an idea of what ratio should work best theoretically.</li>
+                <li>When creating slides, they should practice first by performing an actual chromatography with the
+                  usual solvent mixture, so that they can master how the procedure should work. They should be familiar
+                  with how the dots look separated from each other, when to pull the plates, how to measure the Rf
+                  values, and just how much material should be dotted onto the plate for the best separation and
+                  results. This will greatly assist with the corrections being made to the experiment procedure and save
+                  a lot of initial time by narrowing down which problems need to be focused on.</li>
+                <li>Teams should label both the containment chambers and label the plates with which solvent mixture was
+                  used to develop it. Labeling the plates allows the team to come back to them later and analyze which
+                  could be further developed into.</li>
+                <li>Team should spend first visit to lab ensuring that everything is in place and ready to go; solvents
+                  are on hand, containment chambers are clean and labeled, materials to be chromatographed are accounted
+                  for, plates are cut and that the tools needed are available. This will set them up to fly through
+                  experiments on their next visit.</li>
+              </ul>
+
+
+
+              <h2><strong>Lab Notebook</strong></h2>
+
+
+
+              <figure class="wp-block-image size-large is-resized"><span
+                  class="wp-image-315 inline-gatsby-image-wrapper gatsby-image-wrapper"
+                  style="position:relative;overflow:hidden;max-width:100%;width:649px" data-reactroot=""><span
+                    aria-hidden="true" style="width:100%;padding-bottom:118.51851851851852%"></span><img
+                    aria-hidden="true"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAIAAAB1KUohAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEGklEQVQ4yy1U2XKcSBDk/x/XlkayvV4fofCDP2O9smzrGGkOhpsGGvo+geEYWRs944iKDiDIyqQyCy/JMeG9tJNqZ2Und2FnaWamBsw7AHmUNQnA26AMEhik9ToA27DYhsXHqysvSGomR9M/2/5Zt7NqD0R0DbUNtYh1cYbXO7BcxfdPUVoQZQ8QmyhrqBi+fP3qbYKSq5GpPcSK8BZilQKcVyzOcZyhBJAoQ7sYRmkTJBBAzuSeygHT7vOXL95qmzM1EtH7UZkVdBeVcY7zigMoQMV3URUkdZLjMGmiDEVZUzZa2UNDu09XV97jOmVy0O2hITYraV6yCikAGRE91xOTI+b7qjFFrSA2ROyJ2As9N8R++PzZe3iKuRqknajcMz24ObEurxhiHVMD4e5txLqyVjW2iPVUDNLMFdLvP330Hp4ipgbVzlyP0s7SzsJMXI/cTMfPGTDfE+m61NjmFa+Q5nqqGvXuwwcH5mpUduLK0Z5OIgYi+hNnTWxDW8Q6xPoE0ChD0h4KKN7+8/4PWJ9MNseyTsWpHO1RORV7rkYq9g2xXI2gYpfv//bulgHXozAj5h1XI1cDFT0/SkCsRbRD5HjSjog9xKbGhskxK8jFu7fe7b0vzURlH6V1VpAkx7ujn1GGwqQJ4jrOcZS5KqBIAc1KJvSUArx4e+n9uveZdNOWZjwGYM/c8GehJ2kPXE+u1Mjd7SztgUpnVZw2528uvJ93G8w6KvdFLQDkaUEg1gnACcCgYqDicY4TQLKSFVDmJcsKquwhSODry4V382vN1Wi65zCFKSBR2qQFPVqiilokOQFQZgU9Be7Yhev2tx8Vry/O/4Bt/1xjCSqWljTOcQpIhRREKkqbChnEOsJ7wnsmh4ZYaQ+bALxanHs3P1dCO+Y4a9Z+5odlVpAwrYMYZgULknrl50EMgxj6YemH5eM6QbRb77JXizPv5ueT0G6HEWvjnGQFTQHJS5qV9IRPj0/iDIdJ7UfVLoJUDKtt+tfizPv+4whuZ2GnhrRVoyuka2KI6AsoMOvTgpaNakgLKg6xkWa2/ctyHTrm65vHkw2neOcVjzJM5YBYl5csr0SY1JsAHBt1mHVMj7p7eXgKHPi/70uhJ2FmfuR3SSgY11NN7DYsQSX8sHx4DMtacjWWjaJy0N3L/ePOTfvb9YMwTrNqD6o96O5Ztc+qPTjmSkBsowytdwAiI8yMeU/loLqXu+X29cXC+3Z9L4zTTEVPeFcTg6hF1GLeYd7nJa8aDbHB3C0ZU2NDW9X+vl1uzy7OvX+v76WZdHfwo3ITgDBpNjvgR3Dn7KmX62Tl55ugCGK4i90vyY+h0PPtw+bscuHATrYZuR6o6KRxiy30SOUe8a7GtkS6qCWoRFEr5II8mP7lx+3q7M3if/r7B2Thmhi1AAAAAElFTkSuQmCC"
+                    alt=""
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transition-delay:500ms" />
+                  <picture>
+                    <source srcSet="/static/5b646d42c2bbc185b455bc4de1193c0a/18c31/chromatography-research-notes-p1-copy.png 162w,
+/static/5b646d42c2bbc185b455bc4de1193c0a/59727/chromatography-research-notes-p1-copy.png 325w,
+/static/5b646d42c2bbc185b455bc4de1193c0a/853e8/chromatography-research-notes-p1-copy.png 649w,
+/static/5b646d42c2bbc185b455bc4de1193c0a/225a5/chromatography-research-notes-p1-copy.png 974w,
+/static/5b646d42c2bbc185b455bc4de1193c0a/d6ba7/chromatography-research-notes-p1-copy.png 988w"
+                      sizes="(max-width: 649px) 100vw, 649px" /><img sizes="(max-width: 649px) 100vw, 649px" srcSet="/static/5b646d42c2bbc185b455bc4de1193c0a/18c31/chromatography-research-notes-p1-copy.png 162w,
+/static/5b646d42c2bbc185b455bc4de1193c0a/59727/chromatography-research-notes-p1-copy.png 325w,
+/static/5b646d42c2bbc185b455bc4de1193c0a/853e8/chromatography-research-notes-p1-copy.png 649w,
+/static/5b646d42c2bbc185b455bc4de1193c0a/225a5/chromatography-research-notes-p1-copy.png 974w,
+/static/5b646d42c2bbc185b455bc4de1193c0a/d6ba7/chromatography-research-notes-p1-copy.png 988w"
+                      src="/static/5b646d42c2bbc185b455bc4de1193c0a/853e8/chromatography-research-notes-p1-copy.png"
+                      alt="" loading="eager"
+                      style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition:opacity 500ms" />
+                  </picture><noscript>
+                    <picture>
+                      <source srcset="/static/5b646d42c2bbc185b455bc4de1193c0a/18c31/chromatography-research-notes-p1-copy.png 162w,
+/static/5b646d42c2bbc185b455bc4de1193c0a/59727/chromatography-research-notes-p1-copy.png 325w,
+/static/5b646d42c2bbc185b455bc4de1193c0a/853e8/chromatography-research-notes-p1-copy.png 649w,
+/static/5b646d42c2bbc185b455bc4de1193c0a/225a5/chromatography-research-notes-p1-copy.png 974w,
+/static/5b646d42c2bbc185b455bc4de1193c0a/d6ba7/chromatography-research-notes-p1-copy.png 988w"
+                        sizes="(max-width: 649px) 100vw, 649px" /><img loading="eager"
+                        sizes="(max-width: 649px) 100vw, 649px" srcset="/static/5b646d42c2bbc185b455bc4de1193c0a/18c31/chromatography-research-notes-p1-copy.png 162w,
+/static/5b646d42c2bbc185b455bc4de1193c0a/59727/chromatography-research-notes-p1-copy.png 325w,
+/static/5b646d42c2bbc185b455bc4de1193c0a/853e8/chromatography-research-notes-p1-copy.png 649w,
+/static/5b646d42c2bbc185b455bc4de1193c0a/225a5/chromatography-research-notes-p1-copy.png 974w,
+/static/5b646d42c2bbc185b455bc4de1193c0a/d6ba7/chromatography-research-notes-p1-copy.png 988w"
+                        src="/static/5b646d42c2bbc185b455bc4de1193c0a/853e8/chromatography-research-notes-p1-copy.png"
+                        alt=""
+                        style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" />
+                    </picture>
+                  </noscript>
+                </span></figure>
+
+
+
+              <figure class="wp-block-image size-large is-resized"><span
+                  class="wp-image-313 inline-gatsby-image-wrapper gatsby-image-wrapper"
+                  style="position:relative;overflow:hidden;max-width:100%;width:701px" data-reactroot=""><span
+                    aria-hidden="true" style="width:100%;padding-bottom:74.85714285714286%"></span><img
+                    aria-hidden="true"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAABYlAAAWJQFJUiTwAAACnElEQVQozzXSx5LjNhQF0P7/z3C30kR7or/Bi/F0KzGAASRyBghRFCl1uagZ77DAwb149R4QsS5eXRxdN7k4+f7W9bdwurp4tWESZlDuIszZhImpSGUUusfMfvn29+Nq8dBgY7urj1OIV65PTAbMHBGBqxPmoYCygApAiXkQui/uB8L956/fH1fLB4g0U1HZk+suxg3SzF6a3vpRqBOivm51Sz2Tp3uRszADEeHTl2+/sdC98UPdiOctyADJClLWLMlaULEkx8/bYnuo85JmBTnmiIqIuf/46fOM61aH0813U9WoFJCi5lR0XEZELWahRqaEEpSsghIzD7GRdmyJ+fDnX3eMjI834y8NNqDmCcB5yVpi795j3jXYJjmqGo3m8lGHK0Tq3YePf8y1sWXyJExfI50AvEvgMceg5iUUVatqpNOCvuyropYtcUR02k9VK968fz8nN9gYP2o3pAU5ZO3Lvtweqt2xTgA+pG1e0vtzaHesU0AgMjbcCsg2b9/9wlaaszQ9og7UYp/AJMcQmZba+SMVrxqJqG+wJbzjujfhmpdk/ebt4/qObTdpP+Ql3afNPz+OP57zfdpmBXnZlwkgP3fFMUdZSfdJk1fMhFsK0GqzeVqvHlritBusH7juy0b+3IJDhoiIRHRVq2tkspJVSNN5Lmc+r9otyeFitZpxQxzXvbJnzAKoxSFtCihb6qiMNbYtcVWjqmbGyo3CDDrcDmm1WK6eNvdk211dnLQbm/mqxCwodzF+NGFS9iLMwNUZIsPUSZjBdq+7A3haLhe/sPGj7UblLhC7EoqWuN/Yj8pelB2p7LOCMdVLe3Hx9XmbPi1Xi816Hpj+HyMaIJqXQejB+Mm4UZpB2jmZyp6bYU6Or/++HO/J6/8ALGsb1tdCAm0AAAAASUVORK5CYII="
+                    alt=""
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transition-delay:500ms" />
+                  <picture>
+                    <source srcSet="/static/6344e9f96395a791b635f70f6077d13e/1aaec/chromatography-research-notes-p2-copy.png 175w,
+/static/6344e9f96395a791b635f70f6077d13e/8daf7/chromatography-research-notes-p2-copy.png 351w,
+/static/6344e9f96395a791b635f70f6077d13e/a9fc9/chromatography-research-notes-p2-copy.png 701w,
+/static/6344e9f96395a791b635f70f6077d13e/ca463/chromatography-research-notes-p2-copy.png 934w"
+                      sizes="(max-width: 701px) 100vw, 701px" /><img sizes="(max-width: 701px) 100vw, 701px" srcSet="/static/6344e9f96395a791b635f70f6077d13e/1aaec/chromatography-research-notes-p2-copy.png 175w,
+/static/6344e9f96395a791b635f70f6077d13e/8daf7/chromatography-research-notes-p2-copy.png 351w,
+/static/6344e9f96395a791b635f70f6077d13e/a9fc9/chromatography-research-notes-p2-copy.png 701w,
+/static/6344e9f96395a791b635f70f6077d13e/ca463/chromatography-research-notes-p2-copy.png 934w"
+                      src="/static/6344e9f96395a791b635f70f6077d13e/a9fc9/chromatography-research-notes-p2-copy.png"
+                      alt="" loading="eager"
+                      style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition:opacity 500ms" />
+                  </picture><noscript>
+                    <picture>
+                      <source srcset="/static/6344e9f96395a791b635f70f6077d13e/1aaec/chromatography-research-notes-p2-copy.png 175w,
+/static/6344e9f96395a791b635f70f6077d13e/8daf7/chromatography-research-notes-p2-copy.png 351w,
+/static/6344e9f96395a791b635f70f6077d13e/a9fc9/chromatography-research-notes-p2-copy.png 701w,
+/static/6344e9f96395a791b635f70f6077d13e/ca463/chromatography-research-notes-p2-copy.png 934w"
+                        sizes="(max-width: 701px) 100vw, 701px" /><img loading="eager"
+                        sizes="(max-width: 701px) 100vw, 701px" srcset="/static/6344e9f96395a791b635f70f6077d13e/1aaec/chromatography-research-notes-p2-copy.png 175w,
+/static/6344e9f96395a791b635f70f6077d13e/8daf7/chromatography-research-notes-p2-copy.png 351w,
+/static/6344e9f96395a791b635f70f6077d13e/a9fc9/chromatography-research-notes-p2-copy.png 701w,
+/static/6344e9f96395a791b635f70f6077d13e/ca463/chromatography-research-notes-p2-copy.png 934w"
+                        src="/static/6344e9f96395a791b635f70f6077d13e/a9fc9/chromatography-research-notes-p2-copy.png"
+                        alt=""
+                        style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" />
+                    </picture>
+                  </noscript>
+                </span></figure>
+
+
+
+              <figure class="wp-block-image size-large is-resized"><span
+                  class="wp-image-314 inline-gatsby-image-wrapper gatsby-image-wrapper"
+                  style="position:relative;overflow:hidden;max-width:100%;width:666px" data-reactroot=""><span
+                    aria-hidden="true" style="width:100%;padding-bottom:115.5688622754491%"></span><img
+                    aria-hidden="true"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAYAAAALHW+jAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEb0lEQVQ4yz2VaW/aahCF/f//yJVuyr4laapIldJeGrKwGAzG+75vJMEh9bmaIe2HEQis5z1z5sxrwXKzOilqJMWxidJXUMXZuZL8SL8jSt/ghhVsP4dux1DNEJu9DVnzIOs+prNn/PulhX8uLiC4QVWn5Qlp+d44QQHTTWG6CT9sOgksN4VmhrC9AoadcGXVb7hBhb0eIEyPkHY6Wp0O2v0uBN1Oayco4YZFs1NdfshwUga7YQndiqAaIQw7heOX2Coul26nELcW/OQN4kZBq91Fq0dAK6mD+AW6HTVPix2WGw2WlyGID/DCEoaTQDUjyKrPBxF4vbNgeTn86IUVLsQdvrQ/FWpmXJM/suY1948bLEQVC1HBemtA1nxWt1NcqEaEneJB1gI4QfX3gDh/x9Nig4tWG+1+D4LtF+xhlL01ukWe5YiyI+KcqkaU1XDDAyyvgONXcMMXBMkblxe98P+zx+UZOCCgV9RJ8Y6kqBtqh8ymA7KKBwUvOmCzs6DoISy3gB9TAuj5E7dLCqf3T9xyZ9CHoBpR7YUV3KBsaCDkV5DQya8gb92ghGrEkPYuQ2kYXnhARLCsZvDdfzO0Ol10hn0IppPVSf4OcWuyh9MHEStJx2qjsY/zlYKH+Q53P5/xY7oAPzNbgewhIHXz/W76CRzQlOOavNKtuLl/XEOSbVblxweetO2XrGqvBayQlK53NntIQtLihNvvd2h1e+iOBhBk1atJviRbzY/pHLOnDUNVI+CN2Gs+e/i0kEGxepxvGWo6GQ+EPLy5/Y42A4cQtnunptWi2Hy7/Ynn5R7bvcMgzYpJOZ6XMlaSgfXWImtYoe5kcD9zeH1zy8AeAUXJZKBhJw3B5qs9NDOGrLq8cgRU9IAVUdvS3uHBhekbw4LkFZOrG3R6ffTGQwjrrVWnxTu116y3JrckSgarpLUjmKx6fAANwvYLZOUH0vKDJ0zA4eQK3f4A/fEIgiTbnENSOHuW8PPXArPHzWe7ESv846Xt5TCdlBXS/7QpFK3+aIL+cITBZAxhp7gMtLycY3M2X4aqhwiTV95nNygQ0maEB95lmrrp5pwAynBvMEJ/ND4D56t9neQ1NCtqKHO0y9Q2fd/sTOwUB5pBW5LxWlLRNtH+04QdP2fgYDzG8HJybpkCqhpBs1xrmC/3mD1Jf71cbXSO0vR+CYoVHchJUBweiu1l6A6GGE0uMbq6hLBca3Wc0RWkNA/PZ9D9g8gKqVZrjXNJ8M3WZCB5SBdIVn3AchIGji+vML4moKhybDQzaGS6PPcOJLreVQ80dVIoSjrDCEyXbJgcGZhXHzDsiCc8ubrG5Os1hF8PIl+wiu41+uc0KYu0HX/uRroT6XfyL8lPvHK0rgTUzACdfh+T60/gWjJqmmZaHJu0ONInT+58A1U8DAqxH78wmIoymZUn5IcPEoJ2r4fL66+4vPkKQdzoNRmbFXVTvX6gfDlXcTghr07ISr4r+c1H20K55BdV+Y68+g1ZsdHqdhl49e0G/wN7vXaROLvOvgAAAABJRU5ErkJggg=="
+                    alt=""
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transition-delay:500ms" />
+                  <picture>
+                    <source srcSet="/static/fbb4f4e111e598d6c9f9dbd47b218e5b/31e07/chromatography-research-notes-p3-copy.png 167w,
+/static/fbb4f4e111e598d6c9f9dbd47b218e5b/50822/chromatography-research-notes-p3-copy.png 333w,
+/static/fbb4f4e111e598d6c9f9dbd47b218e5b/e8a52/chromatography-research-notes-p3-copy.png 666w,
+/static/fbb4f4e111e598d6c9f9dbd47b218e5b/0eb15/chromatography-research-notes-p3-copy.png 944w"
+                      sizes="(max-width: 666px) 100vw, 666px" /><img sizes="(max-width: 666px) 100vw, 666px" srcSet="/static/fbb4f4e111e598d6c9f9dbd47b218e5b/31e07/chromatography-research-notes-p3-copy.png 167w,
+/static/fbb4f4e111e598d6c9f9dbd47b218e5b/50822/chromatography-research-notes-p3-copy.png 333w,
+/static/fbb4f4e111e598d6c9f9dbd47b218e5b/e8a52/chromatography-research-notes-p3-copy.png 666w,
+/static/fbb4f4e111e598d6c9f9dbd47b218e5b/0eb15/chromatography-research-notes-p3-copy.png 944w"
+                      src="/static/fbb4f4e111e598d6c9f9dbd47b218e5b/e8a52/chromatography-research-notes-p3-copy.png"
+                      alt="" loading="eager"
+                      style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition:opacity 500ms" />
+                  </picture><noscript>
+                    <picture>
+                      <source srcset="/static/fbb4f4e111e598d6c9f9dbd47b218e5b/31e07/chromatography-research-notes-p3-copy.png 167w,
+/static/fbb4f4e111e598d6c9f9dbd47b218e5b/50822/chromatography-research-notes-p3-copy.png 333w,
+/static/fbb4f4e111e598d6c9f9dbd47b218e5b/e8a52/chromatography-research-notes-p3-copy.png 666w,
+/static/fbb4f4e111e598d6c9f9dbd47b218e5b/0eb15/chromatography-research-notes-p3-copy.png 944w"
+                        sizes="(max-width: 666px) 100vw, 666px" /><img loading="eager"
+                        sizes="(max-width: 666px) 100vw, 666px" srcset="/static/fbb4f4e111e598d6c9f9dbd47b218e5b/31e07/chromatography-research-notes-p3-copy.png 167w,
+/static/fbb4f4e111e598d6c9f9dbd47b218e5b/50822/chromatography-research-notes-p3-copy.png 333w,
+/static/fbb4f4e111e598d6c9f9dbd47b218e5b/e8a52/chromatography-research-notes-p3-copy.png 666w,
+/static/fbb4f4e111e598d6c9f9dbd47b218e5b/0eb15/chromatography-research-notes-p3-copy.png 944w"
+                        src="/static/fbb4f4e111e598d6c9f9dbd47b218e5b/e8a52/chromatography-research-notes-p3-copy.png"
+                        alt=""
+                        style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" />
+                    </picture>
+                  </noscript>
+                </span></figure>
+            </div>
+            <div class="catlist-module--article__catlist--3hS28">Categorization: <div
+                class="catlist-module--catName--1n_lg">Chemistry</div>
+            </div>
+          </article>
+          <nav class="postNav-module--postnav--3mDDd"><a href="/posts/partners-in-development-internship-report/">
+              <div class="postNav-module--postnav__head--301EZ">Previous Post:</div>
+              <div class="postNav-module--postnav__title--1_gx8">Report of my Internship with Partners in Development,
+                Inc.: Community Development in the Mississippi Delta</div>
+            </a><a href="/posts/health-professions-mock-interview-part-two/">
+              <div class="postNav-module--postnav__head--301EZ">Next Post:</div>
+              <div class="postNav-module--postnav__title--1_gx8">Health Professions Mock Interview: Part Two</div>
+            </a></nav>
+        </main>
+      </div>
+      <div style="display:flex;justify-content:center">
+        <footer class="footer-module--footer--2-hg1">
+          <div>© <!-- -->2022<!-- --> <a href="https://jacobstephens.net">Jacob Stephens</a> | <a
+              href="/privacy-policy">Privacy Policy</a></div>
+        </footer>
+      </div>
+    </div>
+    <div id="gatsby-announcer"
+      style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0"
+      aria-live="assertive" aria-atomic="true"></div>
+  </div>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D1JL7BTX37"></script>
+  <script>
+
+
+    if (true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { window.dataLayer && window.dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-D1JL7BTX37', { "send_page_view": false });
+    }
+  </script>
+  <script
+    id="gatsby-script-loader">/*<![CDATA[*/window.pagePath = "/posts/finding-greener-alternatives-to-ap-chromatography-lab/";/*]]>*/</script>
+  <script
+    id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping = { "polyfill": ["/polyfill-3f747b3be5f472020069.js"], "app": ["/app-8d8158e1150371e0c9ca.js"], "component---cache-caches-gatsby-plugin-offline-app-shell-js": ["/component---cache-caches-gatsby-plugin-offline-app-shell-js-504f688893251871c6ae.js"], "component---src-pages-404-js": ["/component---src-pages-404-js-9f8881f1c05a0fcca73a.js"], "component---src-pages-index-js": ["/component---src-pages-index-js-5914d3046a5f09b96db6.js"], "component---src-templates-page-js": ["/component---src-templates-page-js-a65d3ebc49f2f81ea6e4.js"], "component---src-templates-post-js": ["/component---src-templates-post-js-97d8f17007822468a535.js"] };/*]]>*/</script>
+  <script src="/polyfill-3f747b3be5f472020069.js" nomodule=""></script>
+  <script src="/component---src-templates-post-js-97d8f17007822468a535.js" async=""></script>
+  <script src="/284da15516917c324477a862d7d87aa18092acdc-2259aaa5118560e2fcbc.js" async=""></script>
+  <script src="/commons-187e9f092fef749039ba.js" async=""></script>
+  <script src="/777cf710-bdf39bcd2d5fe8ec650f.js" async=""></script>
+  <script src="/app-8d8158e1150371e0c9ca.js" async=""></script>
+  <script src="/framework-dbb71ad78d33dc3746f8.js" async=""></script>
+  <script src="/webpack-runtime-8a47a20bd333eb60ab2e.js" async=""></script>
+</body>
+
+</html>
