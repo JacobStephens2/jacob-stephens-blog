@@ -1,4 +1,4 @@
-# jacobstephens.net
+# blog.stephens.page
 
 Personal website of Jacob Stephens. A lightweight, static HTML site with no build tooling, no JavaScript, and self-hosted fonts.
 
