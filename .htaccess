@@ -12,3 +12,8 @@ RewriteRule ^poker\-discord\/?(.*)$ "https\:\/\/discord\.gg\/bxFEdktvcp$1" [R=30
 
 # Redirect underscore post URLs to hyphenated equivalents
 RewriteRule ^posts/bending_fire(/.*)?$ /posts/bending-fire$1 [R=301,L]
+
+# Redirect removed post to posts index
+RewriteRule ^posts/progressive-web-app-for-dana-alans-campaign/?$ /posts/ [R=301,L]
+RewriteRule ^posts/the-well-played-game-web-app/?$ /posts/ [R=301,L]
+RewriteRule ^posts/custom-wordpress-theme-live-on-demo-website/?$ /posts/ [R=301,L]
