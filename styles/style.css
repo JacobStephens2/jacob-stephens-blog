@@ -75,11 +75,16 @@ h3 {
     text-transform: uppercase;
 }
 
+.home-nav-block {
+    width: min(14rem, 100%);
+    margin: 0 auto;
+}
+
 .home-section-heading {
     width: auto;
     margin: 3.3rem 0 0.9rem;
     font-size: 1.65rem;
-    text-align: left;
+    text-align: center;
 }
 
 .title {
@@ -146,8 +151,6 @@ img {
     margin-top: 0;
     padding-left: 0;
     text-align: left;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .home-list li {
