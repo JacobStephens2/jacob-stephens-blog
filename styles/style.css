@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,700&family=Work+Sans:wght@400;500;600&display=swap");
+
 @font-face {
     font-family: "Merriweather";
     font-style: normal;
@@ -14,46 +16,77 @@
     src: url("/fonts/playfair-display-400.woff2") format("woff2");
 }
 
+:root {
+    --paper: #fef9ee;
+    --paper-deep: #f8f3e8;
+    --ink: #18454d;
+    --ink-soft: #36454f;
+    --accent: #006a6a;
+    --accent-soft: rgba(0, 106, 106, 0.12);
+    --max-width: 72ch;
+}
+
 html {
-    font-family: "Merriweather", serif;
+    font-family: "Newsreader", "Merriweather", serif;
     font-weight: 400;
     font-style: normal;
+    color: var(--ink);
 }
 
 body {
     margin: 0 auto;
-    padding: 0 1.2rem 2rem;
-    max-width: 70ch;
-    /* light cream */
-    background-color: #ffffed;
+    padding: 0 1.4rem 3rem;
+    max-width: var(--max-width);
+    background:
+        linear-gradient(180deg, rgba(24, 69, 77, 0.025), rgba(24, 69, 77, 0) 14rem),
+        var(--paper);
+    color: var(--ink);
 }
 
 p {
-    max-width: 70ch;
-    margin-top: 1.1rem;
-    line-height: 1.6;
+    max-width: var(--max-width);
+    margin-top: 1.2rem;
+    font-size: 1.12rem;
+    line-height: 1.72;
 }
 
 h1 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     width: fit-content;
     margin: 7rem auto 1.8rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
 }
 
 h2 {
-    font-size: 1.7rem;
-    margin: 4.1rem auto 1.8rem;
+    font-size: 1.85rem;
+    margin: 4.6rem auto 1.3rem;
     width: fit-content;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+
+h3 {
+    margin-top: 2.2rem;
+    font-family: "Work Sans", sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
 }
 
 .home-section-heading {
-    font-size: 1.2rem;
-    margin: 3rem auto 1rem;
+    width: auto;
+    margin: 3.3rem 0 0.9rem;
+    font-size: 1.65rem;
+    text-align: left;
 }
 
 .title {
-    font-size: 2.2rem;
-    margin-top: 5rem;
+    font-size: clamp(2.6rem, 6vw, 4.8rem);
+    margin-top: 4.5rem;
+    line-height: 0.95;
+    text-wrap: balance;
 }
 
 .center {
@@ -62,9 +95,10 @@ h2 {
 }
 
 li {
-    max-width: 70ch;
-    margin-bottom: 1rem;
-    line-height: 1.5;
+    max-width: var(--max-width);
+    margin-bottom: 1.15rem;
+    line-height: 1.55;
+    font-size: 1.08rem;
 }
 
 ul > li > ul {
@@ -81,26 +115,39 @@ hr {
 }
 
 .footer {
-    margin-top: 7rem;
+    margin-top: 8rem;
+    font-family: "Work Sans", sans-serif;
+    font-size: 0.88rem;
+    letter-spacing: 0.04em;
 }
 
 a {
-    color: #1a5276;
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.22em;
 }
 
 a:visited {
-    color: #6c3483;
+    color: var(--accent);
+}
+
+a:hover,
+a:focus {
+    text-decoration-thickness: 2px;
 }
 
 img {
     max-width: 100%;
     height: auto;
+    background-color: var(--paper-deep);
 }
 
 .home-list {
     margin-top: 0;
     padding-left: 0;
     text-align: left;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .home-list li {
@@ -113,36 +160,77 @@ img {
 }
 
 .archive-intro {
-    text-align: center;
+    text-align: left;
+    max-width: 42rem;
+    margin-left: 0;
 }
 
 .archive-section-heading {
-    margin-top: 3rem;
+    width: auto;
+    margin-top: 4rem;
 }
 
 .post-meta-nav {
-    max-width: 70ch;
-    margin: 0.7rem auto 0;
-    text-align: center;
+    max-width: var(--max-width);
+    margin: 0.5rem 0 0;
+    font-family: "Work Sans", sans-serif;
+    font-size: 0.86rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: left;
 }
 
 .email-address {
-    font-family: monospace;
+    font-family: "Work Sans", sans-serif;
+    font-size: 0.95rem;
 }
 
 .copy-button {
     margin-left: 0.5rem;
-    padding: 0.15rem 0.45rem;
-    border: 1px solid #1a5276;
-    border-radius: 0.25rem;
+    padding: 0.12rem 0;
+    border: 0;
     background-color: transparent;
-    color: #1a5276;
-    font: inherit;
+    color: var(--accent);
+    font-family: "Work Sans", sans-serif;
+    font-size: 0.95rem;
     line-height: 1.3;
     cursor: pointer;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.22em;
 }
 
 .copy-button:hover,
 .copy-button:focus {
-    background-color: #eef5fb;
+    text-decoration-thickness: 2px;
+}
+
+.center span {
+    font-family: "Work Sans", sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 0 1rem 2.5rem;
+    }
+
+    p {
+        font-size: 1.02rem;
+    }
+
+    li {
+        font-size: 1rem;
+    }
+
+    .title {
+        margin-top: 3.6rem;
+    }
+
+    .home-section-heading,
+    .archive-section-heading {
+        font-size: 1.45rem;
+    }
 }
