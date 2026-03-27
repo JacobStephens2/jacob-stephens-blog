@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jacob Stephens' Personal Site</title>
-    <meta name="description" content="Personal website of Jacob Stephens.">
-    <meta property="og:title" content="Jacob Stephens' Personal Site">
-    <meta property="og:description" content="Personal website of Jacob Stephens.">
+    <title>Jacob Stephens' Blog</title>
+    <meta name="description" content="Writing by Jacob Stephens on web development, design, essays, research, and fiction.">
+    <meta property="og:title" content="Jacob Stephens' Blog">
+    <meta property="og:description" content="Writing by Jacob Stephens on web development, design, essays, research, and fiction.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="Jacob Stephens">
-    <meta name="twitter:title" content="Jacob Stephens' Personal Site">
-    <meta name="twitter:description" content="Personal website of Jacob Stephens.">
+    <meta name="twitter:title" content="Jacob Stephens' Blog">
+    <meta name="twitter:description" content="Writing by Jacob Stephens on web development, design, essays, research, and fiction.">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-00FX53BGR8"></script>
     <script>
@@ -29,11 +29,23 @@
 
 <body>
     <h1 class="title">Jacob Stephens</h1>
-    <p class="center">Welcome to my personal website.</p>
-    <ul>
+    <p class="center">Writing on web development, design, essays, research, and fiction.</p>
+
+    <h2 class="home-section-heading">Explore</h2>
+    <ul class="home-list center" style="margin-top: 2rem;">
         <li><a href="/posts/">Posts</a></li>
         <li><a href="/about/">About</a></li>
-        <li><a href="mailto:jacob@stephens.page">Email me at jacob@stephens.page</a></li>
+        <li><a href="https://stephens.page/portfolio.html">Portfolio</a></li>
+    </ul>
+
+    <h2 class="home-section-heading">Elsewhere</h2>
+    <ul class="home-list center">
+        <li>
+            <a href="mailto:jacob@stephens.page">Email me</a>
+            at
+            <span class="email-address">jacob@stephens.page</span>
+            <button class="copy-button" type="button" data-copy-text="jacob@stephens.page" aria-label="Copy email address">Copy</button>
+        </li>
         <li><a href="https://resume.jacobstephens.net">My resume</a></li>
         <li><a href="https://github.com/JacobStephens2">GitHub</a></li>
         <li><a href="https://www.youtube.com/@jacobstephens1804">YouTube</a></li>
@@ -44,6 +56,25 @@
     <p class="center footer">&copy; 2025 <a href="https://blog.stephens.page">Jacob Stephens</a> |
         <a href="/privacy-policy">Privacy Policy</a>
     </p>
+    <script>
+      for (const button of document.querySelectorAll('.copy-button')) {
+        button.addEventListener('click', async () => {
+          const originalText = button.textContent;
+          const textToCopy = button.dataset.copyText;
+
+          try {
+            await navigator.clipboard.writeText(textToCopy);
+            button.textContent = 'Copied email';
+          } catch (error) {
+            button.textContent = 'Press Ctrl+C';
+          }
+
+          setTimeout(() => {
+            button.textContent = originalText;
+          }, 1600);
+        });
+      }
+    </script>
 </body>
 
 </html>

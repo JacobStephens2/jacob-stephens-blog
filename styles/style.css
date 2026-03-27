@@ -46,6 +46,11 @@ h2 {
     width: fit-content;
 }
 
+.home-section-heading {
+    font-size: 1.2rem;
+    margin: 3rem auto 1rem;
+}
+
 .title {
     font-size: 2.2rem;
     margin-top: 5rem;
@@ -90,4 +95,29 @@ a:visited {
 img {
     max-width: 100%;
     height: auto;
+}
+
+.home-list {
+    margin-top: 0;
+}
+
+.email-address {
+    font-family: monospace;
+}
+
+.copy-button {
+    margin-left: 0.5rem;
+    padding: 0.15rem 0.45rem;
+    border: 1px solid #1a5276;
+    border-radius: 0.25rem;
+    background-color: transparent;
+    color: #1a5276;
+    font: inherit;
+    line-height: 1.3;
+    cursor: pointer;
+}
+
+.copy-button:hover,
+.copy-button:focus {
+    background-color: #eef5fb;
 }
