@@ -99,7 +99,12 @@ img {
 
 .home-list {
     margin-top: 0;
+    padding-left: 0;
     text-align: left;
+}
+
+.home-list li {
+    width: 100%;
 }
 
 .category-links {
