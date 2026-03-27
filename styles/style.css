@@ -101,6 +101,25 @@ img {
     margin-top: 0;
 }
 
+.category-links {
+    margin-top: 1.4rem;
+    line-height: 1.9;
+}
+
+.archive-intro {
+    text-align: center;
+}
+
+.archive-section-heading {
+    margin-top: 3rem;
+}
+
+.post-meta-nav {
+    max-width: 70ch;
+    margin: 0.7rem auto 0;
+    text-align: center;
+}
+
 .email-address {
     font-family: monospace;
 }
