@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminating 2,467 SQL Statements per Page Load | Jacob Stephens' Personal Site</title>
+    <meta name="description" content="A page that fired ~2,650 SQL statements and took 5-7 seconds now fires 183 and loads in about one. A measure, fix, prevent walkthrough of killing an N+1 explosion without changing a byte of output.">
+    <meta property="og:title" content="Eliminating 2,467 SQL Statements per Page Load">
+    <meta property="og:description" content="Measure, fix, prevent: killing an N+1 explosion on a group-reservation page without changing a byte of rendered output.">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="Jacob Stephens">
+    <meta name="twitter:title" content="Eliminating 2,467 SQL Statements per Page Load">
+    <meta name="twitter:description" content="Measure, fix, prevent: killing an N+1 explosion on a group-reservation page without changing a byte of rendered output.">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-00FX53BGR8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-00FX53BGR8');
+    </script>
+    <link rel="icon" href="/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/style.css?v=12">
+</head>
+
+<body>
+    <h1 class="title">Eliminating 2,467 SQL Statements per Page Load</h1>
+    <p class="center">
+        <span>
+            <a href="https://blog.stephens.page">Jacob&nbsp;Stephens</a>
+        </span>&emsp;
+        <span>June&nbsp;3,&nbsp;2026</span>&emsp;
+        <span>~700&nbsp;words</span>&emsp;
+        <span>Web Development</span>&emsp;
+    </p>
+    <p class="post-meta-nav"><a href="/posts/">All posts</a> &middot; <a href="/posts/#web-development">Web Development</a></p>
+    <p class="post-meta-nav"><a href="/posts/sandboxing-ai-agents-per-business-role/">Previous post: Sandboxing AI Agents per Business Role</a></p>
+    <p class="post-meta-nav"><a href="/posts/the-boring-deploy-script/">Next post: The Boring Deploy Script</a></p>
+
+    <p>The page that printed before every trip took 5-7 seconds to load and fired roughly 2,650 SQL statements per render. When I was done it fired 183. The interesting part isn't the number - it's that the work split cleanly into three phases that I think generalize to almost any "this page got slow" problem: <strong>measure, fix, prevent.</strong> A junior engineer stops after the fix. A senior one doesn't.</p>
+
+    <h2>Measure</h2>
+
+    <p>I didn't guess. I captured an xdebug cachegrind profile of a real request and read it top-down. The shape was immediately familiar: an N+1 explosion. The page renders a group reservation - up to ~50 passengers - and for each passenger the object constructors for the booking, the price statement, and the payment schedule each ran their own helper queries. Fifty passengers &times; several constructors &times; several helper queries each is how you get to ~2,650 statements without anyone writing a single obviously-bad query. It was also opening 118 fresh database connections per request, because one code path reached for a new connection instead of the shared handle.</p>
+
+    <p>The lesson I keep relearning: N+1 problems are invisible in the code and obvious in the profile. You will not find them by reading; you find them by measuring.</p>
+
+    <h2>Fix</h2>
+
+    <p>Three moves, in order of payoff:</p>
+
+    <ol>
+        <li><strong>One connection.</strong> Route the stray <code>new</code> connection through the shared handle the page already had open. 118 connections per request became one.</li>
+        <li><strong>Batch the per-row work.</strong> Make the heavy constructor skippable for child-row loads, then hydrate all ~50 passengers with a single batched <code>IN (...)</code> query instead of 50 sets of per-row helper calls.</li>
+        <li><strong>Prefetch once.</strong> Add a small prefetch layer for the price-statement data: a handful of static caches and batched lookups warmed once before the per-passenger loop, with per-instance fallbacks so callers outside this page kept working unchanged.</li>
+    </ol>
+
+    <p>The constraint I held the whole time: <strong>byte-identical output.</strong> At the end of every round I diffed the rendered HTML against the original and required it to match exactly. A performance change that alters output isn't a performance change, it's a feature change with a performance side effect - and it's how you quietly break a document people rely on.</p>
+
+    <h2>Prevent</h2>
+
+    <p>Here's the phase that matters most and gets skipped most. One of the slow queries used a leading-wildcard <code>LIKE '%...%'</code> against a history table - the kind of predicate that can never use an index and gets slower as the table grows. Speeding up the surrounding code would have left a regression waiting to happen. So I added a dedicated column and a composite index that captured the thing the <code>LIKE</code> was actually testing for, and rewrote the query against it. The rows examined per lookup dropped from ~4,165 to 1.</p>
+
+    <p>That's the difference between "I made it fast today" and "it stays fast as the data grows." A schema/index change is the only one of the three phases that prevents the problem from coming back.</p>
+
+    <h2>The result, and the scaling check</h2>
+
+    <p>Production dropped from 5-7 seconds to about one. Statements per request went from ~2,650 to 183 - about a 93% reduction - and the connection storm collapsed into the single handle the page already held. HTML byte-identical throughout.</p>
+
+    <p>Then I did the thing that separates "works on my test case" from "works": I re-ran it against the worst real group in the system - 244 sub-reservations, several times larger than normal. There the same code took the page from ~10 seconds to ~3, and from ~11,800 statements to ~2,400, still byte-identical. The wins scaled to the outlier, which is the only proof that matters.</p>
+
+    <h2>Takeaways</h2>
+
+    <ul>
+        <li><strong>Profile before you touch anything.</strong> The fix is usually boring once you can see the shape; finding the shape is the work.</li>
+        <li><strong>Batch and prefetch instead of looping.</strong> Most N+1s die to one <code>IN (...)</code> query and a warmed cache.</li>
+        <li><strong>Hold output constant.</strong> Byte-identical diffs turn "trust me" into proof.</li>
+        <li><strong>Finish with prevention.</strong> A column and an index are what keep the win from eroding. If you stopped at the fix, you're not done.</li>
+    </ul>
+
+    <p class="center footer">&copy; 2026 <a href="https://blog.stephens.page">Jacob Stephens</a> |
+        <a href="/privacy-policy">Privacy Policy</a>
+    </p>
+</body>
+
+</html>
