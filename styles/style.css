@@ -106,12 +106,43 @@ li {
     font-size: 1.08rem;
 }
 
+/* Content lists (post body). Reset strips markers; put them back. */
+ul {
+    list-style: disc;
+    padding-left: 1.4rem;
+    margin: 0.8rem 0 1.2rem;
+}
+
+ol {
+    list-style: decimal;
+    padding-left: 1.4rem;
+    margin: 0.8rem 0 1.2rem;
+}
+
+ul > li,
+ol > li {
+    margin-bottom: 0.45rem;
+}
+
 ul > li > ul {
     margin-top: 0.6rem;
+    list-style: circle;
 }
 
 ul > li > ul > li {
     margin-left: 1.7rem;
+}
+
+/* Unstyled nav / archive lists stay clean */
+.home-list,
+.archive-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.home-list li,
+.archive-list li {
+    margin-bottom: 1.15rem;
 }
 
 hr {
@@ -145,6 +176,31 @@ img {
     max-width: 100%;
     height: auto;
     background-color: var(--paper-deep);
+}
+
+.product-photo {
+    display: block;
+    width: 100%;
+    max-width: 28rem;
+    margin: 1.2rem 0 0.4rem;
+    border-radius: 0.125rem;
+}
+
+.product-photo-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 1rem;
+    margin: 1.2rem 0 0.4rem;
+    max-width: var(--max-width);
+}
+
+.product-photo-row p {
+    margin: 0;
+}
+
+.product-photo-row .product-photo {
+    margin: 0;
+    max-width: none;
 }
 
 .home-list {
@@ -258,6 +314,70 @@ table {
     border-collapse: collapse;
     font-size: 1.02rem;
     line-height: 1.5;
+}
+
+.council-table {
+    display: block;
+    overflow-x: auto;
+    font-size: 0.95rem;
+}
+
+.council-table th,
+.council-table td {
+    min-width: 6.5rem;
+    padding-right: 0.9rem;
+}
+
+.fn-ref {
+    font-family: "Work Sans", sans-serif;
+    font-size: 0.75em;
+    letter-spacing: 0.02em;
+}
+
+.fn-ref a {
+    text-decoration: none;
+}
+
+.source-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.source-list li {
+    margin-bottom: 0.85rem;
+    font-size: 0.95rem;
+    word-break: break-word;
+}
+
+.source-list .fn-num {
+    font-family: "Work Sans", sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    margin-right: 0.35rem;
+}
+
+.research-details {
+    margin: 1.6rem 0 2rem;
+    padding: 0.9rem 0;
+}
+
+.research-details summary {
+    cursor: pointer;
+    font-family: "Work Sans", sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent);
+    list-style-position: outside;
+}
+
+.research-details[open] summary {
+    margin-bottom: 0.8rem;
+}
+
+.research-details p {
+    margin-top: 0.8rem;
 }
 
 th,
