@@ -168,9 +168,77 @@ img {
     margin-left: 0;
 }
 
+.archive-sort {
+    margin-top: 1.6rem;
+    margin-bottom: 0.4rem;
+    font-family: "Work Sans", sans-serif;
+    font-size: 0.86rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.archive-sort-sep {
+    margin: 0 0.55rem;
+    color: var(--ink-soft);
+}
+
+.archive-sort-link {
+    text-decoration: none;
+    color: var(--ink-soft);
+    border-bottom: 1px solid transparent;
+    padding-bottom: 0.1rem;
+}
+
+.archive-sort-link:hover,
+.archive-sort-link:focus {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom-color: var(--accent);
+}
+
+.archive-sort-link.is-active,
+.archive-sort-link[aria-current="page"] {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+    font-weight: 600;
+}
+
 .archive-section-heading {
     width: auto;
     margin-top: 4rem;
+}
+
+.archive-category-heading {
+    width: auto;
+    margin: 2.8rem 0 1rem;
+    font-family: "Newsreader", "Merriweather", serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    text-transform: none;
+}
+
+/*
+  Default: chronological only (avoids a flash of both lists before JS runs).
+  Category view is shown when data-view="category" (set from the hash).
+  Without scripting, both sections stack so "By category" anchors still work.
+*/
+.archive-view-category {
+    display: none;
+}
+
+.archive-layout[data-view="category"] .archive-view-category {
+    display: block;
+}
+
+.archive-layout[data-view="category"] .archive-view-chrono {
+    display: none;
+}
+
+@media (scripting: none) {
+    .archive-view-category {
+        display: block;
+    }
 }
 
 .post-meta-nav {
@@ -181,6 +249,35 @@ img {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     text-align: left;
+}
+
+table {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 1.4rem 0 1.8rem;
+    border-collapse: collapse;
+    font-size: 1.02rem;
+    line-height: 1.5;
+}
+
+th,
+td {
+    padding: 0.55rem 0.75rem 0.55rem 0;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    font-family: "Work Sans", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+}
+
+tr + tr td {
+    padding-top: 0.7rem;
 }
 
 .email-address {
