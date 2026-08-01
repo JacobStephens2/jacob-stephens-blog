@@ -26,7 +26,7 @@
     </script>
     <link rel="icon" href="/favicon-32x32.png" type="image/png">
     <link rel="stylesheet" href="/styles/reset.css">
-    <link rel="stylesheet" href="/styles/style.css?v=16">
+    <link rel="stylesheet" href="/styles/style.css?v=17">
 </head>
 
 <body>
@@ -212,7 +212,79 @@
     <p class="center footer">&copy; 2026 <a href="https://jacobstephens.net">Jacob Stephens</a> |
         <a href="/privacy-policy">Privacy Policy</a>
     </p>
+
+    <div id="image-lightbox" class="image-lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged image">
+        <button type="button" class="image-lightbox-close" aria-label="Close image">&times;</button>
+        <img class="image-lightbox-img" alt="">
+    </div>
+
+    <script>
+      (function () {
+        var lightbox = document.getElementById('image-lightbox');
+        if (!lightbox) return;
+
+        var lbImg = lightbox.querySelector('.image-lightbox-img');
+        var closeBtn = lightbox.querySelector('.image-lightbox-close');
+        var lastFocus = null;
+
+        function openLightbox(src, alt) {
+          lastFocus = document.activeElement;
+          lbImg.src = src;
+          lbImg.alt = alt || '';
+          lightbox.hidden = false;
+          document.body.classList.add('lightbox-open');
+          closeBtn.focus();
+        }
+
+        function closeLightbox() {
+          if (lightbox.hidden) return;
+          lightbox.hidden = true;
+          lbImg.removeAttribute('src');
+          lbImg.alt = '';
+          document.body.classList.remove('lightbox-open');
+          if (lastFocus && typeof lastFocus.focus === 'function') {
+            lastFocus.focus();
+          }
+        }
+
+        document.querySelectorAll('body > p > img, body .product-photo').forEach(function (img) {
+          img.classList.add('zoomable');
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+          img.setAttribute('aria-label', (img.alt ? img.alt + ' — ' : '') + 'View larger image');
+
+          img.addEventListener('click', function () {
+            openLightbox(img.currentSrc || img.src, img.alt);
+          });
+
+          img.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault();
+              openLightbox(img.currentSrc || img.src, img.alt);
+            }
+          });
+        });
+
+        closeBtn.addEventListener('click', function (event) {
+          event.stopPropagation();
+          closeLightbox();
+        });
+
+        lightbox.addEventListener('click', function (event) {
+          if (event.target === lightbox) {
+            closeLightbox();
+          }
+        });
+
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape') {
+            closeLightbox();
+          }
+        });
+      })();
+    </script>
     <script src="https://stephens.page/blog/newsletter-widget.js" data-list="personal" data-mode="link" defer></script>
 </body>
 
 </html>
+

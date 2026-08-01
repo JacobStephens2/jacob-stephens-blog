@@ -454,3 +454,68 @@ tr + tr td {
         font-size: 1.45rem;
     }
 }
+
+/* Full-page image lightbox (opt-in via .zoomable on content images) */
+img.zoomable {
+    cursor: zoom-in;
+}
+
+body.lightbox-open {
+    overflow: hidden;
+}
+
+.image-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    background: rgba(12, 28, 32, 0.88);
+    box-sizing: border-box;
+}
+
+.image-lightbox[hidden] {
+    display: none;
+}
+
+.image-lightbox-img {
+    display: block;
+    max-width: min(96vw, 100%);
+    max-height: 92vh;
+    width: auto;
+    height: auto;
+    margin: 0;
+    object-fit: contain;
+    background: transparent;
+    border-radius: 0.125rem;
+    box-shadow: 0 0.5rem 2.5rem rgba(0, 0, 0, 0.35);
+    cursor: default;
+}
+
+.image-lightbox-close {
+    position: fixed;
+    top: 0.65rem;
+    right: 0.75rem;
+    z-index: 1001;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0.2rem;
+    background: rgba(254, 249, 238, 0.12);
+    color: #fef9ee;
+    font-family: "Work Sans", sans-serif;
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.image-lightbox-close:hover,
+.image-lightbox-close:focus {
+    background: rgba(254, 249, 238, 0.22);
+    outline: 2px solid rgba(254, 249, 238, 0.55);
+    outline-offset: 2px;
+}
