@@ -43,8 +43,12 @@
     var root = document.documentElement;
     if (preference === THEME_LIGHT || preference === THEME_DARK) {
       root.setAttribute('data-theme', preference);
+      // Pinned override for form controls / scrollbars (CSS vars still drive colors).
+      root.style.colorScheme = preference;
     } else {
+      // Follow OS: clear pin so prefers-color-scheme media rules apply.
       root.removeAttribute('data-theme');
+      root.style.colorScheme = '';
     }
     updateMetaThemeColor();
     updateToggleLabels();
