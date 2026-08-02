@@ -2,8 +2,17 @@
 <html lang="en">
 
 <head>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fef9ee">
     <title>Updating Biomass Controls' Website | Jacob Stephens' Personal Site</title>
     <meta name="description" content="Updating content, carousel features, SEO, and visual editing on Biomass Controls' WordPress website.">
     <meta property="og:title" content="Updating Biomass Controls' Website">
@@ -24,7 +33,8 @@
     </script>
     <link rel="icon" href="/favicon-32x32.png" type="image/png">
     <link rel="stylesheet" href="/styles/reset.css">
-    <link rel="stylesheet" href="/styles/style.css?v=12">
+    <link rel="stylesheet" href="/styles/style.css?v=13">
+    <script src="/styles/theme.js" defer></script>
 </head>
 
 <body>
@@ -36,8 +46,9 @@
         <span>July&nbsp;10,&nbsp;2020</span>&emsp;
         <span>~100&nbsp;words</span>&emsp;
         <span>Web Development</span>&emsp;
+        <span>Handwritten</span>&emsp;
     </p>
-    <p class="post-meta-nav"><a href="/posts/">All posts</a> &middot; <a href="/posts/#web-development">Web Development</a></p>
+    <p class="post-meta-nav"><a href="/posts/">All posts</a> &middot; <a href="/posts/#web-development">Web Development</a> &middot; <a href="/posts/#handwritten">Handwritten</a></p>
     <p class="post-meta-nav"><a href="/posts/converting-my-book-of-the-churchs-year-into-a-coloring-book/">Previous post: Converting My Book of the Church's Year into a Coloring Book</a></p>
     <p class="post-meta-nav"><a href="/posts/e-commerce-site-for-kims-creations/">Next post: E-commerce Site for Kim's Creations</a></p>
 

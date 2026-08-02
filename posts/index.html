@@ -2,8 +2,17 @@
 <html lang="en">
 
 <head>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fef9ee">
     <title>Posts | Jacob Stephens' Blog</title>
     <meta name="description" content="Posts by Jacob Stephens: web development, design, essays, research, fiction, and more.">
     <meta property="og:title" content="Posts">
@@ -25,12 +34,13 @@
     <link rel="icon" href="/favicon-32x32.png" type="image/png">
     <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/style.css?v=13">
+    <script src="/styles/theme.js" defer></script>
 </head>
 
 <body>
     <h1 class="title">Posts</h1>
     <p class="center"><a href="/">Home</a></p>
-    <p class="archive-intro">Newest posts first. Switch to category view when you want to browse by subject.</p>
+    <p class="archive-intro">Newest posts first. Switch to category view when you want to browse by subject or process (AI-assisted vs handwritten).</p>
 
     <p class="center archive-sort" role="navigation" aria-label="Sort posts">
         <a href="#chronological" class="archive-sort-link is-active" data-sort="chronological" aria-current="page">Chronological</a>
@@ -52,12 +62,265 @@
             <ul class="archive-list">
                 <li>
                     <a href="/posts/best-2-player-android-games/">Best 2-Player Android Games</a><br>
+                    August 1, 2026 &middot; <a href="#general">General</a> &middot; <a href="#ai-assisted">AI-assisted</a>
+                </li>
+                <li>
+                    <a href="/posts/pixel-10-pro-xl-case-choices/">Pixel 10 Pro XL Case Choices</a><br>
+                    July 30, 2026 &middot; <a href="#general">General</a> &middot; <a href="#ai-assisted">AI-assisted</a>
+                </li>
+                <li>
+                    <a href="/posts/bending-fire/">Bending Fire</a><br>
+                    October 10, 2024 &middot; <a href="#short-story">Short Story</a> &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/how-websites-add-value/">How Do Websites Create Value for Human Life?</a><br>
+                    February 22, 2022 &middot; <a href="#web-development">Web Development</a> &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/becoming-a-devops-engineer/">Learning DevOps</a><br>
+                    October 24, 2021 &middot; <a href="#web-development">Web Development</a> &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/on-my-skills-web-development-and-leisure/">On My Web Development Skills, History with WordPress, and Leisure</a><br>
+                    October 23, 2021 &middot; <a href="#web-development">Web Development</a> &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/two-person-agile-product-development-flowchart/">Two Person Agile Product Development Flowchart</a><br>
+                    July 3, 2021 &middot; <a href="#workflows">Workflows</a> &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/mailer-for-agnes-irwin-future-owl-fly-by/">Mailer for Agnes Irwin: Future Owl Fly By</a><br>
+                    January 14, 2021 &middot; <a href="#graphic-design">Graphic Design</a> &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/let-it-grow-banner/">Let it Grow! Banner for Montgomery School's Virtual Benefit</a><br>
+                    January 13, 2021 &middot; <a href="#graphic-design">Graphic Design</a> &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/custom-content-management-system/">Website for Minimalists 90/90 Rule Management of Artifacts</a><br>
+                    January 9, 2021 &middot; <a href="#web-development">Web Development</a> &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/converting-my-book-of-the-churchs-year-into-a-coloring-book/">Converting My Book of the Church's Year into a Coloring Book</a><br>
+                    August 13, 2020 &middot; <a href="#graphic-design">Graphic Design</a> &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/updating-biomass-controls-website/">Updating Biomass Controls' Website</a><br>
+                    July 10, 2020 &middot; <a href="#web-development">Web Development</a> &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/e-commerce-site-for-kims-creations/">E-commerce Site for Kim's Creations</a><br>
+                    May 25, 2020 &middot; <a href="#e-commerce">E-commerce</a> &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/brandywine-oak-private-wealths-dynamic-content/">Dynamic Content Added to Brandywine Oak Private Wealth's Home Page</a><br>
+                    May 13, 2020 &middot; <a href="#web-development">Web Development</a> &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/website-for-rose-river-way-studio/">Website for Rose River Way Studio</a><br>
+                    April 13, 2020 &middot; <a href="#web-development">Web Development</a> &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/montgomery-school-map/">Map for Montgomery School</a><br>
+                    January 30, 2020 &middot; <a href="#graphic-design">Graphic Design</a> &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/corsage-removal-with-photoshop/">Corsage Removal with Photoshop</a><br>
+                    January 29, 2020 &middot; <a href="#graphic-design">Graphic Design</a> &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/comptia-a-it-technician-certification/">CompTIA A+ IT Technician Certification</a><br>
+                    November 29, 2017 &middot; <a href="#general">General</a> &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/on-sexuality-and-criminality/">On Sexuality and Criminality: Foucault, Butler, and Zerilli</a><br>
+                    May 11, 2016 &middot; <a href="#essay">Essay</a> &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/why-anti-cyrillic-croats-attack-serbian-language/">Why Anti-Cyrillic Croats Attack Serbian Language</a><br>
+                    December 18, 2015 &middot; <a href="#essay">Essay</a> &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/two-natures-one-being/">Two Natures, One Being: An Evaluation of Bonhoeffer on the Person of Christ</a><br>
+                    March 17, 2015 &middot; <a href="#research-paper">Research Paper</a> &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/finding-greener-alternatives-to-ap-chromatography-lab/">Finding Greener Alternatives for the AP Chromatography Lab</a><br>
+                    May 11, 2014 &middot; <a href="#chemistry">Chemistry</a> &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/the-heart-fragile-as-glass/">The Heart... Fragile as Glass</a><br>
+                    November 2, 2009 &middot; <a href="#poetry">Poetry</a> &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="archive-view archive-view-category" id="by-category" aria-labelledby="by-category-heading">
+            <h2 class="archive-section-heading" id="by-category-heading">By category</h2>
+
+            <p class="center category-links">
+                <a href="#short-story">Short Story</a> &middot;
+                <a href="#web-development">Web Development</a> &middot;
+                <a href="#workflows">Workflows</a> &middot;
+                <a href="#graphic-design">Graphic Design</a> &middot;
+                <a href="#e-commerce">E-commerce</a> &middot;
+                <a href="#general">General</a> &middot;
+                <a href="#essay">Essay</a> &middot;
+                <a href="#research-paper">Research Paper</a> &middot;
+                <a href="#chemistry">Chemistry</a> &middot;
+                <a href="#poetry">Poetry</a>
+            </p>
+            <p class="center category-links">
+                Process: <a href="#ai-assisted">AI-assisted</a> &middot;
+                <a href="#handwritten">Handwritten</a>
+            </p>
+
+            <h3 class="archive-category-heading" id="short-story">Short Story</h3>
+            <ul class="archive-list">
+                <li>
+                    <a href="/posts/bending-fire/">Bending Fire</a><br>
+                    October 10, 2024 &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+            </ul>
+
+            <h3 class="archive-category-heading" id="web-development">Web Development</h3>
+            <ul class="archive-list">
+                <li>
+                    <a href="/posts/how-websites-add-value/">How Do Websites Create Value for Human Life?</a><br>
+                    February 22, 2022 &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/becoming-a-devops-engineer/">Learning DevOps</a><br>
+                    October 24, 2021 &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/on-my-skills-web-development-and-leisure/">On My Web Development Skills, History with WordPress, and Leisure</a><br>
+                    October 23, 2021 &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/custom-content-management-system/">Website for Minimalists 90/90 Rule Management of Artifacts</a><br>
+                    January 9, 2021 &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/updating-biomass-controls-website/">Updating Biomass Controls' Website</a><br>
+                    July 10, 2020 &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/brandywine-oak-private-wealths-dynamic-content/">Dynamic Content Added to Brandywine Oak Private Wealth's Home Page</a><br>
+                    May 13, 2020 &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/website-for-rose-river-way-studio/">Website for Rose River Way Studio</a><br>
+                    April 13, 2020 &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+            </ul>
+
+            <h3 class="archive-category-heading" id="workflows">Workflows</h3>
+            <ul class="archive-list">
+                <li>
+                    <a href="/posts/two-person-agile-product-development-flowchart/">Two Person Agile Product Development Flowchart</a><br>
+                    July 3, 2021 &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+            </ul>
+
+            <h3 class="archive-category-heading" id="graphic-design">Graphic Design</h3>
+            <ul class="archive-list">
+                <li>
+                    <a href="/posts/mailer-for-agnes-irwin-future-owl-fly-by/">Mailer for Agnes Irwin: Future Owl Fly By</a><br>
+                    January 14, 2021 &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/let-it-grow-banner/">Let it Grow! Banner for Montgomery School's Virtual Benefit</a><br>
+                    January 13, 2021 &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/converting-my-book-of-the-churchs-year-into-a-coloring-book/">Converting My Book of the Church's Year into a Coloring Book</a><br>
+                    August 13, 2020 &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/montgomery-school-map/">Map for Montgomery School</a><br>
+                    January 30, 2020 &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/corsage-removal-with-photoshop/">Corsage Removal with Photoshop</a><br>
+                    January 29, 2020 &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+            </ul>
+
+            <h3 class="archive-category-heading" id="e-commerce">E-commerce</h3>
+            <ul class="archive-list">
+                <li>
+                    <a href="/posts/e-commerce-site-for-kims-creations/">E-commerce Site for Kim's Creations</a><br>
+                    May 25, 2020 &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+            </ul>
+
+            <h3 class="archive-category-heading" id="general">General</h3>
+            <ul class="archive-list">
+                <li>
+                    <a href="/posts/best-2-player-android-games/">Best 2-Player Android Games</a><br>
+                    August 1, 2026 &middot; <a href="#ai-assisted">AI-assisted</a>
+                </li>
+                <li>
+                    <a href="/posts/pixel-10-pro-xl-case-choices/">Pixel 10 Pro XL Case Choices</a><br>
+                    July 30, 2026 &middot; <a href="#ai-assisted">AI-assisted</a>
+                </li>
+                <li>
+                    <a href="/posts/comptia-a-it-technician-certification/">CompTIA A+ IT Technician Certification</a><br>
+                    November 29, 2017 &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+            </ul>
+
+            <h3 class="archive-category-heading" id="essay">Essay</h3>
+            <ul class="archive-list">
+                <li>
+                    <a href="/posts/on-sexuality-and-criminality/">On Sexuality and Criminality: Foucault, Butler, and Zerilli</a><br>
+                    May 11, 2016 &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+                <li>
+                    <a href="/posts/why-anti-cyrillic-croats-attack-serbian-language/">Why Anti-Cyrillic Croats Attack Serbian Language</a><br>
+                    December 18, 2015 &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+            </ul>
+
+            <h3 class="archive-category-heading" id="research-paper">Research Paper</h3>
+            <ul class="archive-list">
+                <li>
+                    <a href="/posts/two-natures-one-being/">Two Natures, One Being: An Evaluation of Bonhoeffer on the Person of Christ</a><br>
+                    March 17, 2015 &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+            </ul>
+
+            <h3 class="archive-category-heading" id="chemistry">Chemistry</h3>
+            <ul class="archive-list">
+                <li>
+                    <a href="/posts/finding-greener-alternatives-to-ap-chromatography-lab/">Finding Greener Alternatives for the AP Chromatography Lab</a><br>
+                    May 11, 2014 &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+            </ul>
+
+            <h3 class="archive-category-heading" id="poetry">Poetry</h3>
+            <ul class="archive-list">
+                <li>
+                    <a href="/posts/the-heart-fragile-as-glass/">The Heart... Fragile as Glass</a><br>
+                    November 2, 2009 &middot; <a href="#handwritten">Handwritten</a>
+                </li>
+            </ul>
+
+            <h3 class="archive-category-heading" id="ai-assisted">AI-assisted</h3>
+            <ul class="archive-list">
+                <li>
+                    <a href="/posts/best-2-player-android-games/">Best 2-Player Android Games</a><br>
                     August 1, 2026 &middot; <a href="#general">General</a>
                 </li>
                 <li>
                     <a href="/posts/pixel-10-pro-xl-case-choices/">Pixel 10 Pro XL Case Choices</a><br>
                     July 30, 2026 &middot; <a href="#general">General</a>
                 </li>
+            </ul>
+
+            <h3 class="archive-category-heading" id="handwritten">Handwritten</h3>
+            <ul class="archive-list">
                 <li>
                     <a href="/posts/bending-fire/">Bending Fire</a><br>
                     October 10, 2024 &middot; <a href="#short-story">Short Story</a>
@@ -143,155 +406,7 @@
                     November 2, 2009 &middot; <a href="#poetry">Poetry</a>
                 </li>
             </ul>
-        </section>
 
-        <section class="archive-view archive-view-category" id="by-category" aria-labelledby="by-category-heading">
-            <h2 class="archive-section-heading" id="by-category-heading">By category</h2>
-
-            <p class="center category-links">
-                <a href="#short-story">Short Story</a> &middot;
-                <a href="#web-development">Web Development</a> &middot;
-                <a href="#workflows">Workflows</a> &middot;
-                <a href="#graphic-design">Graphic Design</a> &middot;
-                <a href="#e-commerce">E-commerce</a> &middot;
-                <a href="#general">General</a> &middot;
-                <a href="#essay">Essay</a> &middot;
-                <a href="#research-paper">Research Paper</a> &middot;
-                <a href="#chemistry">Chemistry</a> &middot;
-                <a href="#poetry">Poetry</a>
-            </p>
-
-            <h3 class="archive-category-heading" id="short-story">Short Story</h3>
-            <ul class="archive-list">
-                <li>
-                    <a href="/posts/bending-fire/">Bending Fire</a><br>
-                    October 10, 2024
-                </li>
-            </ul>
-
-            <h3 class="archive-category-heading" id="web-development">Web Development</h3>
-            <ul class="archive-list">
-                <li>
-                    <a href="/posts/how-websites-add-value/">How Do Websites Create Value for Human Life?</a><br>
-                    February 22, 2022
-                </li>
-                <li>
-                    <a href="/posts/becoming-a-devops-engineer/">Learning DevOps</a><br>
-                    October 24, 2021
-                </li>
-                <li>
-                    <a href="/posts/on-my-skills-web-development-and-leisure/">On My Web Development Skills, History with WordPress, and Leisure</a><br>
-                    October 23, 2021
-                </li>
-                <li>
-                    <a href="/posts/custom-content-management-system/">Website for Minimalists 90/90 Rule Management of Artifacts</a><br>
-                    January 9, 2021
-                </li>
-                <li>
-                    <a href="/posts/updating-biomass-controls-website/">Updating Biomass Controls' Website</a><br>
-                    July 10, 2020
-                </li>
-                <li>
-                    <a href="/posts/brandywine-oak-private-wealths-dynamic-content/">Dynamic Content Added to Brandywine Oak Private Wealth's Home Page</a><br>
-                    May 13, 2020
-                </li>
-                <li>
-                    <a href="/posts/website-for-rose-river-way-studio/">Website for Rose River Way Studio</a><br>
-                    April 13, 2020
-                </li>
-            </ul>
-
-            <h3 class="archive-category-heading" id="workflows">Workflows</h3>
-            <ul class="archive-list">
-                <li>
-                    <a href="/posts/two-person-agile-product-development-flowchart/">Two Person Agile Product Development Flowchart</a><br>
-                    July 3, 2021
-                </li>
-            </ul>
-
-            <h3 class="archive-category-heading" id="graphic-design">Graphic Design</h3>
-            <ul class="archive-list">
-                <li>
-                    <a href="/posts/mailer-for-agnes-irwin-future-owl-fly-by/">Mailer for Agnes Irwin: Future Owl Fly By</a><br>
-                    January 14, 2021
-                </li>
-                <li>
-                    <a href="/posts/let-it-grow-banner/">Let it Grow! Banner for Montgomery School's Virtual Benefit</a><br>
-                    January 13, 2021
-                </li>
-                <li>
-                    <a href="/posts/converting-my-book-of-the-churchs-year-into-a-coloring-book/">Converting My Book of the Church's Year into a Coloring Book</a><br>
-                    August 13, 2020
-                </li>
-                <li>
-                    <a href="/posts/montgomery-school-map/">Map for Montgomery School</a><br>
-                    January 30, 2020
-                </li>
-                <li>
-                    <a href="/posts/corsage-removal-with-photoshop/">Corsage Removal with Photoshop</a><br>
-                    January 29, 2020
-                </li>
-            </ul>
-
-            <h3 class="archive-category-heading" id="e-commerce">E-commerce</h3>
-            <ul class="archive-list">
-                <li>
-                    <a href="/posts/e-commerce-site-for-kims-creations/">E-commerce Site for Kim's Creations</a><br>
-                    May 25, 2020
-                </li>
-            </ul>
-
-            <h3 class="archive-category-heading" id="general">General</h3>
-            <ul class="archive-list">
-                <li>
-                    <a href="/posts/best-2-player-android-games/">Best 2-Player Android Games</a><br>
-                    August 1, 2026
-                </li>
-                <li>
-                    <a href="/posts/pixel-10-pro-xl-case-choices/">Pixel 10 Pro XL Case Choices</a><br>
-                    July 30, 2026
-                </li>
-                <li>
-                    <a href="/posts/comptia-a-it-technician-certification/">CompTIA A+ IT Technician Certification</a><br>
-                    November 29, 2017
-                </li>
-            </ul>
-
-            <h3 class="archive-category-heading" id="essay">Essay</h3>
-            <ul class="archive-list">
-                <li>
-                    <a href="/posts/on-sexuality-and-criminality/">On Sexuality and Criminality: Foucault, Butler, and Zerilli</a><br>
-                    May 11, 2016
-                </li>
-                <li>
-                    <a href="/posts/why-anti-cyrillic-croats-attack-serbian-language/">Why Anti-Cyrillic Croats Attack Serbian Language</a><br>
-                    December 18, 2015
-                </li>
-            </ul>
-
-            <h3 class="archive-category-heading" id="research-paper">Research Paper</h3>
-            <ul class="archive-list">
-                <li>
-                    <a href="/posts/two-natures-one-being/">Two Natures, One Being: An Evaluation of Bonhoeffer on the Person of Christ</a><br>
-                    March 17, 2015
-                </li>
-            </ul>
-
-            <h3 class="archive-category-heading" id="chemistry">Chemistry</h3>
-            <ul class="archive-list">
-                <li>
-                    <a href="/posts/finding-greener-alternatives-to-ap-chromatography-lab/">Finding Greener Alternatives for the AP Chromatography Lab</a><br>
-                    May 11, 2014
-                </li>
-            </ul>
-
-            <h3 class="archive-category-heading" id="poetry">Poetry</h3>
-            <ul class="archive-list">
-                <li>
-                    <a href="/posts/the-heart-fragile-as-glass/">The Heart... Fragile as Glass</a><br>
-                    November 2, 2009
-                </li>
-            </ul>
         </section>
 
     </div>
@@ -316,7 +431,9 @@
           'essay': true,
           'research-paper': true,
           'chemistry': true,
-          'poetry': true
+          'poetry': true,
+          'ai-assisted': true,
+          'handwritten': true
         };
 
         function applyView() {

@@ -2,18 +2,27 @@
 <html lang="en">
 
 <head>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fef9ee">
     <title>Pixel 10 Pro XL Case Choices | Jacob Stephens' Personal Site</title>
-    <meta name="description" content="Research for my wife on Pixel 10 Pro XL cases: TORRO and Snakehive leather wallet folios versus Google's Pixelsnap Case, with Bellroy Mag Wallet optional.">
+    <meta name="description" content="Case shortlist for a Pixel 10 Pro XL: Casebus HARPER in purple (the one she ordered), TORRO and Snakehive leather folios versus Google's Pixelsnap Case and Bellroy Mag Wallet.">
     <meta property="og:title" content="Pixel 10 Pro XL Case Choices">
-    <meta property="og:description" content="Research for my wife on Pixel 10 Pro XL cases: TORRO and Snakehive leather wallet folios versus Google's Pixelsnap Case, with Bellroy Mag Wallet optional.">
+    <meta property="og:description" content="Case shortlist for a Pixel 10 Pro XL: Casebus HARPER in purple (the one she ordered), TORRO and Snakehive leather folios versus Google's Pixelsnap Case and Bellroy Mag Wallet.">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://jacobstephens.net/static/stewardgoods/pixel-10-pro-xl-case-choices.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="Jacob Stephens">
     <meta name="twitter:title" content="Pixel 10 Pro XL Case Choices">
-    <meta name="twitter:description" content="Research for my wife on Pixel 10 Pro XL cases: TORRO and Snakehive leather wallet folios versus Google's Pixelsnap Case, with Bellroy Mag Wallet optional.">
+    <meta name="twitter:description" content="Case shortlist for a Pixel 10 Pro XL: Casebus HARPER in purple (the one she ordered), TORRO and Snakehive leather folios versus Google's Pixelsnap Case and Bellroy Mag Wallet.">
     <meta name="twitter:image" content="https://jacobstephens.net/static/stewardgoods/pixel-10-pro-xl-case-choices.png">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-00FX53BGR8"></script>
@@ -26,7 +35,8 @@
     </script>
     <link rel="icon" href="/favicon-32x32.png" type="image/png">
     <link rel="stylesheet" href="/styles/reset.css">
-    <link rel="stylesheet" href="/styles/style.css?v=16">
+    <link rel="stylesheet" href="/styles/style.css?v=19">
+    <script src="/styles/theme.js" defer></script>
 </head>
 
 <body>
@@ -36,156 +46,272 @@
             <a href="https://jacobstephens.net">Jacob&nbsp;Stephens</a>
         </span>&emsp;
         <span>July&nbsp;30,&nbsp;2026</span>&emsp;
-        <span>~1,250&nbsp;words</span>&emsp;
+        <span>~1,400&nbsp;words</span>&emsp;
         <span>General</span>&emsp;
+        <span>AI-assisted</span>&emsp;
     </p>
-    <p class="post-meta-nav"><a href="/posts/">All posts</a> &middot; <a href="/posts/#general">General</a></p>
+    <p class="post-meta-nav"><a href="/posts/">All posts</a> &middot; <a href="/posts/#general">General</a> &middot; <a href="/posts/#ai-assisted">AI-assisted</a></p>
+    <p class="post-meta-nav"><a href="/posts/best-2-player-android-games/">Previous post: Best 2-Player Android Games</a></p>
     <p class="post-meta-nav"><a href="/posts/bending-fire/">Next post: Bending Fire</a></p>
+
+    <p>Five options for a Pixel 10 Pro XL case. She ordered the <a href="#casebus">Casebus HARPER in purple</a> - color range was the draw, purple won, aqua almost did. Pictures go to the store. Then: <a href="#requirements">what she wants</a>, then notes.</p>
+
+    <div class="option-tldr-grid" id="tldr">
+        <figure class="option-tldr">
+            <a href="https://www.casebus.com/smartphone-cases/product/812-Flip-Folio-Phone-Wallet-Case-with-Premium-Leather-Magnetic-Clasp-RFID-Blocking-Credit-Card-Slots-Kickstand-Shockproof-Cover-case">
+                <img class="product-photo" src="/static/stewardgoods/pixel-cases/casebus-harper-purple-1.jpg" alt="Casebus HARPER flip folio wallet case in purple, closed and open with card slots">
+            </a>
+            <figcaption class="option-tldr-caption">
+                <strong>Casebus HARPER</strong> · $29.99 · ordered purple<br>
+                Folio, 3 cards + cash, 5 colors<br>
+                <span class="option-tldr-links">
+                    <a href="https://www.casebus.com/smartphone-cases/product/812-Flip-Folio-Phone-Wallet-Case-with-Premium-Leather-Magnetic-Clasp-RFID-Blocking-Credit-Card-Slots-Kickstand-Shockproof-Cover-case">Product page</a>
+                    · <a href="#casebus">Notes ↓</a>
+                </span>
+            </figcaption>
+        </figure>
+        <figure class="option-tldr">
+            <a href="https://torrousa.com/products/google-pixel-10-pro-xl-case">
+                <img class="product-photo" src="/static/stewardgoods/pixel-cases/torro-pixel-10-pro-xl-wallet.jpg" alt="TORRO black leather wallet folio case for Pixel 10 Pro XL">
+            </a>
+            <figcaption class="option-tldr-caption">
+                <strong>TORRO leather wallet</strong> · $54.99<br>
+                Folio, 3 cards + cash pouch, stand<br>
+                <span class="option-tldr-links">
+                    <a href="https://torrousa.com/products/google-pixel-10-pro-xl-case">Product page</a>
+                    · <a href="#torro">Notes ↓</a>
+                </span>
+            </figcaption>
+        </figure>
+        <figure class="option-tldr">
+            <a href="https://www.snakehive.com/products/google-pixel-10-pro-xl-metro-leather-wallet-phone-case">
+                <img class="product-photo" src="/static/stewardgoods/pixel-cases/snakehive-metro-wallet.jpg" alt="Snakehive Metro leather wallet phone case in Rich Tan">
+            </a>
+            <figcaption class="option-tldr-caption">
+                <strong>Snakehive Metro</strong> · $44.99<br>
+                Folio, 4 cards + cash pouch, stand<br>
+                <span class="option-tldr-links">
+                    <a href="https://www.snakehive.com/products/google-pixel-10-pro-xl-metro-leather-wallet-phone-case">Product page</a>
+                    · <a href="#snakehive">Notes ↓</a>
+                </span>
+            </figcaption>
+        </figure>
+        <figure class="option-tldr">
+            <a href="https://store.google.com/product/pixel_10_pro_phone_case?hl=en-US">
+                <img class="product-photo" src="/static/stewardgoods/pixel-cases/google-pixelsnap-case-lineup.jpg" alt="Google Pixelsnap Case color lineup for Pixel 10 Pro XL">
+            </a>
+            <figcaption class="option-tldr-caption">
+                <strong>Google Pixelsnap Case</strong> · $49.99<br>
+                Thin silicone, wireless + magnets<br>
+                <span class="option-tldr-links">
+                    <a href="https://store.google.com/product/pixel_10_pro_phone_case?hl=en-US">Product page</a>
+                    · <a href="#pixelsnap">Notes ↓</a>
+                </span>
+            </figcaption>
+        </figure>
+        <figure class="option-tldr">
+            <a href="https://bellroy.com/products/mag-wallet?color=black&amp;material=leather">
+                <img class="product-photo" src="/static/stewardgoods/pixel-cases/bellroy-mag-wallet.jpg" alt="Bellroy Mag Wallet in black leather with cards fanned out">
+            </a>
+            <figcaption class="option-tldr-caption">
+                <strong>Bellroy Mag Wallet</strong> · $45<br>
+                Cards on magnets (pair with case)<br>
+                <span class="option-tldr-links">
+                    <a href="https://bellroy.com/products/mag-wallet?color=black&amp;material=leather">Product page</a>
+                    · <a href="#bellroy">Notes ↓</a>
+                </span>
+            </figcaption>
+        </figure>
+    </div>
+
+    <h2 id="requirements">What she is looking for</h2>
+
+    <h3>Musts</h3>
+
+    <ul>
+        <li><strong>Folio</strong> - flap covers the screen when closed. Not a bare back shell.</li>
+        <li><strong>Card slots plus a larger pouch</strong> - fixed slots for everyday cards, and a bigger pocket for extra cards or cash so she can leave a full wallet home some days.</li>
+        <li><strong>Pixel 10 Pro XL on the product page</strong> - not 10 Pro, not 9 Pro XL, not Fold. Wrong-size listings are a common trap on Reddit and Amazon.</li>
+        <li><strong>Real leather</strong> - not the $15 PU flips that split at the hinge.</li>
+    </ul>
+
+    <p>Folio + slots + pouch is why the wallet folios are shortlisted. Casebus HARPER, TORRO, and Snakehive all have the flap, card slots, and a cash compartment. Snakehive: four slots. TORRO and Casebus: three slots plus cash. She ordered Casebus in purple (aqua was close) - black, purple, blue/aqua, red, brown on one product page beat the thinner color menus on TORRO and Snakehive for her.</p>
+
+    <h3>Nice-to-haves</h3>
+
+    <ul>
+        <li><strong>Kickstand</strong> - the folios fold into one. Dead weight if she never props the phone.</li>
+        <li><strong>Tempered glass</strong> - separate either way. Folio covers the face when closed; it does not replace glass when open.</li>
+    </ul>
+
+    <h3>She did not ask for this: magnets and wireless charging</h3>
+
+    <p>She did not request wireless charging or magnetic accessories. Fair - many people still use USB-C only. This Pixel is different: the 10 series is Google's first with built-in Qi2-style magnets (<strong>Pixelsnap</strong>). Nightstand pads, grips, stands, and snap-on wallets work if the case does not block them.</p>
+
+    <p>A leather folio puts a flap - and often cards - over that field. Owners who use a pad nightly tend to drop folios for that reason; cable users shrug. She may not know this phone can do magnets at all. Worth asking once before locking folio-only.</p>
+
+    <p class="option-tldr-fork"><strong>In one line:</strong> she wants folio + slots + pouch (Casebus purple ordered for the color menu; TORRO or Snakehive if real-leather brand names win - plan on USB-C either way). Magnets are optional homework; choosing them trades the full folio pouch for a thin Pixelsnap case, with Bellroy only if a couple of cards still matter.</p>
 
     <p><img src="/static/stewardgoods/pixel-10-pro-xl-case-choices.png" alt="Three phone case styles on a warm cream surface: a black leather folio wallet open with cards and cash, a brown leather folio with four card slots, and a light silicone magnetic case with a slim card wallet beside it"></p>
 
-    <p>My wife needs a case because she is getting a new Pixel 10 Pro XL, and she is getting the phone because I walked the expo floor at AI Engineer World's Fair more thoroughly than I almost did.</p>
+    <p>Context: she is getting the phone because I won a Pixel at Datadog's AI Engineer World's Fair booth - better in her hand than in my desk drawer. I have not lived with these cases myself. Notes below are from r/GooglePixel, r/pixel_phones, and named hands-on reviews.</p>
 
-    <p>I had gone for the talks and the hallway conversations. The booths felt optional until it became obvious that the conference was also a dense map of people shipping real tools, and that skipping the expo would mean missing half of what I had paid travel for. So I made a point of visiting the booths. One of them was Datadog. I entered their sweepstakes at the booth, left without thinking much about it, and later found out I had won a Pixel. That prize is now her phone - which is a better outcome than it sitting in a drawer on my desk - and it is also why I am suddenly researching folio leather and Pixelsnap magnets as if they were production dependencies.</p>
+    <h2>Folio vs magnets (what owners repeat)</h2>
 
-    <p>This post is the research I want her to read before we order a case. I want protection that does not look like a throwaway plastic sleeve, something that can carry a few cards so she can leave a bulkier wallet behind when she wants to, and a product page that actually says Pixel 10 Pro XL - not Pixel 10 Pro, not 9 Pro XL, not 10 Pro Fold.</p>
+    <p>Leather plus cards over the back slows or kills wireless charging. Vendors often print &quot;compatible&quot; and bury the caveat. USB-C users do not care. Pad users switch.</p>
 
-    <p>The main fork is not brand. It is structure: a leather folio wallet that covers the screen and holds cards, or Google's Pixelsnap path - a slim official case that keeps wireless charging and magnetic accessories, with cards optional on a separate magnet wallet.</p>
+    <p>Hotel keys and older transit cards can wipe against the back magnets - a recurring point in r/GooglePixel threads on magnetic vs non-magnetic cases. Front-flap folios keep cards away from that field; rear pockets and Mag wallets sit on it.</p>
 
-    <h2>Folio vs Pixelsnap is the real decision</h2>
+    <h2 id="casebus">Casebus HARPER folio wallet at $29.99 (ordered in purple)</h2>
 
-    <p>The Pixel 10 series is Google's first Pixel line with built-in Qi2-style magnets (Pixelsnap). Official cases, chargers, grips, and stands assume magnet pass-through. A traditional leather folio puts a flap - and often a stack of cards - right over that field. Even vendors who market folios as &quot;wireless charging compatible&quot; warn that leather plus cards can slow charging or block it. If she drops the phone on a nightstand pad every night, a folio may become a daily annoyance. If she plugs in USB-C, that tradeoff is mostly a non-issue.</p>
+    <div class="product-photo-row">
+        <p><a href="https://www.casebus.com/smartphone-cases/product/812-Flip-Folio-Phone-Wallet-Case-with-Premium-Leather-Magnetic-Clasp-RFID-Blocking-Credit-Card-Slots-Kickstand-Shockproof-Cover-case"><img class="product-photo" src="/static/stewardgoods/pixel-cases/casebus-harper-purple-1.jpg" alt="Casebus HARPER flip folio wallet case collage in purple: closed case, open with three card slots and cash, kickstand angles"></a></p>
+        <p><a href="https://www.casebus.com/smartphone-cases/product/812-Flip-Folio-Phone-Wallet-Case-with-Premium-Leather-Magnetic-Clasp-RFID-Blocking-Credit-Card-Slots-Kickstand-Shockproof-Cover-case"><img class="product-photo" src="/static/stewardgoods/pixel-cases/casebus-harper-purple-3.jpg" alt="Casebus HARPER in purple open showing three card slots and one cash slot next to the phone"></a></p>
+        <p><a href="https://www.casebus.com/smartphone-cases/product/812-Flip-Folio-Phone-Wallet-Case-with-Premium-Leather-Magnetic-Clasp-RFID-Blocking-Credit-Card-Slots-Kickstand-Shockproof-Cover-case"><img class="product-photo" src="/static/stewardgoods/pixel-cases/casebus-harper-purple-2.jpg" alt="Casebus HARPER closed purple folio with magnetic strap and corner stud"></a></p>
+    </div>
 
-    <p>Those magnets have a second practical effect. Strong arrays can wipe hotel key cards and some older transit cards when the cards sit against the back of the phone. Folios that keep cards in the front flap, away from the back glass, are safer for that than rear pockets pressed against the magnets.</p>
+    <p>What she picked - purple (aqua almost). Flip folio, three card slots, cash compartment, magnetic clasp, kickstand, RFID claim on the listing. Pixel 10 Pro XL is a device option on the page - confirm that still before any reorder. $29.99 at Casebus.</p>
 
-    <p>So the choice is one leather object that covers the screen and holds cards, or a slim official case that keeps wireless charging and snaps, with cards optional as a separate magnet wallet.</p>
-
-    <h2>TORRO leather wallet case at $54.99</h2>
-
-    <p><img class="product-photo" src="/static/stewardgoods/pixel-cases/torro-pixel-10-pro-xl-wallet.jpg" alt="TORRO black leather wallet folio case for Pixel 10 Pro XL, with red stitching and red bull logo, phone propped open on stand"></p>
-
-    <p>When I compared leather folios built for this exact phone, TORRO's Pixel 10 Pro XL leather wallet case kept coming up. TORRO USA lists it at $54.99, ships without import fees, and builds it from top-grain U.S. cowhide with a shock-absorbing TPU inner frame and soft microfibre lining.</p>
-
-    <p>What it offers:</p>
+    <p>Color is why this one won over the shortlist: <strong>black, purple, blue, red, brown</strong> on one SKU. The listing's &quot;blue&quot; is a teal aqua in the photos - that was her other finalist; purple got the order. TORRO and Snakehive sell a tighter set of leather tones. If the phone is a gift and she cares how it looks next to her bag or coat, five solid colors is a real difference, not marketing fluff.</p>
 
     <ul>
-        <li>Designed specifically for Pixel 10 Pro XL</li>
-        <li>Three card slots plus a larger cash or notes compartment</li>
-        <li>Integrated horizontal kickstand</li>
-        <li>Magnetic side clasp</li>
-        <li>Slim folio profile with full button and camera access</li>
-        <li>Marketed as wireless-charging compatible, with the usual folio caveats</li>
+        <li>Same shape job as TORRO: flap, three slots, cash pouch, stand.</li>
+        <li>Cheapest folio here. Listing says &quot;premium leather&quot; and TPU shell; at $30 treat that as mass-market wallet-case leather (often coated/PU-class), not Snakehive or TORRO hide marketing. Fine if color and price were the priority - just know the band.</li>
+        <li>Site says wireless charging supported. Plan on USB-C with cards in the slots anyway - same rule as every other wallet folio here.</li>
+        <li>Store reviews on the page (4.8 from 124 at writeup) are generic multi-device feedback: fit, delivery time, magnetic clasp. Not a deep Pixel-10-Pro-XL owner thread the way TORRO and Pixelsnap have.</li>
     </ul>
 
-    <p>This is the gift-shaped folio option: real leather, screen cover, cards, stand, and a black-with-red-detail colorway. TORRO also offers monogramming on some products, which matters if the object itself should feel personal rather than purely utilitarian.</p>
+    <p>Case for: she already ordered purple; five colors she actually likes; hits folio + slots + pouch under $30. Case against: thinner brand track record on this exact phone, material tier below TORRO/Snakehive if long-term leather patina was the goal.</p>
 
-    <p>Buy from TORRO USA or a trusted U.S. listing if you are in the States. The UK store is a different storefront and does not ship here the same way.</p>
+    <p><a href="https://www.casebus.com/smartphone-cases/product/812-Flip-Folio-Phone-Wallet-Case-with-Premium-Leather-Magnetic-Clasp-RFID-Blocking-Credit-Card-Slots-Kickstand-Shockproof-Cover-case">https://www.casebus.com/smartphone-cases/product/812-Flip-Folio-Phone-Wallet-Case-with-Premium-Leather-Magnetic-Clasp-RFID-Blocking-Credit-Card-Slots-Kickstand-Shockproof-Cover-case</a></p>
+
+    <h2 id="torro">TORRO leather wallet case at $54.99</h2>
+
+    <p><a href="https://torrousa.com/products/google-pixel-10-pro-xl-case"><img class="product-photo" src="/static/stewardgoods/pixel-cases/torro-pixel-10-pro-xl-wallet.jpg" alt="TORRO black leather wallet folio case for Pixel 10 Pro XL, with red stitching and red bull logo, phone propped open on stand"></a></p>
+
+    <p>The leather folio name that keeps coming up for this exact phone: screen cover, three card slots, cash pouch, horizontal kickstand, magnetic clasp. TORRO USA at $54.99 - not the UK store, which is a different storefront and does not ship the same way.</p>
+
+    <ul>
+        <li>People upgrade here after cheap PU hinges and card pockets fail.</li>
+        <li>Stand is useful for recipes and calls; waste if she never props the phone.</li>
+        <li>Wireless: plan on cable if cards stay in the slots.</li>
+    </ul>
+
+    <p>Case for: gift-shaped real leather that matches her folio + pouch list. Case against: bulk, flap, no easy Qi.</p>
 
     <p><a href="https://torrousa.com/products/google-pixel-10-pro-xl-case">https://torrousa.com/products/google-pixel-10-pro-xl-case</a></p>
 
-    <h2>Snakehive Metro leather wallet case at $44.99</h2>
+    <h2 id="snakehive">Snakehive Metro leather wallet case at $44.99</h2>
 
     <div class="product-photo-row">
-        <p><img class="product-photo" src="/static/stewardgoods/pixel-cases/snakehive-metro-wallet-black.jpg" alt="Snakehive Metro leather wallet phone case in Jet Black, closed folio with magnetic strap and embossed logo"></p>
-        <p><img class="product-photo" src="/static/stewardgoods/pixel-cases/snakehive-metro-wallet.jpg" alt="Snakehive Metro leather wallet phone case in Rich Tan, closed folio with magnetic strap and embossed logo"></p>
+        <p><a href="https://www.snakehive.com/products/google-pixel-10-pro-xl-metro-leather-wallet-phone-case"><img class="product-photo" src="/static/stewardgoods/pixel-cases/snakehive-metro-wallet-black.jpg" alt="Snakehive Metro leather wallet phone case in Jet Black, closed folio with magnetic strap and embossed logo"></a></p>
+        <p><a href="https://www.snakehive.com/products/google-pixel-10-pro-xl-metro-leather-wallet-phone-case"><img class="product-photo" src="/static/stewardgoods/pixel-cases/snakehive-metro-wallet.jpg" alt="Snakehive Metro leather wallet phone case in Rich Tan, closed folio with magnetic strap and embossed logo"></a></p>
     </div>
 
-    <p>Snakehive's Metro is the lower-priced leather alternative I kept next to TORRO. It blends their Vintage wallet style with a more modern finish. Colors currently include Jet Black (Dappled) and Rich Tan.</p>
+    <p>Same job as TORRO for less money, with one more slot: four cards plus cash. Jet Black (Dappled) and Rich Tan. Leather patina is treated as a feature - wrong material if she wants factory-new forever.</p>
 
-    <p>What it offers:</p>
+    <p>Snakehive is blunt on their product page: they do not guarantee wireless charging through this wallet. Trust that over listings that only say &quot;compatible.&quot; Plan on USB-C.</p>
 
-    <ul>
-        <li>Premium top-grain leather that develops a patina</li>
-        <li>Four card slots plus cash storage - one more card than TORRO</li>
-        <li>Magnetic closure</li>
-        <li>Built-in stand</li>
-        <li>Raised edges for screen and camera</li>
-        <li>Precise cutouts and button covers</li>
-    </ul>
-
-    <p>Snakehive is plain about wireless charging: they cannot guarantee it with this wallet because of leather thickness, and they recommend planning on a cable, or on a pad strong enough to push through several millimeters. That is useful information rather than marketing noise. If she already accepts the folio tradeoff, Metro is strong value, especially if four cards matter more than three.</p>
+    <p>Value lane if folio + pouch is already decided. TORRO if the black-and-red gift look matters more.</p>
 
     <p><a href="https://www.snakehive.com/products/google-pixel-10-pro-xl-metro-leather-wallet-phone-case">https://www.snakehive.com/products/google-pixel-10-pro-xl-metro-leather-wallet-phone-case</a></p>
 
-    <h2>Google Pixelsnap Case at $49.99, with Bellroy Mag Wallet optional at $45</h2>
+    <h2 id="pixelsnap">Google Pixelsnap Case at $49.99</h2>
 
-    <p><img class="product-photo" src="/static/stewardgoods/pixel-cases/google-pixelsnap-case-lineup.jpg" alt="Pixelsnap Case color lineup for Pixel 10 Pro XL: Obsidian in front, then Moonstone, Porcelain, and Jade behind"></p>
+    <p><a href="https://store.google.com/product/pixel_10_pro_phone_case?hl=en-US"><img class="product-photo" src="/static/stewardgoods/pixel-cases/google-pixelsnap-case-lineup.jpg" alt="Pixelsnap Case color lineup for Pixel 10 Pro XL: Obsidian in front, then Moonstone, Porcelain, and Jade behind"></a></p>
 
     <div class="product-photo-row">
-        <p><img class="product-photo" src="/static/stewardgoods/pixel-cases/google-pixelsnap-case-obsidian.jpg" alt="Official Google Pixelsnap Case in Obsidian for Pixel 10 Pro XL - dark charcoal silicone, not pure black"></p>
-        <p><img class="product-photo" src="/static/stewardgoods/pixel-cases/google-pixelsnap-case-moonstone.jpg" alt="Official Google Pixelsnap Case in Moonstone for Pixel 10 Pro XL, soft blue-gray silicone"></p>
-        <p><img class="product-photo" src="/static/stewardgoods/pixel-cases/google-pixelsnap-case-porcelain.jpg" alt="Official Google Pixelsnap Case in Porcelain for Pixel 10 Pro XL, cream silicone"></p>
-        <p><img class="product-photo" src="/static/stewardgoods/pixel-cases/google-pixelsnap-case-jade.jpg" alt="Official Google Pixelsnap Case in Jade for Pixel 10 Pro XL, light green silicone"></p>
-        <p><img class="product-photo" src="/static/stewardgoods/pixel-cases/bellroy-mag-wallet.jpg" alt="Bellroy Mag Wallet in black leather with cards fanned out of the top flap"></p>
+        <p><a href="https://store.google.com/product/pixel_10_pro_phone_case?hl=en-US"><img class="product-photo" src="/static/stewardgoods/pixel-cases/google-pixelsnap-case-obsidian.jpg" alt="Official Google Pixelsnap Case in Obsidian for Pixel 10 Pro XL - dark charcoal silicone, not pure black"></a></p>
+        <p><a href="https://store.google.com/product/pixel_10_pro_phone_case?hl=en-US"><img class="product-photo" src="/static/stewardgoods/pixel-cases/google-pixelsnap-case-moonstone.jpg" alt="Official Google Pixelsnap Case in Moonstone for Pixel 10 Pro XL, soft blue-gray silicone"></a></p>
+        <p><a href="https://store.google.com/product/pixel_10_pro_phone_case?hl=en-US"><img class="product-photo" src="/static/stewardgoods/pixel-cases/google-pixelsnap-case-porcelain.jpg" alt="Official Google Pixelsnap Case in Porcelain for Pixel 10 Pro XL, cream silicone"></a></p>
+        <p><a href="https://store.google.com/product/pixel_10_pro_phone_case?hl=en-US"><img class="product-photo" src="/static/stewardgoods/pixel-cases/google-pixelsnap-case-jade.jpg" alt="Official Google Pixelsnap Case in Jade for Pixel 10 Pro XL, light green silicone"></a></p>
     </div>
 
-    <p>If wireless charging and magnetic accessories are part of daily life, the official Pixelsnap Case is the option that keeps that system intact. It is soft silicone in Pixel-matching colors. For Pixel 10 Pro XL the lineup is Obsidian, Moonstone, Porcelain, and Jade - pictured dark-to-light above, because she may prefer darker to lighter rather than defaulting to pale gift colors.</p>
+    <p>Thin silicone for magnets and color match: Obsidian, Moonstone, Porcelain, Jade. Obsidian is charcoal, not pure black - people notice after ordering &quot;black.&quot;</p>
 
-    <p>One precision that matters if she wants black: Obsidian is the darkest official color, but it is charcoal, not pure black. In bright light it reads as a deep gray with a soft matte finish. If she wants something closer to true black, TORRO's black-with-red leather, Snakehive Jet Black, or the Bellroy Mag Wallet in black sit nearer that end of the spectrum than Google's silicone does. Drop-tested, raised around the display and camera bar, and built so Pixelsnap chargers, stands, grips, and wallets snap on cleanly. Recycled materials make up a substantial share of the case.</p>
+    <p>Day one is strong: exact fit, clicky buttons, Pixelsnap magnets work. Owner record after that is mixed.</p>
 
-    <p>This is not a folio. It does not cover the screen. It does not hold cards by itself. What it preserves is the phone's magnetic accessory system.</p>
+    <ul>
+        <li><strong>Lint.</strong> Soft silicone pulls fabric out of pockets. Rita El Khoury (Android Authority) describes cleaning fibers off the sides every time the phone comes out of pants. On r/GooglePixel, u/fluffy-zebra-7938: &quot;It's a complete lint magnet and driving me crazy.&quot;</li>
+        <li><strong>Grip.</strong> Reddit splits. On r/GooglePixel, u/voided_chex: held vertical, it &quot;really wants to just slither down out of your hand&quot; - &quot;fake-grippy and slippery at once. Like oiled silicone.&quot; Dry hands and humidity change the feel.</li>
+        <li><strong>Wear.</strong> Across Pixel generations, owners report USB-C tabs cracking, chewed corners after drops, linings separating, light colors staining from jeans. Jon Gilbert (Android Police) documented his 10-series Pixelsnap case after seven months: silicone worn through to polycarbonate, pitting under the thumb, a snap near the charge port - on a $50 case. Rita El Khoury (Android Authority) walks the same history and would not recommend it at that price despite excellent day-one fit.</li>
+    </ul>
 
-    <p>If she still wants a couple of cards without giving up magnets, a detachable magnetic wallet is the clean answer. Bellroy's Mag Wallet in black leather is the one I looked at: a slim MagSafe-style card holder that snaps to a magnetic case and pops off when she wants the phone thin or on a charger. That pair - Pixelsnap Case plus Mag Wallet - is the only combination among these options that fully keeps Qi2/Pixelsnap while still covering &quot;I need my ID and a card.&quot;</p>
+    <p>Buy for magnets and looks now. Do not buy for year-two durability.</p>
 
     <p><a href="https://store.google.com/product/pixel_10_pro_phone_case?hl=en-US">https://store.google.com/product/pixel_10_pro_phone_case?hl=en-US</a></p>
 
+    <h2 id="bellroy">Bellroy Mag Wallet at $45</h2>
+
+    <p><a href="https://bellroy.com/products/mag-wallet?color=black&amp;material=leather"><img class="product-photo" src="/static/stewardgoods/pixel-cases/bellroy-mag-wallet.jpg" alt="Bellroy Mag Wallet in black leather with cards fanned out of the top flap"></a></p>
+
+    <p>If magnets win but she still wants ID and a card or two: magnetic case + detachable wallet. Bellroy Mag Wallet in black leather snaps on, pops off for a charger or thin pocket day. No big cash pouch on this path.</p>
+
+    <p>Pack Hacker (two-week review) and MagSafe wallet threads: magnet is the strong part - cards stay put, wallet does not casually slide off in a bag the way cheap stick-ons do. Cards need a little break-in. The stand is weak - Pack Hacker needed weeks of creasing and still found it inconsistent. Treat it as a card holder first.</p>
+
+    <p>Cards sit against the back magnets, so hotel keys and older transit cards still wipe risk - pop the wallet off or keep those cards elsewhere. Front-flap folios dodge that; this setup does not.</p>
+
+    <p>Pixelsnap + Mag Wallet (~$95) is the only combo here that keeps Qi2 and still carries a couple of cards. Two purchases, two things to manage.</p>
+
     <p><a href="https://bellroy.com/products/mag-wallet?color=black&amp;material=leather">https://bellroy.com/products/mag-wallet?color=black&amp;material=leather</a></p>
 
-    <h2>How I would map the choice</h2>
+    <h2>How I would map it</h2>
 
     <table>
         <tr>
-            <th>Priority</th>
+            <th>Day-to-day priority</th>
             <th>Lean toward</th>
         </tr>
         <tr>
-            <td>One leather object, screen cover, cards, stand</td>
+            <td>Folio + slots + pouch + stand, and color choice matters</td>
+            <td>Casebus HARPER at $29.99 (ordered purple)</td>
+        </tr>
+        <tr>
+            <td>Same shape, named leather brands, gift look</td>
             <td>TORRO at $54.99</td>
         </tr>
         <tr>
-            <td>Same idea, more cards, lower price</td>
+            <td>Same, four slots, mid price</td>
             <td>Snakehive Metro at $44.99</td>
         </tr>
         <tr>
-            <td>Nightstand wireless charging / Pixelsnap accessories</td>
-            <td>Google Pixelsnap Case</td>
+            <td>Wireless pad / grips / thin phone</td>
+            <td>Pixelsnap Case (eyes open on lint and wear)</td>
         </tr>
         <tr>
-            <td>Magnets plus a few cards</td>
-            <td>Pixelsnap Case + Bellroy Mag Wallet</td>
+            <td>Magnets + a few cards, no full pouch</td>
+            <td>Pixelsnap + Bellroy Mag Wallet (~$95)</td>
         </tr>
         <tr>
             <td>Cards safer from magnets (hotel keys, transit)</td>
-            <td>Front-flap folios (TORRO or Snakehive)</td>
+            <td>Front-flap folios (Casebus, TORRO, or Snakehive)</td>
         </tr>
-
     </table>
 
-    <p>I would skip the $15-25 Amazon PU folios. The failure points on cheap wallets are hinges and card pockets. Real leather costs more and ages better, and TORRO and Snakehive already sit in a reasonable price band for something used every day.</p>
+    <p>Skip $15-25 Amazon no-name PU folios. Failure points people photograph: hinges and stretched card pockets. Casebus sits just above that band on price; TORRO and Snakehive sit higher if hide and brand history matter more than color menu.</p>
 
-    <h2>What I would ask her before ordering</h2>
+    <h2>Questions before ordering</h2>
 
     <ol>
-        <li>Do you wireless-charge daily, or is USB-C fine?</li>
-        <li>How many physical cards do you actually want on the phone?</li>
-        <li>Do you want the screen covered when it is in a bag or purse?</li>
-        <li>Do you care about a kickstand for video calls or kitchen recipes?</li>
+        <li>Still want the folio flap over the screen in a bag?</li>
+        <li>How many slot cards, and do you need the larger pouch for cash/extras - or are two cards enough?</li>
+        <li>You did not ask for wireless charging - would you use a nightstand pad or snap-on magnetic wallet if it worked cleanly?</li>
+        <li>Kickstand: useful or dead weight?</li>
+        <li>If magnets win: okay wiping lint off silicone?</li>
     </ol>
 
-    <p>If the answers point to folio-and-cards, I would buy TORRO unless four slots at a lower price wins - then Snakehive. If wireless charging is non-negotiable, I would buy the official Pixelsnap Case and, if cards still matter, add the Bellroy Mag Wallet rather than force a leather flap to pretend it is magnet-friendly.</p>
+    <p>She ordered Casebus HARPER in purple - color menu was the draw (black, purple, blue/aqua, red, brown), purple beat aqua by a hair - at $29.99 with the folio + three slots + cash layout. TORRO or Snakehive remain the upgrade lane if the first case's leather or hinge disappoints. Magnets newly interesting → Pixelsnap, plus Bellroy only for a couple of cards - that path does not give the cash pouch she described.</p>
 
-    <p>Either way: confirm the product page says Pixel 10 Pro XL, and pair the case with a tempered-glass screen protector. Folios protect the face when closed. They do not replace glass when open.</p>
-
-    <p>What she still needs to decide is which tradeoffs she wants on the phone itself - wireless pad versus USB-C as the daily default, three cards versus four, screen cover versus a slim magnetic case. Those preferences decide the order more cleanly than another review roundup can.</p>
+    <p>Confirm the page still says Pixel 10 Pro XL on the device picker. Add tempered glass.</p>
 
     <h2>Research notes</h2>
 
-    <p>This post is the decision-facing writeup. Underneath it is a Perplexity multi-model council pass (GPT-5.6 Sol Thinking, Claude Opus 5 Thinking, Kimi K3) that compared leather folios and magnetic fallbacks before I chose what to show her.</p>
+    <p>Sources for the testimony above: r/GooglePixel and r/pixel_phones; Rita El Khoury, <em>Android Authority</em> (official Pixelsnap case - lint, grip, durability history); Jon Gilbert, <em>Android Police</em> (Pixelsnap wear after seven months); Pack Hacker Mag Wallet review; plus a Perplexity multi-model council (GPT-5.6 Sol Thinking, Claude Opus 5 Thinking, Kimi K3) used to shortlist before this writeup.</p>
 
     <ul>
-        <li><a href="model-council/">Model council writeup</a> - agreement, disagreement, and recommendation from that pass</li>
-        <li><a href="model-council/sources/">Sources only</a> - numbered links used in the council footnotes</li>
-        <li><a href="model-council/research.md">Raw markdown</a> - original export, including the full footnote dump</li>
+        <li><a href="model-council/">Model council writeup</a></li>
+        <li><a href="model-council/sources/">Sources only</a></li>
+        <li><a href="model-council/research.md">Raw markdown</a></li>
     </ul>
 
     <p class="center footer">&copy; 2026 <a href="https://jacobstephens.net">Jacob Stephens</a> |

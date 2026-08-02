@@ -1,6 +1,6 @@
-# blog.stephens.page
+# jacobstephens.net
 
-Personal website of Jacob Stephens. A lightweight, static HTML site with no build tooling, no JavaScript, and self-hosted fonts.
+Personal website of Jacob Stephens (https://jacobstephens.net). A lightweight, static HTML site with no build tooling and self-hosted fonts. Theme follows the OS light/dark preference by default; a fixed toggle in the top-right pins an explicit choice.
 
 ## Structure
 

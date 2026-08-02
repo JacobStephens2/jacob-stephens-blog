@@ -2,8 +2,17 @@
 <html lang="en">
 
 <head>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fef9ee">
     <title>Why Anti-Cyrillic Croats Attack Serbian Language | Jacob Stephens' Personal Site</title>
     <meta name="description" content="An analysis of Croatian anti-Cyrillic violence through Girard's mimetic desire theory, examining how war veterans' pursuit of pure identity drives scapegoating of Serbs.">
     <meta property="og:title" content="Why Anti-Cyrillic Croats Attack Serbian Language">
@@ -24,7 +33,8 @@
     </script>
     <link rel="icon" href="/favicon-32x32.png" type="image/png">
     <link rel="stylesheet" href="/styles/reset.css">
-    <link rel="stylesheet" href="/styles/style.css?v=12">
+    <link rel="stylesheet" href="/styles/style.css?v=13">
+    <script src="/styles/theme.js" defer></script>
 </head>
 
 <body>
@@ -32,9 +42,10 @@
     <p class="center">
         <span><a href="https://jacobstephens.net">Jacob&nbsp;Stephens</a></span>&emsp;
         <span>December&nbsp;18,&nbsp;2015</span>&emsp;
-        <span>Essay</span>
+        <span>Essay</span>&emsp;
+        <span>Handwritten</span>
     </p>
-    <p class="post-meta-nav"><a href="/posts/">All posts</a> &middot; <a href="/posts/#essay">Essay</a></p>
+    <p class="post-meta-nav"><a href="/posts/">All posts</a> &middot; <a href="/posts/#essay">Essay</a> &middot; <a href="/posts/#handwritten">Handwritten</a></p>
     <p class="post-meta-nav"><a href="/posts/on-sexuality-and-criminality/">Previous post: On Sexuality and Criminality: Foucault, Butler, and Zerilli</a></p>
     <p class="post-meta-nav"><a href="/posts/two-natures-one-being/">Next post: Two Natures, One Being: An Evaluation of Bonhoeffer on the Person of Christ</a></p>
 
