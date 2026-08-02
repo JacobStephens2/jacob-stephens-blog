@@ -312,19 +312,35 @@ figure.option-tldr {
     max-width: none;
 }
 
-/* Shared thumbnail frame so one tall product shot cannot stretch a grid row. */
+/*
+  Default TLDR thumbs keep native aspect ratio (product photos are often square).
+  Do not force 16:9 + object-fit:cover here - that crops case product shots.
+
+  Landscape game art: prep the asset to 16:9 (e.g. seven-wonders-duel-tldr.jpg)
+  rather than cropping every grid site-wide. Optional tight frame only when the
+  grid opts in with .option-tldr-grid--cover.
+*/
 figure.option-tldr > a {
     display: block;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
     border-radius: 0.125rem;
-    background: var(--paper-deep, #f3eee3);
 }
 
 figure.option-tldr .product-photo {
     margin: 0;
     max-width: none;
     width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Opt-in only: equal 16:9 cells with crop (not used for product case grids). */
+.option-tldr-grid--cover figure.option-tldr > a {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--paper-deep, #f3eee3);
+}
+
+.option-tldr-grid--cover figure.option-tldr .product-photo {
     height: 100%;
     object-fit: cover;
     object-position: center center;
