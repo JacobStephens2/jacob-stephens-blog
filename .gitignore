@@ -74,3 +74,7 @@ yarn-error.log
 
 # Working notes: kept locally, never served, not worth git weight
 .notes/
+
+# Python bytecode
+__pycache__/
+*.pyc
