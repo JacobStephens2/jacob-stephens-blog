@@ -245,6 +245,62 @@
       .sym-main  { grid-area: main; }
       .sym-aside-title { display: none; }
 
+      /* Restack each row into a block: the symbol and how to say it on one
+         line, what it means HERE beneath, the general maths note last and
+         quieter. Four columns of prose are unreadable in a narrow rail — and
+         just as unreadable on a phone, where the last column otherwise falls
+         to two words a line. So this holds at every width, and the rail below
+         only adds its own trim. */
+      .sym-aside .symkey,
+      .sym-aside .symkey tbody,
+      .sym-aside .symkey tr,
+      .sym-aside .symkey td { display: block; width: auto; }
+      .sym-aside .symkey thead { display: none; }
+      .sym-aside .symkey { margin: 0 0 0.9rem; }
+      .sym-aside .symkey tr {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0.72rem;
+        padding-bottom: 0.6rem;
+        border-bottom: 1px solid var(--viz-grid, #e1e0d9);
+      }
+      .sym-aside .symkey tr:last-child { border-bottom: 0; margin-bottom: 0; }
+      .sym-aside .symkey td { padding: 0; }
+      .sym-aside .symkey td:first-child {
+        order: 1;
+        display: inline;
+        font-size: 1.2em;
+        padding-right: 0.55em;
+      }
+      .sym-aside .symkey td:nth-child(2) {
+        order: 2;
+        display: inline;
+        font-style: italic;
+        opacity: 0.75;
+      }
+      .sym-aside .symkey td:nth-child(4) {
+        order: 3;
+        flex: 0 0 100%;
+        display: block;
+        margin-top: 0.18rem;
+        line-height: 1.45;
+      }
+      .sym-aside .symkey td:nth-child(3) {
+        order: 4;
+        flex: 0 0 100%;
+        display: block;
+        margin-top: 0.2rem;
+        font-size: 0.92em;
+        line-height: 1.4;
+        opacity: 0.72;
+        max-width: none;
+      }
+      .sym-aside .symkey td:nth-child(3)::before {
+        content: "in maths: ";
+        font-variant: small-caps;
+        letter-spacing: 0.03em;
+      }
+
       @media (min-width: 1150px) {
         .sym-layout {
           grid-template-columns: minmax(0, var(--max-width)) minmax(18rem, 23rem);
@@ -273,58 +329,6 @@
           font-weight: 600;
           margin: 0 0 0.5rem;
           letter-spacing: 0.02em;
-        }
-        /* Three table columns do not fit a narrow rail. Restack each row:
-           the symbol and how to say it on one line, the meaning beneath. */
-        .sym-aside .symkey,
-        .sym-aside .symkey tbody,
-        .sym-aside .symkey tr,
-        .sym-aside .symkey td { display: block; width: auto; }
-        .sym-aside .symkey thead { display: none; }
-        .sym-aside .symkey { margin: 0 0 0.9rem; }
-        .sym-aside .symkey tr {
-          margin-bottom: 0.72rem;
-          padding-bottom: 0.6rem;
-          border-bottom: 1px solid var(--viz-grid, #e1e0d9);
-        }
-        .sym-aside .symkey tr:last-child { border-bottom: 0; margin-bottom: 0; }
-        .sym-aside .symkey td { padding: 0; }
-        .sym-aside .symkey td:first-child {
-          display: inline;
-          font-size: 1.2em;
-          padding-right: 0.55em;
-        }
-        .sym-aside .symkey td:nth-child(2) {
-          display: inline;
-          font-style: italic;
-          opacity: 0.75;
-        }
-        /* In the rail, lead with what the symbol means HERE. The general
-           maths note follows, smaller and quieter, for a first read. */
-        .sym-aside .symkey tr { display: flex; flex-wrap: wrap; }
-        .sym-aside .symkey td:first-child  { order: 1; }
-        .sym-aside .symkey td:nth-child(2) { order: 2; }
-        .sym-aside .symkey td:nth-child(4) {
-          order: 3;
-          flex: 0 0 100%;
-          display: block;
-          margin-top: 0.18rem;
-          line-height: 1.45;
-        }
-        .sym-aside .symkey td:nth-child(3) {
-          order: 4;
-          flex: 0 0 100%;
-          display: block;
-          margin-top: 0.2rem;
-          font-size: 0.92em;
-          line-height: 1.4;
-          opacity: 0.72;
-          max-width: none;
-        }
-        .sym-aside .symkey td:nth-child(3)::before {
-          content: "in maths: ";
-          font-variant: small-caps;
-          letter-spacing: 0.03em;
         }
         .sym-aside > p:last-child { margin-bottom: 0; font-size: 0.95em; }
       }
