@@ -1,0 +1,258 @@
+{
+  "categories": {
+    "short-story": "Short Story",
+    "web-development": "Web Development",
+    "workflows": "Workflows",
+    "graphic-design": "Graphic Design",
+    "e-commerce": "E-commerce",
+    "general": "General",
+    "essay": "Essay",
+    "research-paper": "Research Paper",
+    "chemistry": "Chemistry",
+    "poetry": "Poetry",
+    "ai-assisted": "AI-assisted",
+    "handwritten": "Handwritten"
+  },
+  "posts": [
+    {
+      "slug": "tigris-and-euphrates-scoring-rule",
+      "title": "The Price of a Point: Looking for New Strategy in Tigris & Euphrates",
+      "date": "August 7, 2026",
+      "categories": [
+        "general",
+        "ai-assisted"
+      ],
+      "status": "draft"
+    },
+    {
+      "slug": "best-2-player-android-games",
+      "title": "Best 2-Player Android Games",
+      "date": "August 1, 2026",
+      "categories": [
+        "general",
+        "ai-assisted"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "pixel-10-pro-xl-case-choices",
+      "title": "Pixel 10 Pro XL Case Choices",
+      "date": "July 30, 2026",
+      "categories": [
+        "general",
+        "ai-assisted"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "bending-fire",
+      "title": "Bending Fire",
+      "date": "October 10, 2024",
+      "categories": [
+        "short-story",
+        "handwritten"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "how-websites-add-value",
+      "title": "How Do Websites Create Value for Human Life?",
+      "date": "February 22, 2022",
+      "categories": [
+        "web-development",
+        "handwritten"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "becoming-a-devops-engineer",
+      "title": "Learning DevOps",
+      "date": "October 24, 2021",
+      "categories": [
+        "web-development",
+        "handwritten"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "on-my-skills-web-development-and-leisure",
+      "title": "On My Web Development Skills, History with WordPress, and Leisure",
+      "date": "October 23, 2021",
+      "categories": [
+        "web-development",
+        "handwritten"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "two-person-agile-product-development-flowchart",
+      "title": "Two Person Agile Product Development Flowchart",
+      "date": "July 3, 2021",
+      "categories": [
+        "workflows",
+        "handwritten"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "mailer-for-agnes-irwin-future-owl-fly-by",
+      "title": "Mailer for Agnes Irwin: Future Owl Fly By",
+      "date": "January 14, 2021",
+      "categories": [
+        "graphic-design",
+        "handwritten"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "let-it-grow-banner",
+      "title": "Let it Grow! Banner for Montgomery School's Virtual Benefit",
+      "date": "January 13, 2021",
+      "categories": [
+        "graphic-design",
+        "handwritten"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "custom-content-management-system",
+      "title": "Website for Minimalists 90/90 Rule Management of Artifacts",
+      "date": "January 9, 2021",
+      "categories": [
+        "web-development",
+        "handwritten"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "converting-my-book-of-the-churchs-year-into-a-coloring-book",
+      "title": "Converting My Book of the Church's Year into a Coloring Book",
+      "date": "August 13, 2020",
+      "categories": [
+        "graphic-design",
+        "handwritten"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "updating-biomass-controls-website",
+      "title": "Updating Biomass Controls' Website",
+      "date": "July 10, 2020",
+      "categories": [
+        "web-development",
+        "handwritten"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "e-commerce-site-for-kims-creations",
+      "title": "E-commerce Site for Kim's Creations",
+      "date": "May 25, 2020",
+      "categories": [
+        "e-commerce",
+        "handwritten"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "brandywine-oak-private-wealths-dynamic-content",
+      "title": "Dynamic Content Added to Brandywine Oak Private Wealth's Home Page",
+      "date": "May 13, 2020",
+      "categories": [
+        "web-development",
+        "handwritten"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "website-for-rose-river-way-studio",
+      "title": "Website for Rose River Way Studio",
+      "date": "April 13, 2020",
+      "categories": [
+        "web-development",
+        "handwritten"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "montgomery-school-map",
+      "title": "Map for Montgomery School",
+      "date": "January 30, 2020",
+      "categories": [
+        "graphic-design",
+        "handwritten"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "corsage-removal-with-photoshop",
+      "title": "Corsage Removal with Photoshop",
+      "date": "January 29, 2020",
+      "categories": [
+        "graphic-design",
+        "handwritten"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "comptia-a-it-technician-certification",
+      "title": "CompTIA A+ IT Technician Certification",
+      "date": "November 29, 2017",
+      "categories": [
+        "general",
+        "handwritten"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "on-sexuality-and-criminality",
+      "title": "On Sexuality and Criminality: Foucault, Butler, and Zerilli",
+      "date": "May 11, 2016",
+      "categories": [
+        "essay",
+        "handwritten"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "why-anti-cyrillic-croats-attack-serbian-language",
+      "title": "Why Anti-Cyrillic Croats Attack Serbian Language",
+      "date": "December 18, 2015",
+      "categories": [
+        "essay",
+        "handwritten"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "two-natures-one-being",
+      "title": "Two Natures, One Being: An Evaluation of Bonhoeffer on the Person of Christ",
+      "date": "March 17, 2015",
+      "categories": [
+        "research-paper",
+        "handwritten"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "finding-greener-alternatives-to-ap-chromatography-lab",
+      "title": "Finding Greener Alternatives for the AP Chromatography Lab",
+      "date": "May 11, 2014",
+      "categories": [
+        "chemistry",
+        "handwritten"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "the-heart-fragile-as-glass",
+      "title": "The Heart... Fragile as Glass",
+      "date": "November 2, 2009",
+      "categories": [
+        "poetry",
+        "handwritten"
+      ],
+      "status": "published"
+    }
+  ]
+}

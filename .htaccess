@@ -2,6 +2,8 @@ RewriteEngine on
 
 # Working notes are kept in the repo but never served.
 RedirectMatch 404 ^/\.notes(/.*)?$
+RedirectMatch 404 ^/posts\.json$
+RedirectMatch 404 ^/tools(/.*)?$
 <FilesMatch "^\.">
     Require all denied
 </FilesMatch>
