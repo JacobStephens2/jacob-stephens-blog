@@ -17,8 +17,8 @@ When a second analytical post arrives, record here how its language relates to
 the first. Two posts that both say "run" or "portfolio" must either agree on
 the term or state plainly that they mean different things.
 
-## Not modelled
+## Not modeled
 
 The site's design vocabulary lives in [style/DESIGN.md](./style/DESIGN.md) —
-surface, ink, marginalia, and the colour tokens. That is a design system, not a
+surface, ink, marginalia, and the color tokens. That is a design system, not a
 domain model, and the two should not be merged.

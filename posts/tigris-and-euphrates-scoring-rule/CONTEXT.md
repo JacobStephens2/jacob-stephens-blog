@@ -11,17 +11,17 @@ one and says so.
 **Sphere**:
 One of the four scoring categories: settlements, temples, farms, and markets.
 The rulebook compares spheres to decide the winner.
-_Avoid_: pile, category, suit, colour
+_Avoid_: pile, category, suit, color
 
-**Colour**:
+**Color**:
 The attribute of a physical component — a tile, a leader, a monument, or a
-victory point token. Each colour matches exactly one sphere.
+victory point token. Each color matches exactly one sphere.
 _Avoid_: suit, type, sphere
 
 **Lowest sphere**:
 The sphere in which a player holds the fewest victory points. The rulebook
 compares these first, then the second lowest, and so on.
-_Avoid_: minimum, primary sphere, weakest colour
+_Avoid_: minimum, primary sphere, weakest color
 
 **Treasure**:
 A victory point token that is wild. At the end of the game a player allocates
@@ -51,11 +51,11 @@ Several victory points that arrive at once in a single sphere, as a war reward
 does. The rulebook has no term for this.
 _Avoid_: burst, lump, haul
 
-**Single-colour windfall / single-sphere windfall**:
-The same event in two registers. Say **single-colour** when describing play,
-because points arrive coloured and players say it that way. Say
+**Single-color windfall / single-sphere windfall**:
+The same event in two registers. Say **single-color** when describing play,
+because points arrive colored and players say it that way. Say
 **single-sphere** inside the propositions, where the claim is about the sorted
-portfolio and colour is not visible to the rule.
+portfolio and color is not visible to the rule.
 _Avoid_: mixing the two registers in one sentence
 
 **Criterion**:
