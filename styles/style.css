@@ -785,3 +785,9 @@ html[data-theme="dark"] .theme-toggle .icon-moon {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
 }
+
+/* The CSS reset gives `strong`, `b`, `em` and `i` `font: inherit`, which wipes
+   their weight and slant. Restore them, or emphasis silently does nothing.
+   Found via a post where 31 <strong> tags all rendered at normal weight. */
+b, strong { font-weight: 600; }
+i, em { font-style: italic; }
