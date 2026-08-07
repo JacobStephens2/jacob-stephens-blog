@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fef9ee">
+    <meta name="robots" content="noindex, nofollow">
+    <title>The Price of a Point: Looking for New Strategy in Tigris &amp; Euphrates | Jacob Stephens' Personal Site</title>
+    <meta name="description" content="A lunch conversation with a top-ranked player turned into a question: can a machine reason its way to a new idea about a board game? Four exact results about the scoring rule, and an honest account of where the maths stops.">
+    <meta property="og:title" content="The Price of a Point: Looking for New Strategy in Tigris &amp; Euphrates">
+    <meta property="og:description" content="A lunch conversation with a top-ranked player turned into a question: can a machine reason its way to a new idea about a board game? Four exact results about the scoring rule, and an honest account of where the maths stops.">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="Jacob Stephens">
+    <meta name="twitter:title" content="The Price of a Point: Looking for New Strategy in Tigris &amp; Euphrates">
+    <meta name="twitter:description" content="A lunch conversation with a top-ranked player turned into a question: can a machine reason its way to a new idea about a board game? Four exact results about the scoring rule, and an honest account of where the maths stops.">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-00FX53BGR8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-00FX53BGR8');
+    </script>
+    <link rel="icon" href="/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/style.css?v=23">
+    <script src="/styles/theme.js" defer></script>
+
+    <style>
+      /* ---- chart tokens -------------------------------------------------
+         Validated with the data-viz palette checker against this site's own
+         surfaces (light #f8f3e8, dark #152226), adjacent pairlist, in both
+         modes. Black settlements are drawn in amber: a neutral grey falls
+         under the chroma floor and stops doing identity work, and every
+         other legible slot collides with red, blue or green under simulated
+         colour-blindness. Every series is also directly labelled, and each
+         figure ships a table view, so colour never carries meaning alone. */
+      .viz {
+        --viz-surface: var(--paper-deep);
+        --viz-grid: #e1e0d9;
+        --viz-axis: #c3c2b7;
+        --viz-muted: #898781;
+        --c-red: #e34948;
+        --c-blue: #2a78d6;
+        --c-green: #008300;
+        --c-black: #d08b00;
+        --o-1: #104281;
+        --o-2: #1c5cab;
+        --o-3: #2a78d6;
+        --o-4: #6da7ec;
+        --s-a: #2a78d6;
+        --s-b: #e34948;
+      }
+      @media (prefers-color-scheme: dark) {
+        html:not([data-theme="light"]) .viz {
+          --viz-grid: #2c2c2a;
+          --viz-axis: #383835;
+          --viz-muted: #898781;
+          --c-red: #e66767;
+          --c-blue: #3987e5;
+          --c-green: #1baf7a;
+          --c-black: #c98500;
+          --o-1: #cde2fb;
+          --o-2: #9ec5f4;
+          --o-3: #6da7ec;
+          --o-4: #3987e5;
+          --s-a: #3987e5;
+          --s-b: #e66767;
+        }
+      }
+      html[data-theme="dark"] .viz {
+        --viz-grid: #2c2c2a;
+        --viz-axis: #383835;
+        --viz-muted: #898781;
+        --c-red: #e66767;
+        --c-blue: #3987e5;
+        --c-green: #1baf7a;
+        --c-black: #c98500;
+        --o-1: #cde2fb;
+        --o-2: #9ec5f4;
+        --o-3: #6da7ec;
+        --o-4: #3987e5;
+        --s-a: #3987e5;
+        --s-b: #e66767;
+      }
+
+      figure.viz {
+        margin: 3rem 0 2.4rem;
+        padding: 1.3rem 1.1rem 1rem;
+        background: var(--viz-surface);
+        border-radius: 10px;
+      }
+      figure.viz svg { display: block; width: 100%; height: auto; overflow: visible; }
+      .viz-title {
+        font-size: 1.02rem;
+        line-height: 1.45;
+        font-weight: 500;
+        margin: 0 0 0.15rem;
+        color: var(--ink);
+      }
+      .viz-sub {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin: 0 0 1rem;
+        color: var(--ink-soft);
+        max-width: 60ch;
+      }
+      .viz figcaption {
+        font-size: 0.87rem;
+        line-height: 1.55;
+        color: var(--ink-soft);
+        margin-top: 0.9rem;
+      }
+      .viz-legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.1rem;
+        margin: 0 0 0.9rem;
+        font-size: 0.85rem;
+        color: var(--ink-soft);
+      }
+      .viz-legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+      .viz-legend i {
+        width: 13px; height: 13px; border-radius: 3px;
+        display: inline-block; flex: 0 0 auto;
+      }
+      .viz-controls {
+        display: flex; align-items: center; flex-wrap: wrap;
+        gap: 0.6rem; margin: 0 0 1rem;
+        font-size: 0.87rem; color: var(--ink-soft);
+      }
+      .viz-controls input[type="range"] { flex: 1 1 170px; min-width: 140px; accent-color: var(--accent); }
+      .viz-controls output { font-variant-numeric: tabular-nums; font-weight: 500; color: var(--ink); }
+      .viz-btn {
+        font: inherit; font-size: 0.83rem;
+        padding: 0.24rem 0.72rem; border-radius: 999px;
+        border: 1px solid var(--theme-toggle-border);
+        background: transparent; color: var(--ink); cursor: pointer;
+      }
+      .viz-btn:hover { background: var(--accent-soft); }
+      .viz details { margin-top: 0.9rem; font-size: 0.85rem; color: var(--ink-soft); }
+      .viz details summary { cursor: pointer; color: var(--accent); }
+      .viz table { border-collapse: collapse; margin-top: 0.7rem; font-variant-numeric: tabular-nums; }
+      .viz th, .viz td { text-align: right; padding: 0.22rem 0.7rem 0.22rem 0; }
+      .viz th:first-child, .viz td:first-child { text-align: left; }
+      .viz th { font-weight: 500; color: var(--ink); border-bottom: 1px solid var(--viz-axis); }
+      .viz-tip {
+        position: fixed; z-index: 20; pointer-events: none; opacity: 0;
+        transition: opacity 0.12s ease;
+        background: var(--paper); color: var(--ink);
+        border: 1px solid var(--theme-toggle-border);
+        border-radius: 7px; padding: 0.4rem 0.6rem;
+        font-size: 0.82rem; line-height: 1.4;
+        box-shadow: 0 3px 14px rgba(0,0,0,0.13);
+        max-width: 15rem;
+      }
+      .key { font-variant-numeric: tabular-nums; white-space: nowrap; }
+      @media (prefers-reduced-motion: reduce) {
+        .viz-tip { transition: none; }
+      }
+    </style>
+    <style>
+      /* claim tiers ------------------------------------------------------
+         This piece keeps three kinds of claim apart. The tags carry that
+         distinction visually; the text states it too, so colour and
+         placement never carry the meaning alone. */
+      .tier {
+        display: inline-block;
+        font-size: 0.72em;
+        letter-spacing: 0.08em;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 0.15em 0.5em;
+        border-radius: 3px;
+        border: 1px solid currentColor;
+        vertical-align: 0.15em;
+        margin-right: 0.45em;
+        white-space: nowrap;
+      }
+      .tier-rule  { color: #006c4a; }
+      .tier-model { color: #1c5cab; }
+      .tier-hyp   { color: #8a5a00; }
+      [data-theme="dark"] .tier-rule  { color: #3fbf8f; }
+      [data-theme="dark"] .tier-model { color: #6da7ec; }
+      [data-theme="dark"] .tier-hyp   { color: #d9a441; }
+      .tier-key {
+        border: 1px solid var(--viz-grid, #ddd);
+        border-radius: 6px;
+        padding: 0.9em 1.1em;
+        margin: 1.6em 0;
+        font-size: 0.95em;
+      }
+      .tier-key p { margin: 0.45em 0; }
+      .math {
+        margin: 1.35em 0;
+        text-align: center;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.06em;
+        line-height: 1.7;
+        overflow-x: auto;
+      }
+      .prop {
+        margin: 1.7em 0;
+        padding-left: 1em;
+        border-left: 2px solid var(--viz-grid, #ddd);
+      }
+      .prop > p { margin: 0.5em 0; }
+      .prop-name { font-weight: 600; font-variant: small-caps; letter-spacing: 0.02em; }
+      .proof { font-size: 0.96em; color: var(--ink-soft); }
+      .proof .qed { float: right; }
+      var { font-family: Georgia, "Times New Roman", serif; font-style: italic; }
+      /* The CSS reset flattens sub and sup to the baseline. Restore them,
+         or the symbol key teaches notation the page cannot actually show. */
+      sub, sup {
+        font-size: 0.72em;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+      sup { top: -0.55em; }
+      sub { bottom: -0.28em; }
+
+      /* Two-column reading layout. The symbol key stays on screen beside the
+         formulas, so a reader never has to scroll back to decode one. Below
+         the breakpoint it collapses to normal flow, in reading order. */
+      .sym-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "intro" "aside" "main";
+        column-gap: 2.75rem;
+      }
+      .sym-intro { grid-area: intro; }
+      .sym-aside { grid-area: aside; }
+      .sym-main  { grid-area: main; }
+      .sym-aside-title { display: none; }
+
+      @media (min-width: 1150px) {
+        .sym-layout {
+          grid-template-columns: minmax(0, var(--max-width)) minmax(18rem, 23rem);
+          grid-template-areas:
+            "intro aside"
+            "main  aside";
+          margin-left: calc(50% - 50vw);
+          margin-right: calc(50% - 50vw);
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+          justify-content: center;
+        }
+        .sym-aside {
+          position: sticky;
+          top: 1.25rem;
+          align-self: start;
+          max-height: calc(100vh - 2.5rem);
+          overflow-y: auto;
+          font-size: 0.86em;
+          padding: 0.9rem 1.1rem 1rem;
+          background: var(--paper-deep, #f8f3e8);
+          border-radius: 10px;
+        }
+        .sym-aside-title {
+          display: block;
+          font-weight: 600;
+          margin: 0 0 0.5rem;
+          letter-spacing: 0.02em;
+        }
+        /* Three table columns do not fit a narrow rail. Restack each row:
+           the symbol and how to say it on one line, the meaning beneath. */
+        .sym-aside .symkey,
+        .sym-aside .symkey tbody,
+        .sym-aside .symkey tr,
+        .sym-aside .symkey td { display: block; width: auto; }
+        .sym-aside .symkey thead { display: none; }
+        .sym-aside .symkey { margin: 0 0 0.9rem; }
+        .sym-aside .symkey tr {
+          margin-bottom: 0.72rem;
+          padding-bottom: 0.6rem;
+          border-bottom: 1px solid var(--viz-grid, #e1e0d9);
+        }
+        .sym-aside .symkey tr:last-child { border-bottom: 0; margin-bottom: 0; }
+        .sym-aside .symkey td { padding: 0; }
+        .sym-aside .symkey td:first-child {
+          display: inline;
+          font-size: 1.2em;
+          padding-right: 0.55em;
+        }
+        .sym-aside .symkey td:nth-child(2) {
+          display: inline;
+          font-style: italic;
+          opacity: 0.75;
+        }
+        /* In the rail, lead with what the symbol means HERE. The general
+           maths note follows, smaller and quieter, for a first read. */
+        .sym-aside .symkey tr { display: flex; flex-wrap: wrap; }
+        .sym-aside .symkey td:first-child  { order: 1; }
+        .sym-aside .symkey td:nth-child(2) { order: 2; }
+        .sym-aside .symkey td:nth-child(4) {
+          order: 3;
+          flex: 0 0 100%;
+          display: block;
+          margin-top: 0.18rem;
+          line-height: 1.45;
+        }
+        .sym-aside .symkey td:nth-child(3) {
+          order: 4;
+          flex: 0 0 100%;
+          display: block;
+          margin-top: 0.2rem;
+          font-size: 0.92em;
+          line-height: 1.4;
+          opacity: 0.72;
+          max-width: none;
+        }
+        .sym-aside .symkey td:nth-child(3)::before {
+          content: "in maths: ";
+          font-variant: small-caps;
+          letter-spacing: 0.03em;
+        }
+        .sym-aside > p:last-child { margin-bottom: 0; font-size: 0.95em; }
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        .sym-aside { scroll-behavior: smooth; }
+      }
+
+      .keyidea {
+        background: var(--paper-deep, #f8f3e8);
+        border-radius: 10px;
+        padding: 1.3rem 1.4rem 1.1rem;
+        margin: 2rem 0 2.4rem;
+      }
+      .keyidea-title {
+        font-weight: 700;
+        font-size: 0.78rem;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        margin: 0 0 0.7rem;
+        color: var(--accent, #006a6a);
+      }
+      .keyidea > p { margin: 0 0 0.8rem; }
+      .keyidea > ol { margin: 0 0 0.8rem 1.15rem; }
+      .keyidea > ol > li { margin-bottom: 0.65rem; }
+      .keyidea > :last-child { margin-bottom: 0; }
+
+      .tldr {
+        font-weight: 600;
+        font-size: 1.06em;
+        line-height: 1.62;
+        border-left: 3px solid var(--accent, #006a6a);
+        padding: 0.1em 0 0.1em 1.1em;
+        margin: 1.7em 0;
+      }
+
+      .photo { margin: 2.4rem 0; }
+      .photo[hidden] { display: none; }
+      .photo img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+      .photo figcaption {
+        font-size: 0.87rem;
+        line-height: 1.55;
+        color: var(--ink-soft);
+        margin-top: 0.7rem;
+      }
+      .photo .credit { display: block; margin-top: 0.35rem; opacity: 0.8; }
+
+      .symkey {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.2em 0 1.6em;
+        font-size: 0.95em;
+      }
+      .symkey th, .symkey td {
+        text-align: left;
+        padding: 0.42em 0.9em 0.42em 0;
+        vertical-align: top;
+      }
+      .symkey thead th {
+        font-weight: 600;
+        border-bottom: 1px solid var(--viz-axis, #c3c2b7);
+      }
+      .symkey td:first-child {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.15em;
+        white-space: nowrap;
+        padding-right: 1.2em;
+      }
+      .symkey td:nth-child(2) { font-style: italic; white-space: nowrap; padding-right: 1.2em; }
+      .symkey td:nth-child(3) { color: var(--ink-soft); max-width: 24em; }
+      .symkey thead th:nth-child(3) { color: var(--ink-soft); }
+      .math-read {
+        margin: -0.6em 0 1.4em;
+        padding-left: 1em;
+        border-left: 2px solid var(--viz-grid, #ddd);
+        font-size: 0.97em;
+      }
+      .costtable {
+        border-collapse: collapse;
+        margin: 1.2em 0;
+        font-variant-numeric: tabular-nums;
+      }
+      .costtable th, .costtable td { text-align: right; padding: 0.32em 1.1em 0.32em 0; }
+      .costtable th:first-child, .costtable td:first-child { text-align: left; }
+      .costtable thead th { font-weight: 600; border-bottom: 1px solid var(--viz-axis, #c3c2b7); }
+      .costtable tr.pick td { font-weight: 700; }
+      .correction {
+        border-left: 3px solid #8a5a00;
+        padding: 0.2em 0 0.2em 1em;
+        margin: 1.6em 0;
+      }
+      [data-theme="dark"] .correction { border-left-color: #d9a441; }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">The Price of a Point: Looking for New Strategy in Tigris &amp; Euphrates</h1>
+    <p class="post-meta">Jacob Stephens &middot; August 7, 2026 &middot; General &middot; AI-assisted</p>
+    <p class="post-meta-nav"><a href="/posts/">All posts</a> &middot; <a href="/posts/#general">General</a> &middot; <a href="/posts/#ai-assisted">AI-assisted</a></p>
+
+    <figure class="photo">
+        <img src="/static/tigris-and-euphrates/waterline-hero.jpg"
+             alt="Four clay vessels of different heights on a stone table, water poured in until it settles at one level across all four."
+             onerror="this.closest('figure').hidden = true;">
+        <figcaption>Your score is the shortest vessel. Everything in this post follows from that one sentence.
+            <span class="credit">Generated with <a href="https://inkvoke.dev/">inkvoke</a>, my own command-line tool for OpenAI image models.</span>
+        </figcaption>
+    </figure>
+
+    <h2 id="origin">Where this came from</h2>
+
+    <p>I had lunch with my dad outside Reading Terminal Market in Philadelphia. He plays Tigris &amp; Euphrates seriously. He is <a href="https://boardgamearena.com/playerstat?id=93452684&amp;game=1531">markstephens404</a> on Board Game Arena, with 1,749 games, 892 wins and a 74% win rate. He has been inside the world top 15 at the game.</p>
+
+    <p>So I asked him what the strongest players actually do. He talked. I listened. Then I asked a different question, and it is the reason this post exists.</p>
+
+    <p>Could a machine find a <em>new</em> idea about this game?</p>
+
+    <p>Not by playing itself ten million times. That works, and other people do it well. I meant something narrower: take the published rule, treat it as mathematics, and see whether anything falls out that strong players do not already say to each other.</p>
+
+    <p>This post is that attempt. I should tell you the result before you spend your time.</p>
+
+    <p class="tldr">I did not find a new strategy. I found four exact statements about the scoring rule. Three of them I have not seen written down anywhere, and one of them corrects a mistake that is easy to make and that I made myself while working. They are small, they are certain, and they change how I read a position. That is less than I hoped for and more than I expected.</p>
+
+    <div class="keyidea">
+        <p class="keyidea-title">The idea this post is built on</p>
+
+        <p>Before you spend actions chasing points in one colour, count how many of your four spheres are level at the bottom. That count is your <strong>floor multiplicity</strong>. Call it <var>w</var>. It is 1, 2, 3 or 4, and it changes turn by turn.</p>
+
+        <p>Two things follow from <var>w</var> alone, and both are exact:</p>
+
+        <ol>
+            <li><strong><var>w</var> is the price of a point of score.</strong> Raising your lowest sphere by one costs exactly <var>w</var> points, because you must lift every sphere that is level at the bottom. One sphere alone down there and a point costs a point. Four level and the same point of score costs four.</li>
+            <li><strong>A lump of points in one colour is never worth nothing.</strong> It moves criterion <var>w</var> &mdash; your lowest sphere when <var>w</var> is 1, your second lowest when <var>w</var> is 2, and so on. It always moves something. Against a single opponent, a windfall that could not touch my lowest sphere still changed who won 44% of the time.</li>
+        </ol>
+
+        <p>Every guide says to keep your spheres level. That is the same advice in every position. <var>w</var> tells you what being unlevel is costing you <em>right now</em>, and what a war is really worth before you start it.</p>
+    </div>
+
+    <p>I also found the edge, quite fast. Past that edge the maths stops and guessing starts. This post marks that edge clearly, because the interesting failure was not in the arithmetic. It was in the labelling.</p>
+
+    <h2 id="context">Before you start</h2>
+
+    <p>This post is about one rule in the board game Tigris &amp; Euphrates. You do not need to know the game. You need four facts.</p>
+
+    <ol>
+        <li>Each player collects <strong>victory points</strong> in four <strong>spheres</strong>: settlements, temples, farms, and markets.</li>
+        <li>Each sphere has a <strong>colour</strong>. Tiles and point tokens use the same four colours.</li>
+        <li>A <strong>treasure</strong> is a point token that is wild. At the end of the game you put each treasure into any sphere.</li>
+        <li>At the end, players compare their <strong>lowest sphere</strong>. If two players tie, they compare the second lowest sphere.</li>
+    </ol>
+
+    <figure class="photo">
+        <img src="/static/tigris-and-euphrates/uruk-accounting-tablets.jpg"
+             alt="Three small clay tablets side by side. The left one bears only impressed numerical marks. The centre one mixes numbers with simple pictures. The right one carries early proto-cuneiform signs."
+             onerror="this.closest('figure').hidden = true;">
+        <figcaption>Three clay tablets from Uruk, about 3300&ndash;3000&nbsp;BCE: a numerical tablet, a numerical-ideographic tablet, and a proto-cuneiform tablet. Writing in Mesopotamia began as accounting. Each tablet records <em>how many</em> of <em>which kind</em> &mdash; which is exactly the shape of a Tigris &amp; Euphrates score.
+            <span class="credit">Photograph by Daderot, derivative by Zunkir. Oriental Institute of Chicago collection. <a href="https://commons.wikimedia.org/wiki/File:Numerical_and_proto_cuneiforms_tablets_-_Oriental_Institute.jpg">Wikimedia Commons</a>, released under CC0 1.0 (public domain).</span>
+        </figcaption>
+    </figure>
+
+    <p>Most guides give you one sentence: keep your spheres level. The sentence is true. It is not enough. This post shows what the rule says. It also shows what the rule does not say.</p>
+
+    <p>Each new word appears in <strong>bold</strong> the first time you meet it. A short definition comes with it. You do not need to remember them all at once.</p>
+
+    <div class="tier-key">
+        <p>Each claim below has one label. The labels mean different things.</p>
+        <p><span class="tier tier-rule">Rule</span> The rulebook gives this result. It is true of the game.</p>
+        <p><span class="tier tier-model">Model</span> A <strong>toy model</strong> gives this result. It is true of the model. It is not yet true of the game.</p>
+        <p><span class="tier tier-hyp">Hypothesis</span> A guess about real play. Nobody has tested it here.</p>
+    </div>
+
+    <h2 id="rule">Your result is four numbers, not one</h2>
+
+    <p>Your result is not one number. It is four numbers.</p>
+
+    <p>Write your four sphere totals together as a <strong>portfolio</strong>. Sort the portfolio from low to high. To compare two players, compare the two sorted portfolios one position at a time. The first difference decides. This comparison is <strong>leximin</strong>.</p>
+
+    <p>Now give the four sorted positions names. Position 1 is <strong>criterion 1</strong>. Position 2 is <strong>criterion 2</strong>. The rule reads criterion 1 first, then criterion 2, and so on.</p>
+
+    <p>Criterion 1 is your lowest sphere. This post also calls it your <strong>floor</strong>, because it is the level everything else sits above.</p>
+
+    <p>Two or more spheres can hold that same lowest total. The count of spheres at your floor is the <strong>floor multiplicity</strong>. It is 1, 2, 3 or 4. It does more work in this post than any other number.</p>
+
+    <p>Two facts come from this. Both are easy to miss.</p>
+
+    <p>First, the comparison does not stop at the floor. One player holds 5, 5, 8, 8. A second player holds 5, 6, 6, 7. They are not equal. The first player loses. Criterion 1 is 5 for both players. Criterion 2 is 5 against 6.</p>
+
+    <p>Second, the rule does not see colour. It sorts your portfolio first, and the sort removes the labels. Colour controls what you can get while you play. Colour does not change the comparison.</p>
+
+    <div class="sym-layout">
+
+      <div class="sym-intro">
+    <h3 id="symbols">How to read the symbols</h3>
+
+    <p>This post uses a few short symbols. Each one stands for a phrase about the game. Nothing here is more than counting. Here is the whole list.</p>
+      </div>
+
+      <aside class="sym-aside" aria-label="Symbol key">
+        <p class="sym-aside-title">Symbol key</p>
+    <table class="symkey">
+        <thead><tr><th>Symbol</th><th>Say it</th><th>In maths generally</th><th>Here it means</th></tr></thead>
+        <tbody>
+            <tr><td><var>x</var></td><td>ex</td><td>A stand-in name for a thing you are talking about.</td><td>Your portfolio. All four sphere totals together.</td></tr>
+            <tr><td><var>x</var><sub>1</sub> &hellip; <var>x</var><sub>4</sub></td><td>ex one</td><td>A small number below the line picks one item out of a group.</td><td>One sphere total. The small number picks the sphere.</td></tr>
+            <tr><td><var>x</var><sup>&uarr;</sup></td><td>ex sorted</td><td>A mark above the line changes the thing in a stated way. An up arrow usually means sorted upward.</td><td>The same four totals, put in order from low to high.</td></tr>
+            <tr><td><var>x</var><sup>&uarr;</sup><sub>1</sub></td><td>ex sorted one</td><td>Both marks together: item 1 of the sorted group.</td><td>Criterion 1. The lowest of the four. Your floor.</td></tr>
+            <tr><td><var>m</var></td><td>em</td><td>Any letter can name a number you want to talk about more than once.</td><td>The floor value. How many points your lowest sphere holds.</td></tr>
+            <tr><td><var>w</var></td><td>double-u</td><td>Same idea. A letter standing for a count.</td><td>The floor multiplicity. How many spheres hold that floor value. It is 1, 2, 3 or 4.</td></tr>
+            <tr><td><var>t</var></td><td>tee</td><td>Often a count or an amount you are given.</td><td>How many treasures you hold.</td></tr>
+            <tr><td>&lambda;</td><td>lambda</td><td>The Greek L. Mathematicians reach for it when they need a name for a level, a rate, or a setting they are about to tune. It carries no fixed meaning; it is borrowed for whatever the writer says it is.</td><td>A level: a number of points you would like every sphere to reach.</td></tr>
+            <tr><td>&lambda;*</td><td>lambda star</td><td>A star on a letter almost always marks the best or chosen value of that thing.</td><td>The highest level you can pay for.</td></tr>
+            <tr><td>&Sigma;</td><td>sigma</td><td>Capital Greek S, for &ldquo;sum&rdquo;. It always means &ldquo;add up a series of things&rdquo;.</td><td>Add these up.</td></tr>
+            <tr><td><var>i</var></td><td>eye</td><td>The usual name for a counter that walks through a group one item at a time. It is not a value you look up.</td><td>Each sphere in turn: first sphere 1, then 2, then 3, then 4.</td></tr>
+            <tr><td>&Sigma;<sub>i</sub></td><td>sum over eye</td><td>Sigma with a counter under it: do the next part once per item, then add the answers.</td><td>Work it out once for each of the four spheres, then add the four answers.</td></tr>
+            <tr><td>max(0, <var>n</var>)</td><td>max of zero and en</td><td>max picks the largest of the values in the brackets. Pairing it with 0 is the standard way to stop a number going negative.</td><td>Take <var>n</var>, but never go below zero.</td></tr>
+            <tr><td>{ &hellip; }</td><td>the set of</td><td>Curly brackets hold a set: a group of things with no order and no repeats.</td><td>The group of every level you can pay for.</td></tr>
+            <tr><td>:</td><td>such that</td><td>Inside curly brackets the colon separates the thing from the test it must pass. Some writers use a vertical bar instead.</td><td>Read it as &ldquo;where&rdquo;.</td></tr>
+            <tr><td>max { &hellip; }</td><td>the largest of</td><td>The largest member of a set.</td><td>The highest level that passes the test.</td></tr>
+            <tr><td>&le;</td><td>is at most</td><td>Less than or equal to.</td><td>Is not more than.</td></tr>
+        </tbody>
+    </table>
+    <p>You can read every formula below out loud with this list. If a formula still does not help you, skip it. The sentence before it says the same thing in words.</p>
+      </aside>
+
+      <div class="sym-main">
+    <h2 id="treasures">Treasures fill your portfolio like water</h2>
+
+    <p><span class="tier tier-rule">Rule</span> You hold <var>t</var> treasures. You want the highest floor you can get. There is a formula for it.</p>
+
+    <div class="prop">
+        <p><span class="prop-name">Proposition 1 (the level treasures reach).</span> Your floor goes up to &lambda;*.</p>
+        <p class="math">&lambda;* = max { &lambda; : &Sigma;<sub>i</sub> max(0, &lambda; &minus; <var>x</var><sub>i</sub>) &le; <var>t</var> }</p>
+        <p class="math-read"><strong>In words:</strong> pick a level &lambda;. For each sphere, work out how many points it needs to reach that level, and count zero for a sphere that is already there. Add up those numbers. That total is the cost of the level. &lambda;* is the highest level with a cost you can pay from your <var>t</var> treasures.</p>
+        <p class="proof">The sum &Sigma;<sub>i</sub> max(0, &lambda; &minus; <var>x</var><sub>i</sub>) is the number of points you need to bring every sphere up to <var>&lambda;</var>. This number goes up as <var>&lambda;</var> goes up. So the levels you can pay for make one unbroken range. &lambda;* is the top of that range. You can pay for &lambda;*. You cannot pay for &lambda;* + 1. <span class="qed">&#9632;</span></p>
+    </div>
+
+    <p>This method is called <strong>water-filling</strong>. You can do it at the table. Pour water into four columns. Stop when you have no water left. The surface shows your floor.</p>
+
+    <p>Here is an example. Your spheres hold 3, 5, 9 and 5. You hold six treasures. Work out the cost of each level.</p>
+
+    <table class="costtable">
+        <thead><tr><th>Level</th><th>Points needed, sphere by sphere</th><th>Cost</th><th>Can you pay?</th></tr></thead>
+        <tbody>
+            <tr><td>5</td><td>2 + 0 + 0 + 0</td><td>2</td><td>yes</td></tr>
+            <tr class="pick"><td>6</td><td>3 + 1 + 0 + 1</td><td>5</td><td>yes</td></tr>
+            <tr><td>7</td><td>4 + 2 + 0 + 2</td><td>8</td><td>no</td></tr>
+        </tbody>
+    </table>
+
+    <p>Level 7 costs 8 treasures, and you hold 6. Level 6 costs 5, so you can pay for it. So &lambda;* is 6. One treasure is left over. It lifts one sphere to 7.</p>
+
+    <figure class="viz" id="fig-waterfill">
+        <p class="viz-title">Six treasures poured into a portfolio of 3, 5, 9, 5</p>
+        <p class="viz-sub">The solid columns show points you already hold. The lighter part shows treasure. The surface stops at &lambda;* = 6.</p>
+        <div class="viz-legend">
+            <span><i style="background:var(--s-a)"></i>Points already scored</span>
+            <span><i style="background:var(--s-b)"></i>Treasure allocated</span>
+        </div>
+        <svg viewBox="0 0 640 300" role="img" aria-label="Four columns show the four spheres at heights 3, 5, 9 and 5. Treasure fills the three lower columns to level 6. This uses five treasures. The sixth treasure lifts one column to 7. The green sphere at 9 gets nothing."></svg>
+        <figcaption>Five treasures bring every sphere to 6. The sixth treasure cannot lift the floor. Three spheres now hold the floor value, so a lift costs three points. The treasure goes into one sphere and improves criterion 3.</figcaption>
+        <details><summary>Table view</summary><div data-table></div></details>
+    </figure>
+
+    <p>Greedy filling is not only a good method. It is the best method for the whole comparison.</p>
+
+    <div class="prop">
+        <p><span class="prop-name">Proposition 2 (greedy filling is best).</span> Put each treasure into a sphere that is at the floor. This gives the portfolio <var>g</var>. No other way to place the same <var>t</var> treasures beats <var>g</var>.</p>
+        <p class="proof"><em>Why it works, in plain terms.</em> Water-filling makes your four totals as level as they can be. The rule reads the low end of the sorted portfolio first. So the most level portfolio you can reach is also the best one. The formal version follows.</p>
+        <p class="proof"><em>Lemma.</em> Water-filling gives the smallest portfolio in the <strong>majorization</strong> order &mdash; a standard way of comparing how evenly a set of numbers is spread. A portfolio is smaller in that order exactly when each of its <var>k</var>-lowest sums is larger. So <var>g</var> gives the largest sum of the <var>k</var> lowest criteria, for every <var>k</var>. This is the Hardy&ndash;Littlewood&ndash;P&oacute;lya result. The source code also tests it by brute force.</p>
+        <p class="proof">Now assume that some portfolio <var>y</var> beats <var>g</var>. Let <var>k</var> be the first criterion where they differ. Then <var>y</var><sup>&uarr;</sup><sub>k</sub> is above <var>g</var><sup>&uarr;</sup><sub>k</sub>, and every criterion below <var>k</var> is equal. Add the first <var>k</var> criteria. The sum for <var>y</var> is larger than the sum for <var>g</var>. This contradicts the lemma. <span class="qed">&#9632;</span></p>
+    </div>
+      </div>
+
+    </div>
+
+    <h2 id="floor">Floor multiplicity sets the price</h2>
+
+    <p>Four points can arrive in one sphere at once. This is what a <strong>war</strong> pays. This post calls it a <strong>windfall</strong>. Look at two cases.</p>
+
+    <p>In the first case, one sphere is alone at the floor. The four points lift your lowest sphere. Your floor goes up.</p>
+
+    <p>In the second case, two or more spheres hold the floor value. You put four points into one of them. Your floor does not move. The other sphere at the floor is still there.</p>
+
+    <p>It is easy to say that the four points did nothing. That is wrong. Here is the correct statement.</p>
+
+    <div class="prop">
+        <p><span class="prop-name">Proposition 3 (the price of one point of score).</span> To lift your lowest sphere by 1, you must pay exactly <var>w</var> points.</p>
+        <p class="proof">Put one point into each of the <var>w</var> spheres at the floor. All of them go to <var>m</var>&nbsp;+&nbsp;1. Every other sphere is already above <var>m</var>. So the new floor is <var>m</var>&nbsp;+&nbsp;1. Now pay less than <var>w</var> points. At least one sphere stays at <var>m</var>. So the floor does not move. <span class="qed">&#9632;</span></p>
+    </div>
+
+    <p>So floor multiplicity is a price. One sphere at the floor: one point of score costs one point. Four spheres at the floor: one point of score costs four points. This is the most useful number in this post.</p>
+
+    <div class="prop">
+        <p><span class="prop-name">Proposition 4 (which criterion moves).</span> Add <var>b</var> &ge; 1 points to one sphere at the floor. This improves <em>exactly criterion <var>w</var></em>. Criteria 1 to <var>w</var>&minus;1 do not change. Criterion <var>w</var> goes up.</p>
+        <p class="proof">The floor value <var>m</var> appears <var>w</var> times. So <var>x</var><sup>&uarr;</sup><sub>1</sub> to <var>x</var><sup>&uarr;</sup><sub>w</sub> are all <var>m</var>, and <var>x</var><sup>&uarr;</sup><sub>w+1</sub> is above <var>m</var>. Add <var>b</var> to one copy of <var>m</var>. Now <var>w</var>&minus;1 copies of <var>m</var> are left. One entry becomes <var>m</var>&nbsp;+&nbsp;<var>b</var>, which is above <var>m</var>. Every other entry does not change, and each one is already above <var>m</var>. Sort again. Positions 1 to <var>w</var>&minus;1 still hold <var>m</var>. Position <var>w</var> now holds min(<var>m</var>&nbsp;+&nbsp;<var>b</var>, <var>x</var><sup>&uarr;</sup><sub>w+1</sub>), and that value is above <var>m</var>. So the first difference is at position <var>w</var>. <span class="qed">&#9632;</span></p>
+    </div>
+
+    <p>Read Proposition 4 again. A single-sphere windfall never does nothing. The value of <var>w</var> is 1, 2, 3 or 4. So one criterion always moves. Floor multiplicity decides <em>which</em> criterion moves. It does not decide <em>if</em> one moves.</p>
+
+    <div class="correction">
+        <p><strong>A trap.</strong> It is easy to score a portfolio with <code>min()</code>. Do this, and a windfall into a level floor measures as zero. You then say the windfall is worth nothing. But <code>min()</code> is only criterion 1. In this case criterion 1 is the one criterion that cannot move. The zero comes from your measurement. It does not come from the game.</p>
+    </div>
+
+    <p>This also separates two tools. A treasure lifts the floor level, because you can put treasures into several spheres. A windfall cannot lift a level floor, because all the points go into one sphere. The windfall moves criterion <var>w</var> instead.</p>
+
+    <p>Does the difference matter? That question needs an opponent. So it leaves the rules and enters a model. The next section describes that model in full. For the chart below you need one word. A <strong>run</strong> is one instance of the model. A run is not a game, and this post never mixes the two.</p>
+
+    <figure class="viz" id="fig-h2h">
+        <p class="viz-title">Does a &ldquo;worthless&rdquo; windfall change who wins?</p>
+        <p class="viz-sub">Each run makes one portfolio and one opponent portfolio. It compares them with the rulebook comparison. It does this with the windfall and without it. The groups show how many spheres hold the floor value.</p>
+        <div class="viz-legend">
+            <span><i style="background:var(--s-a)"></i>Without the windfall</span>
+            <span><i style="background:var(--s-b)"></i>With the windfall</span>
+        </div>
+        <svg viewBox="0 0 640 316" role="img" aria-label="Grouped bar chart of the win rate before and after a four-point single-sphere windfall, by floor multiplicity. At multiplicity 1 the win rate goes from 39.9 to 90.8 percent. At multiplicity 2, where the lowest sphere cannot move, it still goes from 32.1 to 76.4 percent. At multiplicity 3 it goes from 27.8 to 52.8 percent. At multiplicity 4 it goes from 88.5 to 100 percent."></svg>
+        <figcaption>The win rate against one opponent. At floor multiplicity 2 the lowest sphere cannot move. The windfall still changes the result 44.3% of the time. Criterion 2 does that work.</figcaption>
+        <details><summary>Table view</summary><div data-table></div></details>
+    </figure>
+
+    <p><span class="tier tier-model">Model</span> At floor multiplicity 2 the lowest sphere cannot move. The windfall still lifts the win rate from 32.1% to 76.4%. It changes the result in 44.3% of matches. This is not a small effect.</p>
+
+    <h2 id="model">The toy model, in full</h2>
+
+    <p>Everything below comes from one model. Here is what the model does.</p>
+
+    <p>Points arrive one at a time. Each point has a colour. On a <strong>steered</strong> step, the point goes into a sphere that is at your floor. On an unsteered step, the colour comes at random from the tile bag: 57 red, 36 blue, 30 green, 30 black. Your <strong>discipline</strong> is how often you steer.</p>
+
+    <p>The bag assumption is the largest leap in this model. It is not a rule. Tile counts are not point counts. You need a <strong>leader</strong> or a <strong>king</strong> to get a point. A king collects for a sphere with no leader. A <strong>revolt</strong> pays red at any size. A war pays several points at once. A <strong>monument</strong> pays again and again, and it uses no tiles. A <strong>trader</strong> takes the treasures. Every leader needs a <strong>temple</strong> next to it, so red tiles do structural work.</p>
+
+    <p>The model has no board. It has no <strong>kingdoms</strong>, no leaders, no monuments, no opponents and no hidden information. So a result that leans on the bag assumption is a guess about the game, and no more.</p>
+
+    <figure class="viz" id="fig-balance">
+        <p class="viz-title">The same 36 points, with more or less discipline</p>
+        <p class="viz-sub">Your lowest sphere against how often you steer a point into a sphere at your floor.</p>
+        <svg viewBox="0 0 640 318" role="img" aria-label="Line chart. The lowest sphere goes from 5.17 to 9.00 as discipline goes from 0 to 100 percent of points."></svg>
+        <figcaption>With 36 points, a perfect portfolio gives a lowest sphere of 9. No discipline gives 5.17. That is 57.4% of the perfect value. The line becomes flat after about half.</figcaption>
+        <details><summary>Table view</summary><div data-table></div></details>
+    </figure>
+
+    <p><span class="tier tier-model">Model</span> Discipline is worth about 3.8 points of lowest sphere. The first quarter of the discipline gives you 56% of that gain.</p>
+
+    <div class="correction">
+        <p><strong>A metric that is easy to misname.</strong> It is easy to call 57.4% the share of raw points that become score. It is not that. It is the lowest sphere as a share of the perfect value. Only 14.3% of your raw points sit in your lowest sphere. Perfect play reaches 25%, because a quarter is the limit with four spheres. Call the number <strong>balance efficiency</strong> and it is useful. Call it a conversion rate and it is four times too large.</p>
+    </div>
+
+    <figure class="viz" id="fig-horizon">
+        <p class="viz-title">What one more point does to your lowest sphere</p>
+        <p class="viz-sub">Move the slider. Rank 1 is your weakest sphere now. This shows the effect on the lowest sphere only. It is not the value of a point, because that needs an opponent.</p>
+        <div class="viz-controls">
+            <label for="horizon-range">Points still to come</label>
+            <input type="range" id="horizon-range" min="0" max="5" step="1" value="4">
+            <output id="horizon-out">12</output>
+            <button class="viz-btn" type="button" data-play>Play</button>
+        </div>
+        <svg viewBox="0 0 640 306" role="img" aria-label="Bar chart of the effect of one extra point on the lowest sphere, by rank, as the points still to come go from 20 down to 0. At 20 points to come, all four ranks are worth about 0.16 to 0.31. At 0 points to come, only the weakest sphere shows a value, at 0.55."></svg>
+        <figcaption>At 0 points to come, the three other ranks read zero. This happens because the game stops. Only the floor can move. It does not mean those spheres stop counting, because the later criteria still read them.</figcaption>
+        <details><summary>Table view</summary><div data-table></div></details>
+    </figure>
+
+    <p><span class="tier tier-model">Model</span> With 20 points still to come, the four ranks are almost equal: 0.31, 0.30, 0.28 and 0.16. The order can still change, so a strong sphere keeps value. As the end comes near, the effect moves onto the floor.</p>
+
+    <p>You can read this as a rule for play: go wide early, go exact late. Do not. This chart sees criterion 1 only. It cannot see the other three criteria. Read it as one idea about one criterion in one model.</p>
+
+    <h2 id="scarcity">The scarce colours, and how much of that is my assumption</h2>
+
+    <p>The tile bag is not equal. Red is 37% of it. Green and black are 19.6% each. So you can guess that the scarce colours set your floor.</p>
+
+    <figure class="viz" id="fig-bag">
+        <p class="viz-title">Share of the bag against share of runs where that colour is alone at the floor</p>
+        <p class="viz-sub">In the toy model, with no discipline. Both bars are shares of all runs, so you can compare them directly.</p>
+        <div class="viz-legend">
+            <span><i style="background:var(--s-a)"></i>Share of the bag</span>
+            <span><i style="background:var(--s-b)"></i>Sole lowest sphere</span>
+        </div>
+        <svg viewBox="0 0 640 224" role="img" aria-label="Paired bar chart. It compares each colour's share of the tile bag against how often that colour is the only lowest sphere. Red is 37.3 percent of the bag and only 1.1 percent of the floors. Blue is 23.5 percent and 16.8 percent. Green is 19.6 percent and 33.6 percent. Black is 19.6 percent and 33.3 percent."></svg>
+        <figcaption>One sphere is alone at the floor in 84.7% of runs. The other 15.3% have a level floor. Those runs are not in the right-hand bars, so the right-hand bars do not add up to 100%.</figcaption>
+        <details><summary>Table view</summary><div data-table></div></details>
+    </figure>
+
+    <p><span class="tier tier-model">Model</span> Green or black is the only lowest sphere in 66.8% of all runs. Red does this 1.1% of the time.</p>
+
+    <div class="correction">
+        <p><strong>A denominator that is easy to lose.</strong> Green and black are 78.9% of the runs <em>that have one sphere alone at the floor</em>. It is easy to quote that as &ldquo;almost four in five&rdquo;. But only 84.7% of runs have one sphere alone at the floor. So the correct figure for all runs is 66.8%. The simulation reports the conditional number first. That is why it escapes.</p>
+    </div>
+
+    <p>Now the important part. I ran the same measurement again with a different arrival rule. The result is mostly an echo of my assumption.</p>
+
+    <ul>
+        <li>Points arrive in bag proportions: green or black is lowest in <strong>67.2%</strong> of runs.</li>
+        <li>Points arrive equally in the four colours: <strong>41.8%</strong>. This is what chance gives, because two colours of four take about half of the 84.7%.</li>
+        <li>Half way between the two rules: 58.2%.</li>
+    </ul>
+
+    <p>Discipline removes the effect as fast. At 35% discipline the figure falls to 36.6%. At 50% it falls to 31.3%.</p>
+
+    <p><span class="tier tier-hyp">Hypothesis</span> So do not say that the game is decided in green and black. Say this instead. <em>If</em> points in real play arrive in proportion to tile counts, <em>then</em> scarce colours set the floor more often for a player with no discipline. I have not shown the first part. The section above lists the reasons it is probably false. There is a clean test: count the colours of the points scored in a few hundred recorded games. Until somebody does that test, colour advice has no support here.</p>
+
+    <h2 id="cannot">What this post cannot tell you</h2>
+
+    <p>Two analyses look good from here. Both fail against the rules. I name them so that nobody builds them.</p>
+
+    <p><strong>Do not count the bag.</strong> It looks possible to work out what your opponent holds. Page 9 of the rulebook stops this: <em>&ldquo;The number of tiles in the bag is hidden information; players cannot deliberately count the tiles in the bag.&rdquo;</em> It also says that tiles removed from the game <em>&ldquo;are kept facedown in the box and cannot be viewed by any player.&rdquo;</em> Tiles leave the game face down through hand replacement, revolts and wars. So you cannot know what is left. The rules also forbid the attempt.</p>
+
+    <p><strong>Do not trust one war calculation.</strong> It is easy to pick one position and find the best target. That number changes with your own strength, with the tiles you commit, and with what you believe about the unseen tiles. It also leaves out the cost of the action, the value of both kingdoms, and the <strong>priest</strong> rule on page 10. Under that rule a temple with a treasure, or a temple next to another leader, stays on the board and pays nothing. One position is not a strategy.</p>
+
+    <p><strong>Steering is not a resource you can save.</strong> The model finds that late discipline is worth about 0.58 of a point. The number is real inside the model. But the model gives both policies the same points and the same steering chances. The game does not work that way. Your control over colour comes from leaders, position, monuments, treasures, and from what your opponents allow. Early actions build the board that lets you score late.</p>
+
+    <h2 id="stands">What stands</h2>
+
+    <ol>
+        <li><span class="tier tier-rule">Rule</span> Your result is a sorted portfolio of four numbers. It is not one number.</li>
+        <li><span class="tier tier-rule">Rule</span> With <var>t</var> treasures your floor reaches &lambda;*, and greedy filling gets you there (Propositions 1 and 2).</li>
+        <li><span class="tier tier-rule">Rule</span> To lift your lowest sphere by 1 you pay <var>w</var> points. Floor multiplicity is a price (Proposition 3).</li>
+        <li><span class="tier tier-rule">Rule</span> A single-sphere windfall improves exactly criterion <var>w</var>. It is never worth nothing (Proposition 4).</li>
+        <li><span class="tier tier-model">Model</span> A windfall that cannot move your lowest sphere still changes the result against one opponent about 44% of the time.</li>
+        <li><span class="tier tier-model">Model</span> Discipline is worth about 3.8 points of lowest sphere across 36 points.</li>
+        <li><span class="tier tier-hyp">Hypothesis</span> Scarce colours set the floor, <em>if</em> points arrive in proportion to tile counts. Not tested. It becomes chance under an equal arrival rule.</li>
+    </ol>
+
+    <p>The scoring rule holds more than &ldquo;keep your spheres level&rdquo;. Most of the extra content sits in the later criteria, and short summaries drop them. What I cannot tell you is how this works on a real board. That needs a program with the board, the opponents, and strong self-play.</p>
+
+    <h2 id="code">The code</h2>
+
+    <p>One Python file gives every number above. It uses numpy. It gives the same result every time, and it runs in about three seconds. Each function carries the label of the claim it can support.</p>
+
+    <p>All four propositions have short proofs. All four also have a brute-force test, because a short proof can hide a case. The tests are simple loops. They cover 12,005 portfolios for Proposition 2, 90,000 cases for Proposition 1, 4,096 for Proposition 3, and 24,576 for Proposition 4. There are no counterexamples.</p>
+
+    <p>The simulation is <a href="/static/tigris-and-euphrates/tigris_sim.py">tigris_sim.py</a>. Its output is <a href="/static/tigris-and-euphrates/sim_results.json">sim_results.json</a>. A script writes the chart numbers into this page from that file. A check script fails if the two do not agree.</p>
+
+    <p>I checked the rules against the <a href="https://images-cdn.fantasyflightgames.com/filer_public/bf/e1/bfe1ae7d-d41c-44d4-910b-86cd59324b38/kn25_rulebook_web.pdf">Z-Man rulebook</a>. See page 9 for hidden information, page 10 for the priest rule, and page 14 for the winner.</p>
+
+    <p class="post-meta-nav"><a href="/posts/">All posts</a></p>
+
+    <script>
+    (function () {
+      'use strict';
+
+      var NS = 'http://www.w3.org/2000/svg';
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+      // ---- data (from sim_results.json) --------------------------------
+      /* @generated from sim_results.json by build_chart_data.py - do not edit */
+      var D = {
+        bag: [
+          { name: 'Red temples', bag: 0.3725, floor: 0.0111 },
+          { name: 'Blue farms', bag: 0.2353, floor: 0.1676 },
+          { name: 'Green markets', bag: 0.1961, floor: 0.3355 },
+          { name: 'Black settlements', bag: 0.1961, floor: 0.3329 },
+        ],
+        balance: [
+          { steer: 0.00, floor: 5.165, eff: 0.5739, raw: 0.1435 },
+          { steer: 0.25, floor: 7.315, eff: 0.8127, raw: 0.2032 },
+          { steer: 0.50, floor: 8.168, eff: 0.9076, raw: 0.2269 },
+          { steer: 0.75, floor: 8.615, eff: 0.9572, raw: 0.2393 },
+          { steer: 1.00, floor: 9.000, eff: 1.0000, raw: 0.2500 },
+        ],
+        horizon: [
+          { h: 0, v: [0.551, 0.000, 0.000, 0.000] },
+          { h: 2, v: [0.333, 0.164, 0.014, 0.000] },
+          { h: 4, v: [0.385, 0.291, 0.179, 0.039] },
+          { h: 8, v: [0.343, 0.302, 0.240, 0.089] },
+          { h: 12, v: [0.328, 0.307, 0.266, 0.122] },
+          { h: 20, v: [0.311, 0.304, 0.282, 0.158] },
+        ],
+        waterfill: {
+          level: 6, treasures: 6, spent: 5, leftover: 1,
+          spheres: [
+            { name: 'red', start: 3, final: 7 },
+            { name: 'blue', start: 5, final: 6 },
+            { name: 'green', start: 9, final: 9 },
+            { name: 'black', start: 5, final: 6 },
+          ],
+        },
+        h2h: [
+          { w: 1, share: 0.5433, before: 0.3994, after: 0.9075, changed: 0.5081 },
+          { w: 2, share: 0.2949, before: 0.3209, after: 0.7637, changed: 0.4428 },
+          { w: 3, share: 0.0544, before: 0.2776, after: 0.5276, changed: 0.2500 },
+          { w: 4, share: 0.1074, before: 0.8850, after: 1.0000, changed: 0.1150 },
+        ],
+      };
+      /* @end generated */
+
+      function mk(tag, attrs, parent) {
+        var e = document.createElementNS(NS, tag);
+        for (var k in attrs) if (attrs[k] !== null && attrs[k] !== undefined) {
+          e.setAttribute(k, attrs[k]);
+        }
+        if (parent) parent.appendChild(e);
+        return e;
+      }
+      function txt(parent, x, y, s, o) {
+        o = o || {};
+        var t = mk('text', {
+          x: x, y: y, 'font-size': o.size || 13,
+          'text-anchor': o.anchor || 'start',
+          'dominant-baseline': o.baseline || 'auto',
+          fill: o.fill || 'var(--viz-muted)',
+          'font-weight': o.weight || 400,
+          'font-family': 'inherit'
+        }, parent);
+        t.textContent = s;
+        return t;
+      }
+      function scale(d0, d1, r0, r1) {
+        return function (v) { return d1 === d0 ? r0 : r0 + (v - d0) / (d1 - d0) * (r1 - r0); };
+      }
+      function fmt(v, n) { return v.toFixed(n === undefined ? 2 : n); }
+
+      // ---- tooltip -----------------------------------------------------
+      var tip = document.createElement('div');
+      tip.className = 'viz-tip';
+      tip.setAttribute('role', 'status');
+      document.body.appendChild(tip);
+      function bindTip(node, html) {
+        node.style.cursor = 'default';
+        function show(ev) {
+          tip.innerHTML = html;
+          tip.style.opacity = '1';
+          var pt = ev.touches ? ev.touches[0] : ev;
+          var w = tip.offsetWidth, h = tip.offsetHeight;
+          var x = Math.min(Math.max(8, pt.clientX - w / 2), window.innerWidth - w - 8);
+          var y = pt.clientY - h - 14;
+          if (y < 8) y = pt.clientY + 18;
+          tip.style.left = x + 'px';
+          tip.style.top = y + 'px';
+        }
+        node.addEventListener('mouseenter', show);
+        node.addEventListener('mousemove', show);
+        node.addEventListener('mouseleave', function () { tip.style.opacity = '0'; });
+        node.addEventListener('touchstart', show, { passive: true });
+        node.addEventListener('touchend', function () { tip.style.opacity = '0'; });
+      }
+
+      // ---- animation ---------------------------------------------------
+      function ease(t) { return 1 - Math.pow(1 - t, 3); }
+      function animate(dur, step) {
+        if (reduce.matches) { step(1); return; }
+        var t0 = null;
+        function frame(ts) {
+          if (t0 === null) t0 = ts;
+          var p = Math.min(1, (ts - t0) / dur);
+          step(ease(p));
+          if (p < 1) requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+      }
+      function onReveal(node, fn) {
+        if (!('IntersectionObserver' in window)) { fn(); return; }
+        var seen = false;
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting && !seen) { seen = true; fn(); io.disconnect(); }
+          });
+        }, { threshold: 0.25 });
+        io.observe(node);
+      }
+
+      function tableFrom(host, cols, rows) {
+        var t = document.createElement('table');
+        var thead = document.createElement('thead');
+        var tr = document.createElement('tr');
+        cols.forEach(function (c) {
+          var th = document.createElement('th'); th.textContent = c; tr.appendChild(th);
+        });
+        thead.appendChild(tr); t.appendChild(thead);
+        var tb = document.createElement('tbody');
+        rows.forEach(function (r) {
+          var row = document.createElement('tr');
+          r.forEach(function (v) {
+            var td = document.createElement('td'); td.textContent = v; row.appendChild(td);
+          });
+          tb.appendChild(row);
+        });
+        t.appendChild(tb); host.appendChild(t);
+      }
+
+      function gridlines(g, x0, x1, ticks, y, opts) {
+        opts = opts || {};
+        ticks.forEach(function (v) {
+          mk('line', {
+            x1: x0, x2: x1, y1: y(v), y2: y(v),
+            stroke: v === 0 && opts.zero ? 'var(--viz-axis)' : 'var(--viz-grid)',
+            'stroke-width': v === 0 && opts.zero ? 1.5 : 1
+          }, g);
+          txt(g, x0 - 9, y(v), opts.fmt ? opts.fmt(v) : String(v),
+              { anchor: 'end', baseline: 'middle', size: 12 });
+        });
+      }
+
+
+      // ============ figure 0: water-filling diagram ======================
+      function figWaterfill() {
+        var fig = document.getElementById('fig-waterfill');
+        if (!fig) return;
+        var svg = fig.querySelector('svg');
+        var wf = D.waterfill;
+        var W = 640, H = 300, L = 56, R = 24, T = 30, B = 52;
+        var top = 10;
+        var y = scale(0, top, H - B, T);
+        var g = mk('g', {}, svg);
+
+        gridlines(g, L, W - R, [0, 2, 4, 6, 8, 10], y, { zero: true });
+        txt(svg, L - 46, T - 10, 'victory points', { size: 12 });
+
+        var step = (W - R - L) / wf.spheres.length, bw = 58;
+        var parts = [];
+
+        wf.spheres.forEach(function (d, i) {
+          var cx = L + step * i + step / 2;
+          txt(svg, cx, H - B + 20, d.name, { anchor: 'middle', size: 12.5, fill: 'var(--ink)' });
+          txt(svg, cx, H - B + 36, d.start + ' \u2192 ' + d.final,
+            { anchor: 'middle', size: 11 });
+
+          // scored points (solid, drawn from the baseline up)
+          var base = mk('rect', {
+            x: cx - bw / 2, y: y(0), width: bw, height: 0, rx: 3, fill: 'var(--s-a)'
+          }, g);
+          bindTip(base, '<strong>' + d.name + '</strong><br>' + d.start +
+            ' points already scored');
+
+          // treasure added on top
+          var add = mk('rect', {
+            x: cx - bw / 2, y: y(0), width: bw, height: 0, rx: 3,
+            fill: 'var(--s-b)', opacity: 0.85
+          }, g);
+          if (d.final > d.start) {
+            bindTip(add, '<strong>' + d.name + '</strong><br>' +
+              (d.final - d.start) + ' treasure allocated<br>' +
+              d.start + ' \u2192 ' + d.final);
+          }
+          parts.push({ base: base, add: add, d: d });
+        });
+
+        // the water level
+        var lvl = mk('line', {
+          x1: L, x2: W - R, y1: y(wf.level), y2: y(wf.level),
+          stroke: 'var(--c-black)', 'stroke-width': 2,
+          'stroke-dasharray': '6 4', opacity: 0
+        }, g);
+        var lvlLab = txt(g, W - R, y(wf.level) - 8,
+          '\u03BB* = ' + wf.level,
+          { anchor: 'end', size: 12.5, fill: 'var(--c-black)', weight: 600, opacity: 0 });
+
+        onReveal(fig, function () {
+          animate(1100, function (p) {
+            parts.forEach(function (o) {
+              var sv = o.d.start * Math.min(1, p / 0.55);
+              var hb = Math.max(0, y(0) - y(sv));
+              o.base.setAttribute('y', y(sv));
+              o.base.setAttribute('height', hb);
+
+              var tp = p < 0.55 ? 0 : (p - 0.55) / 0.45;
+              var av = (o.d.final - o.d.start) * tp;
+              o.add.setAttribute('y', y(o.d.start + av));
+              o.add.setAttribute('height', Math.max(0, y(o.d.start) - y(o.d.start + av)));
+            });
+            var lp = p < 0.6 ? 0 : (p - 0.6) / 0.4;
+            lvl.setAttribute('opacity', lp);
+            lvlLab.setAttribute('opacity', lp);
+          });
+        });
+
+        tableFrom(fig.querySelector('[data-table]'),
+          ['Sphere', 'Scored', 'Treasure added', 'Final'],
+          wf.spheres.map(function (d) {
+            return [d.name, d.start, d.final - d.start, d.final];
+          }).concat([['total treasures', '', wf.treasures,
+                      '\u03BB* = ' + wf.level]]));
+      }
+
+      // ============ figure 1: windfall head-to-head ======================
+      function figH2H() {
+        var fig = document.getElementById('fig-h2h');
+        if (!fig) return;
+        var svg = fig.querySelector('svg');
+        var W = 640, H = 316, L = 52, R = 24, T = 40, B = 50;
+        var y = scale(0, 1, H - B, T);
+        var g = mk('g', {}, svg);
+
+        gridlines(g, L, W - R, [0, 0.2, 0.4, 0.6, 0.8, 1.0], y,
+          { zero: true, fmt: function (v) { return Math.round(v * 100) + '%'; } });
+        txt(svg, L - 46, T - 16, 'win rate', { size: 12 });
+
+        var step = (W - R - L) / D.h2h.length;
+        var bw = 36, gap = 10, bars = [];
+
+        D.h2h.forEach(function (d, i) {
+          var cx = L + step * i + step / 2;
+          txt(svg, cx, H - B + 20, d.w === 1 ? '1 sphere' : d.w + ' spheres',
+            { anchor: 'middle', size: 12.5, fill: 'var(--ink)' });
+          txt(svg, cx, H - B + 36, fmt(d.share * 100, 1) + '% of runs',
+            { anchor: 'middle', size: 11 });
+
+          [{ k: 'before', c: 'var(--s-a)', s: -1, n: 'without' },
+           { k: 'after', c: 'var(--s-b)', s: 1, n: 'with' }].forEach(function (spec) {
+            var x = spec.s < 0 ? cx - gap / 2 - bw : cx + gap / 2;
+            var rect = mk('rect', { x: x, y: y(0), width: bw, height: 0, rx: 4, fill: spec.c }, g);
+            var lab = txt(g, x + bw / 2, y(0) - 7, '',
+              { anchor: 'middle', size: 12, fill: 'var(--ink)', weight: 500 });
+            bindTip(rect, '<strong>' + (d.w === 1 ? '1 sphere' : d.w + ' spheres') +
+              ' at the floor</strong><br>win rate ' + spec.n + ' the windfall: ' +
+              fmt(d[spec.k] * 100, 1) + '%<br>result changes ' +
+              fmt(d.changed * 100, 1) + '% of the time');
+            bars.push({ rect: rect, lab: lab, v: d[spec.k] });
+          });
+        });
+
+        onReveal(fig, function () {
+          animate(950, function (p) {
+            bars.forEach(function (b) {
+              var v = b.v * p;
+              b.rect.setAttribute('y', y(v));
+              b.rect.setAttribute('height', Math.max(0, y(0) - y(v)));
+              b.lab.setAttribute('y', y(v) - 7);
+              b.lab.textContent = fmt(v * 100, 1) + '%';
+            });
+          });
+        });
+
+        tableFrom(fig.querySelector('[data-table]'),
+          ['Spheres at the floor', 'Share of runs', 'Win rate without', 'Win rate with', 'Result changed'],
+          D.h2h.map(function (d) {
+            return [d.w, fmt(d.share * 100, 1) + '%', fmt(d.before * 100, 1) + '%',
+                    fmt(d.after * 100, 1) + '%', fmt(d.changed * 100, 1) + '%'];
+          }));
+      }
+
+      // ============ figure 2: balance efficiency ========================
+      function figBalance() {
+        var fig = document.getElementById('fig-balance');
+        if (!fig) return;
+        var svg = fig.querySelector('svg');
+        var W = 640, H = 318, L = 52, R = 22, T = 24, B = 52;
+        var x = scale(0, 1, L, W - R);
+        var y = scale(4, 9.5, H - B, T);
+        var g = mk('g', {}, svg);
+
+        gridlines(g, L, W - R, [4, 5, 6, 7, 8, 9], y, { fmt: function (v) { return v; } });
+        txt(svg, L - 46, T - 6, 'lowest sphere', { size: 12 });
+        txt(svg, (L + W - R) / 2, H - B + 40,
+          'share of points steered into a weakest sphere',
+          { anchor: 'middle', size: 12 });
+
+        D.balance.forEach(function (d) {
+          txt(svg, x(d.steer), H - B + 20, Math.round(d.steer * 100) + '%',
+            { anchor: 'middle', size: 12 });
+        });
+
+        var pts = D.balance.map(function (d) { return [x(d.steer), y(d.floor)]; });
+        var path = mk('path', {
+          fill: 'none', stroke: 'var(--s-a)', 'stroke-width': 2.5,
+          'stroke-linejoin': 'round', 'stroke-linecap': 'round',
+          d: pts.map(function (p, i) { return (i ? 'L' : 'M') + p[0] + ' ' + p[1]; }).join(' ')
+        }, g);
+        var len = path.getTotalLength ? path.getTotalLength() : 0;
+        if (len) {
+          path.setAttribute('stroke-dasharray', len);
+          path.setAttribute('stroke-dashoffset', len);
+        }
+
+        var dots = D.balance.map(function (d) {
+          var c = mk('circle', {
+            cx: x(d.steer), cy: y(d.floor), r: 5,
+            fill: 'var(--viz-surface)', stroke: 'var(--s-a)', 'stroke-width': 2.5, opacity: 0
+          }, g);
+          bindTip(c, '<strong>' + Math.round(d.steer * 100) + '% steered</strong><br>lowest sphere ' +
+            fmt(d.floor) + '<br>balance efficiency ' + fmt(d.eff * 100, 1) +
+            '%<br>share of raw points ' + fmt(d.raw * 100, 1) + '%');
+          return c;
+        });
+
+        var ends = [D.balance[0], D.balance[D.balance.length - 1]].map(function (d, i) {
+          return txt(g, x(d.steer) + (i ? -8 : 8), y(d.floor) + (i ? 18 : -12), fmt(d.floor),
+            { anchor: i ? 'end' : 'start', size: 13, fill: 'var(--ink)', weight: 500, opacity: 0 });
+        });
+
+        onReveal(fig, function () {
+          animate(1000, function (p) {
+            if (len) path.setAttribute('stroke-dashoffset', len * (1 - p));
+            var span = p * (dots.length - 1);
+            dots.forEach(function (c, i) { c.setAttribute('opacity', span >= i - 0.15 ? 1 : 0); });
+            ends.forEach(function (t) {
+              t.setAttribute('opacity', p > 0.8 ? (p - 0.8) / 0.2 : 0);
+            });
+          });
+        });
+
+        tableFrom(fig.querySelector('[data-table]'),
+          ['Steered', 'Lowest sphere', 'Balance efficiency', 'Share of raw points'],
+          D.balance.map(function (d) {
+            return [Math.round(d.steer * 100) + '%', fmt(d.floor),
+                    fmt(d.eff * 100, 1) + '%', fmt(d.raw * 100, 1) + '%'];
+          }));
+      }
+
+      // ============ figure 3: horizon ====================================
+      function figHorizon() {
+        var fig = document.getElementById('fig-horizon');
+        if (!fig) return;
+        var svg = fig.querySelector('svg');
+        var W = 640, H = 306, L = 56, R = 24, T = 26, B = 48;
+        var y = scale(0, 0.6, H - B, T);
+        var g = mk('g', {}, svg);
+        var ranks = ['weakest', '2nd', '3rd', 'strongest'];
+        var cols = ['var(--o-1)', 'var(--o-2)', 'var(--o-3)', 'var(--o-4)'];
+        var bw = 74, step = (W - R - L) / 4;
+
+        gridlines(g, L, W - R, [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6], y,
+          { zero: true, fmt: function (v) { return v.toFixed(1); } });
+        txt(svg, L - 46, T - 8, 'effect on lowest sphere', { size: 12 });
+
+        var bars = ranks.map(function (r, i) {
+          var cx = L + step * i + step / 2;
+          txt(svg, cx, H - B + 20, r, { anchor: 'middle', size: 12.5, fill: 'var(--ink)' });
+          txt(svg, cx, H - B + 36, 'rank ' + (i + 1), { anchor: 'middle', size: 11 });
+          var rect = mk('rect', { x: cx - bw / 2, y: y(0), width: bw, height: 0, rx: 4, fill: cols[i] }, g);
+          var lab = txt(g, cx, y(0) - 8, '', { anchor: 'middle', size: 13, fill: 'var(--ink)', weight: 500 });
+          return { rect: rect, lab: lab };
+        });
+
+        var range = fig.querySelector('#horizon-range');
+        var out = fig.querySelector('#horizon-out');
+        var playBtn = fig.querySelector('[data-play]');
+        range.max = D.horizon.length - 1;
+        var cur = D.horizon[+range.value].v.map(function () { return 0; });
+
+        function draw(vals) {
+          vals.forEach(function (v, i) {
+            bars[i].rect.setAttribute('y', y(v));
+            bars[i].rect.setAttribute('height', Math.max(0, y(0) - y(v)));
+            bars[i].lab.setAttribute('y', y(v) - 8);
+            bars[i].lab.textContent = v > 0.004 ? fmt(v, 3) : '0';
+          });
+        }
+        function tween(to, dur) {
+          var from = cur.slice();
+          animate(dur === undefined ? 480 : dur, function (p) {
+            draw(to.map(function (v, i) { return from[i] + (v - from[i]) * p; }));
+          });
+          cur = to.slice();
+        }
+        function setIdx(i, dur) {
+          var row = D.horizon[i];
+          out.textContent = row.h;
+          range.value = i;
+          tween(row.v, dur);
+          bars.forEach(function (b, j) {
+            b.rect.__tip = '<strong>' + ranks[j] + ' sphere</strong><br>' +
+              fmt(row.v[j], 3) + ' added to the lowest sphere<br>with ' + row.h +
+              ' points still to come';
+          });
+        }
+        bars.forEach(function (b) {
+          bindTip(b.rect, '');
+          ['mouseenter', 'mousemove'].forEach(function (ev) {
+            b.rect.addEventListener(ev, function () {
+              if (b.rect.__tip) tip.innerHTML = b.rect.__tip;
+            });
+          });
+        });
+
+        range.addEventListener('input', function () { setIdx(+range.value, 220); });
+        playBtn.addEventListener('click', function () {
+          var i = D.horizon.length - 1;
+          (function tick() {
+            setIdx(i, 340);
+            i -= 1;
+            if (i >= 0) setTimeout(tick, 620);
+          })();
+        });
+
+        onReveal(fig, function () { setIdx(+range.value, 900); });
+
+        tableFrom(fig.querySelector('[data-table]'),
+          ['Points still to come', 'Weakest', '2nd', '3rd', 'Strongest'],
+          D.horizon.slice().reverse().map(function (r) {
+            return [r.h].concat(r.v.map(function (v) { return fmt(v, 3); }));
+          }));
+      }
+
+      // ============ figure 4: bag share vs floor share ===================
+      function figBag() {
+        var fig = document.getElementById('fig-bag');
+        if (!fig) return;
+        var svg = fig.querySelector('svg');
+        var W = 640, H = 224, mid = 320, half = 56, maxLen = 190, barH = 26;
+        var g = mk('g', {}, svg);
+        var dom = 0.40;
+
+        txt(svg, mid - half - 6, 36, 'share of bag', { anchor: 'end', size: 12 });
+        txt(svg, mid + half + 6, 36, 'sole lowest sphere', { anchor: 'start', size: 12 });
+
+        var bars = [];
+        D.bag.forEach(function (d, i) {
+          var top = 56 + i * 42;
+          txt(svg, mid, top + barH / 2, d.name,
+            { anchor: 'middle', baseline: 'middle', size: 12.5, fill: 'var(--ink)' });
+
+          var lb = mk('rect', {
+            x: mid - half, y: top, width: 0, height: barH, rx: 3, fill: 'var(--s-a)'
+          }, g);
+          var ll = txt(g, mid - half - 8, top + barH / 2, '',
+            { anchor: 'end', baseline: 'middle', size: 12, fill: 'var(--ink)', weight: 500 });
+          bindTip(lb, '<strong>' + d.name + '</strong><br>' + fmt(d.bag * 100, 1) +
+            '% of the 153 tiles');
+
+          var rb = mk('rect', {
+            x: mid + half, y: top, width: 0, height: barH, rx: 3, fill: 'var(--s-b)'
+          }, g);
+          var rl = txt(g, mid + half + 8, top + barH / 2, '',
+            { anchor: 'start', baseline: 'middle', size: 12, fill: 'var(--ink)', weight: 500 });
+          bindTip(rb, '<strong>' + d.name + '</strong><br>sole lowest sphere in ' +
+            fmt(d.floor * 100, 1) + '% of all runs');
+
+          bars.push({ rect: lb, lab: ll, v: d.bag, left: true });
+          bars.push({ rect: rb, lab: rl, v: d.floor, left: false });
+        });
+
+        onReveal(fig, function () {
+          animate(900, function (p) {
+            bars.forEach(function (b) {
+              var v = b.v * p, len = v / dom * maxLen;
+              b.rect.setAttribute('width', len);
+              if (b.left) b.rect.setAttribute('x', mid - half - len);
+              b.lab.setAttribute('x', b.left ? mid - half - len - 8 : mid + half + len + 8);
+              b.lab.textContent = fmt(v * 100, 1) + '%';
+            });
+          });
+        });
+
+        tableFrom(fig.querySelector('[data-table]'),
+          ['Colour', 'Share of bag', 'Sole lowest sphere (all runs)'],
+          D.bag.map(function (d) {
+            return [d.name, fmt(d.bag * 100, 1) + '%', fmt(d.floor * 100, 1) + '%'];
+          }));
+      }
+
+      function build() {
+        [figWaterfill, figH2H, figBalance, figHorizon, figBag].forEach(function (f) {
+          try { f(); } catch (e) { /* a broken chart must not take the article down */ }
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', build);
+      } else {
+        build();
+      }
+    })();
+    </script>
+</body>
+
+</html>

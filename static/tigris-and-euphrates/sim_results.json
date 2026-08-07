@@ -1,0 +1,405 @@
+{
+  "_meta": {
+    "seed": 20260807,
+    "trials": 60000,
+    "claim_tiers": {
+      "RULE": "follows from the published rules; true of the game",
+      "MODEL": "a property of the toy allocation process only",
+      "HYP": "a conjecture about real play; not tested here"
+    },
+    "not_modelled": [
+      "board",
+      "adjacency",
+      "kingdoms",
+      "leaders",
+      "monuments",
+      "opponents' choices",
+      "hidden information",
+      "action costs"
+    ]
+  },
+  "rule_waterfilling_optimal": {
+    "portfolios_checked": 12005,
+    "counterexamples": 0,
+    "max_pt": 6,
+    "max_wilds": 4
+  },
+  "rule_windfall_levels": {
+    "budget": 4,
+    "max_pt": 9,
+    "by_floor_multiplicity": [
+      {
+        "floor_multiplicity": 1,
+        "portfolios": 8100,
+        "share_improving_criterion_1": 1.0,
+        "share_improving_criterion_2_plus": 0.0,
+        "share_improving_nothing": 0.0
+      },
+      {
+        "floor_multiplicity": 2,
+        "portfolios": 1710,
+        "share_improving_criterion_1": 0.0,
+        "share_improving_criterion_2_plus": 1.0,
+        "share_improving_nothing": 0.0
+      },
+      {
+        "floor_multiplicity": 3,
+        "portfolios": 180,
+        "share_improving_criterion_1": 0.0,
+        "share_improving_criterion_2_plus": 1.0,
+        "share_improving_nothing": 0.0
+      },
+      {
+        "floor_multiplicity": 4,
+        "portfolios": 10,
+        "share_improving_criterion_1": 0.0,
+        "share_improving_criterion_2_plus": 1.0,
+        "share_improving_nothing": 0.0
+      }
+    ]
+  },
+  "rule_floor_cost": {
+    "portfolios_checked": 4096,
+    "counterexamples": 0
+  },
+  "rule_criterion_index": {
+    "cases_checked": 24576,
+    "counterexamples": 0,
+    "max_budget": 6
+  },
+  "rule_waterfill_level": {
+    "cases_checked": 90000,
+    "counterexamples": 0
+  },
+  "rule_waterfill_example": {
+    "start": [
+      3,
+      5,
+      9,
+      5
+    ],
+    "treasures": 6,
+    "level": 6,
+    "spent_reaching_level": 5,
+    "leftover": 1,
+    "final": [
+      7,
+      6,
+      9,
+      6
+    ],
+    "colours": [
+      "red",
+      "blue",
+      "green",
+      "black"
+    ],
+    "cost_curve": [
+      {
+        "level": 3,
+        "cost": 0
+      },
+      {
+        "level": 4,
+        "cost": 1
+      },
+      {
+        "level": 5,
+        "cost": 2
+      },
+      {
+        "level": 6,
+        "cost": 5
+      },
+      {
+        "level": 7,
+        "cost": 8
+      },
+      {
+        "level": 8,
+        "cost": 11
+      },
+      {
+        "level": 9,
+        "cost": 14
+      },
+      {
+        "level": 10,
+        "cost": 18
+      }
+    ]
+  },
+  "model_binding_colour": {
+    "n_points": 36,
+    "steer": 0.0,
+    "unique_floor_share": 0.8470166666666666,
+    "bag_share": {
+      "red": 0.37254901960784315,
+      "blue": 0.23529411764705882,
+      "green": 0.19607843137254902,
+      "black": 0.19607843137254902
+    },
+    "sole_floor_given_unique": {
+      "red": 0.013065465063654788,
+      "blue": 0.1978316050451585,
+      "green": 0.3960764250998603,
+      "black": 0.39302650479132645
+    },
+    "sole_floor_unconditional": {
+      "red": 0.011066666666666666,
+      "blue": 0.16756666666666667,
+      "green": 0.3354833333333333,
+      "black": 0.33290000000000003
+    },
+    "green_or_black_unconditional": 0.6683833333333333
+  },
+  "model_balance_efficiency": {
+    "n_points": 36,
+    "perfect_floor": 9.0,
+    "rows": [
+      {
+        "steer": 0.0,
+        "mean_lowest_sphere": 5.165383333333334,
+        "balance_efficiency": 0.5739314814814815,
+        "share_of_raw_points": 0.14348287037037039,
+        "mean_floor_multiplicity": 1.1666666666666667
+      },
+      {
+        "steer": 0.25,
+        "mean_lowest_sphere": 7.314616666666667,
+        "balance_efficiency": 0.8127351851851852,
+        "share_of_raw_points": 0.2031837962962963,
+        "mean_floor_multiplicity": 1.55325
+      },
+      {
+        "steer": 0.5,
+        "mean_lowest_sphere": 8.167966666666667,
+        "balance_efficiency": 0.9075518518518518,
+        "share_of_raw_points": 0.22688796296296296,
+        "mean_floor_multiplicity": 2.039266666666667
+      },
+      {
+        "steer": 0.75,
+        "mean_lowest_sphere": 8.61455,
+        "balance_efficiency": 0.9571722222222222,
+        "share_of_raw_points": 0.23929305555555555,
+        "mean_floor_multiplicity": 2.900316666666667
+      },
+      {
+        "steer": 1.0,
+        "mean_lowest_sphere": 9.0,
+        "balance_efficiency": 1.0,
+        "share_of_raw_points": 0.25,
+        "mean_floor_multiplicity": 4.0
+      }
+    ]
+  },
+  "model_marginal_value_horizon": {
+    "n_now": 24,
+    "steer": 0.35,
+    "measures": "lowest sphere only",
+    "rows": [
+      {
+        "horizon": 0,
+        "rank_1": 0.5507333333333333,
+        "rank_2": 0.0,
+        "rank_3": 0.0,
+        "rank_4": 0.0
+      },
+      {
+        "horizon": 2,
+        "rank_1": 0.3333,
+        "rank_2": 0.1643,
+        "rank_3": 0.013933333333333334,
+        "rank_4": 0.0
+      },
+      {
+        "horizon": 4,
+        "rank_1": 0.3848666666666667,
+        "rank_2": 0.29096666666666665,
+        "rank_3": 0.17873333333333333,
+        "rank_4": 0.03933333333333333
+      },
+      {
+        "horizon": 8,
+        "rank_1": 0.3428333333333333,
+        "rank_2": 0.3018,
+        "rank_3": 0.24013333333333334,
+        "rank_4": 0.08913333333333333
+      },
+      {
+        "horizon": 12,
+        "rank_1": 0.32816666666666666,
+        "rank_2": 0.30746666666666667,
+        "rank_3": 0.2657333333333333,
+        "rank_4": 0.12226666666666666
+      },
+      {
+        "horizon": 20,
+        "rank_1": 0.3114,
+        "rank_2": 0.3036333333333333,
+        "rank_3": 0.28223333333333334,
+        "rank_4": 0.15806666666666666
+      }
+    ]
+  },
+  "model_windfall_vs_spread": {
+    "budget": 4,
+    "n_points": 36,
+    "steer": 0.35,
+    "by_floor_multiplicity": [
+      {
+        "floor_multiplicity": 1,
+        "share": 0.5457666666666666,
+        "windfall_floor_gain": 1.1280767116594392,
+        "spread_floor_gain": 2.0693214438404692,
+        "windfall_improves_some_criterion": 1.0,
+        "windfall_improves_criterion_1": 1.0
+      },
+      {
+        "floor_multiplicity": 2,
+        "share": 0.29,
+        "windfall_floor_gain": 0.0,
+        "spread_floor_gain": 1.3516666666666666,
+        "windfall_improves_some_criterion": 1.0,
+        "windfall_improves_criterion_1": 0.0
+      },
+      {
+        "floor_multiplicity": 3,
+        "share": 0.0588,
+        "windfall_floor_gain": 0.0,
+        "spread_floor_gain": 1.0,
+        "windfall_improves_some_criterion": 1.0,
+        "windfall_improves_criterion_1": 0.0
+      },
+      {
+        "floor_multiplicity": 4,
+        "share": 0.10543333333333334,
+        "windfall_floor_gain": 0.0,
+        "spread_floor_gain": 1.0,
+        "windfall_improves_some_criterion": 1.0,
+        "windfall_improves_criterion_1": 0.0
+      }
+    ]
+  },
+  "model_windfall_head_to_head": {
+    "budget": 4,
+    "trials": 20000,
+    "by_floor_multiplicity": [
+      {
+        "floor_multiplicity": 1,
+        "share": 0.54325,
+        "win_rate_before": 0.39935572940635067,
+        "win_rate_after": 0.9075011504832029,
+        "result_changed": 0.5081454210768522
+      },
+      {
+        "floor_multiplicity": 2,
+        "share": 0.29495,
+        "win_rate_before": 0.3209018477708086,
+        "win_rate_after": 0.7636887608069164,
+        "result_changed": 0.4427869130361078
+      },
+      {
+        "floor_multiplicity": 3,
+        "share": 0.0544,
+        "win_rate_before": 0.2775735294117647,
+        "win_rate_after": 0.5275735294117647,
+        "result_changed": 0.25
+      },
+      {
+        "floor_multiplicity": 4,
+        "share": 0.1074,
+        "win_rate_before": 0.8850093109869647,
+        "win_rate_after": 1.0,
+        "result_changed": 0.11499068901303539
+      }
+    ]
+  },
+  "model_phase_strategy": {
+    "n_points": 44,
+    "steer_budget": 12,
+    "level_mean_floor": 9.5765,
+    "phased_mean_floor": 10.158283333333333,
+    "phased_edge": 0.581783333333334,
+    "measures": "lowest sphere only"
+  },
+  "model_sensitivity": {
+    "n_points": [
+      {
+        "n_points": 24,
+        "unique_floor_share": 0.8028,
+        "green_or_black": 0.6127499999999999
+      },
+      {
+        "n_points": 36,
+        "unique_floor_share": 0.84615,
+        "green_or_black": 0.67165
+      },
+      {
+        "n_points": 48,
+        "unique_floor_share": 0.8729,
+        "green_or_black": 0.71265
+      },
+      {
+        "n_points": 60,
+        "unique_floor_share": 0.88875,
+        "green_or_black": 0.74115
+      }
+    ],
+    "steer": [
+      {
+        "steer": 0.0,
+        "unique_floor_share": 0.84615,
+        "green_or_black": 0.67165
+      },
+      {
+        "steer": 0.2,
+        "unique_floor_share": 0.62855,
+        "green_or_black": 0.45915000000000006
+      },
+      {
+        "steer": 0.35,
+        "unique_floor_share": 0.54825,
+        "green_or_black": 0.3663
+      },
+      {
+        "steer": 0.5,
+        "unique_floor_share": 0.50475,
+        "green_or_black": 0.3126
+      }
+    ],
+    "arrival": [
+      {
+        "arrival": "bag_proportions",
+        "p": [
+          0.37254901960784315,
+          0.23529411764705882,
+          0.19607843137254902,
+          0.19607843137254902
+        ],
+        "green_or_black": 0.67165
+      },
+      {
+        "arrival": "uniform",
+        "p": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "green_or_black": 0.41779999999999995
+      },
+      {
+        "arrival": "halfway_to_uniform",
+        "p": [
+          0.3112745098039216,
+          0.2426470588235294,
+          0.2230392156862745,
+          0.2230392156862745
+        ],
+        "green_or_black": 0.5815
+      }
+    ]
+  }
+}

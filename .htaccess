@@ -1,5 +1,11 @@
 RewriteEngine on
 
+# Working notes are kept in the repo but never served.
+RedirectMatch 404 ^/\.notes(/.*)?$
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
 # Redirect poker subpaths
 RewriteCond %{HTTP_HOST} ^blog\.stephens\.page$ [OR]
 RewriteCond %{HTTP_HOST} ^jacobstephens\.net$ [OR]
