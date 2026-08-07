@@ -4,6 +4,11 @@ RewriteEngine on
 RedirectMatch 404 ^/\.notes(/.*)?$
 RedirectMatch 404 ^/posts\.json$
 RedirectMatch 404 ^/tools(/.*)?$
+# The domain model: CONTEXT-MAP.md at the root and a CONTEXT.md beside any post
+# that has one. These name draft slugs, so they must not be served or crawled.
+# Deliberately narrow: model-council/research.md is linked from published posts
+# as "Raw markdown" and must keep serving.
+RedirectMatch 404 ^/(.*/)?CONTEXT(-MAP)?\.md$
 <FilesMatch "^\.">
     Require all denied
 </FilesMatch>
