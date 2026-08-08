@@ -37,6 +37,16 @@
     <script src="/styles/theme.js" defer></script>
 
     <style>
+      /* The symbol key draws its rules with --viz-grid but sits outside any
+         .viz surface, so it was falling back to the light-mode grey in both
+         themes. Define the token at the root as well; .viz still overrides
+         it on its own darker panels. */
+      :root { --viz-grid: #e1e0d9; }
+      @media (prefers-color-scheme: dark) {
+        html:not([data-theme="light"]) { --viz-grid: #2c2c2a; }
+      }
+      html[data-theme="dark"] { --viz-grid: #2c2c2a; }
+
       /* ---- chart tokens -------------------------------------------------
          Validated with the data-viz palette checker against this site's own
          surfaces (light #f8f3e8, dark #152226), adjacent pairlist, in both
@@ -242,7 +252,32 @@
       .sym-intro { grid-area: intro; }
       .sym-aside { grid-area: aside; }
       .sym-main  { grid-area: main; }
-      .sym-aside-title { display: none; }
+      /* Below the two-column breakpoint the key is not a sidebar, it is 500
+         words wedged between the intro and Proposition 1. Collapse it there
+         and let the summary do the work. Ships open, so with no JS the
+         reader sees exactly what they saw before. */
+      .symkey-wrap > summary.sym-aside-title {
+        display: block;
+        cursor: pointer;
+        margin: 0;
+        padding: 0.6rem 0;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        list-style: none;
+        border-top: 1px solid var(--viz-grid, #e1e0d9);
+        border-bottom: 1px solid var(--viz-grid, #e1e0d9);
+      }
+      .symkey-wrap > summary::-webkit-details-marker { display: none; }
+      .symkey-wrap > summary.sym-aside-title::before {
+        content: "+";
+        display: inline-block;
+        width: 1.1em;
+        font-weight: 400;
+        color: var(--ink-soft);
+      }
+      .symkey-wrap[open] > summary.sym-aside-title::before { content: "\2212"; }
+      .sym-aside-hint { font-weight: 400; color: var(--ink-soft); }
+      .symkey-wrap > summary + * { margin-top: 1rem; }
 
       /* Restack each row into a block: the symbol and how to say it on one
          line, what it means HERE beneath, the general math note last and
@@ -323,16 +358,66 @@
           background: var(--paper-deep, #f8f3e8);
           border-radius: 10px;
         }
-        .sym-aside-title {
-          display: block;
-          font-weight: 600;
+        /* Sidebar again: the disclosure is forced open, so the summary goes
+           back to being a plain heading. */
+        .symkey-wrap > summary.sym-aside-title {
           margin: 0 0 0.5rem;
-          letter-spacing: 0.02em;
+          padding: 0;
+          border: 0;
+          cursor: default;
+          pointer-events: none;
         }
-        .sym-aside > p:last-child { margin-bottom: 0; font-size: 0.95em; }
+        .symkey-wrap > summary.sym-aside-title::before { display: none; }
+        .sym-aside-hint { display: none; }
+        .symkey-wrap > summary + * { margin-top: 0; }
+        .symkey-wrap > p:last-child { margin-bottom: 0; font-size: 0.95em; }
       }
       @media (prefers-reduced-motion: no-preference) {
         .sym-aside { scroll-behavior: smooth; }
+      }
+
+      .toc {
+        max-width: var(--max-width);
+        margin: 2.4rem 0 2.8rem;
+        padding: 1.1rem 1.3rem 1.2rem;
+        background: var(--paper-deep, #f8f3e8);
+        border-radius: 10px;
+      }
+      .toc-title {
+        font-family: "Work Sans", sans-serif;
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin: 0 0 0.7rem;
+      }
+      .toc ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        counter-reset: toc;
+        columns: 2;
+        column-gap: 2.2rem;
+      }
+      .toc li {
+        counter-increment: toc;
+        margin: 0 0 0.42rem;
+        padding-left: 1.9rem;
+        text-indent: -1.9rem;
+        line-height: 1.45;
+        break-inside: avoid;
+      }
+      .toc li::before {
+        content: counter(toc);
+        display: inline-block;
+        width: 1.9rem;
+        text-indent: 0;
+        font-variant-numeric: tabular-nums;
+        color: var(--ink-soft);
+      }
+      .toc a { text-decoration-thickness: 1px; text-underline-offset: 2px; }
+      @media (max-width: 640px) {
+        .toc ol { columns: 1; }
       }
 
       .keyidea {
@@ -429,7 +514,7 @@
 
 <body>
     <h1 class="title">The Price of a Point: Looking for New Strategy in Tigris &amp; Euphrates</h1>
-    <p class="post-meta">Jacob Stephens &middot; August 7, 2026 &middot; General &middot; AI-assisted</p>
+    <p class="post-meta">Jacob Stephens &middot; August 7, 2026 &middot; General &middot; AI-assisted &middot; 3,700 words &middot; 16 min read</p>
     <p class="post-meta-nav"><a href="/posts/">All posts</a> &middot; <a href="/posts/#general">General</a> &middot; <a href="/posts/#ai-assisted">AI-assisted</a></p>
 
     <figure class="photo">
@@ -440,6 +525,22 @@
             <span class="credit">Generated with <a href="https://inkvoke.dev/">inkvoke</a>, my own command-line tool for OpenAI image models.</span>
         </figcaption>
     </figure>
+
+    <nav class="toc" aria-labelledby="toc-title">
+        <p class="toc-title" id="toc-title">What is in this post</p>
+        <ol>
+            <li><a href="#origin">Where this came from</a></li>
+            <li><a href="#context">Before you start</a></li>
+            <li><a href="#rule">Your result is four numbers, not one</a></li>
+            <li><a href="#treasures">Treasures fill your portfolio like water</a></li>
+            <li><a href="#floor">Floor multiplicity sets the price</a></li>
+            <li><a href="#model">The toy model, in full</a></li>
+            <li><a href="#scarcity">The scarce colors, and how much of that is my assumption</a></li>
+            <li><a href="#cannot">What this post cannot tell you</a></li>
+            <li><a href="#stands">What stands</a></li>
+            <li><a href="#code">The code</a></li>
+        </ol>
+    </nav>
 
     <h2 id="origin">Where this came from</h2>
 
@@ -530,7 +631,8 @@
       </div>
 
       <aside class="sym-aside" aria-label="Symbol key">
-        <p class="sym-aside-title">Symbol key</p>
+        <details class="symkey-wrap" open>
+        <summary class="sym-aside-title">Symbol key<span class="sym-aside-hint"> - 17 symbols, plain words</span></summary>
     <table class="symkey">
         <thead><tr><th>Symbol</th><th>Say it</th><th>In math generally</th><th>Here it means</th></tr></thead>
         <tbody>
@@ -554,6 +656,7 @@
         </tbody>
     </table>
     <p>You can read every formula below out loud with this list. If a formula still does not help you, skip it. The sentence before it says the same thing in words.</p>
+        </details>
       </aside>
 
       <div class="sym-main">
@@ -1280,6 +1383,22 @@
       } else {
         build();
       }
+    })();
+    </script>
+
+    <script>
+    // The symbol key ships open so a reader with no JS gets today's page.
+    // Above 1150px it is a sticky sidebar and belongs open; below that it
+    // sits in the reading flow, so close it and let the reader choose.
+    (function () {
+      'use strict';
+      var d = document.querySelector('.symkey-wrap');
+      if (!d) return;
+      var mq = window.matchMedia('(min-width: 1150px)');
+      var sync = function () { d.open = mq.matches; };
+      sync();
+      if (mq.addEventListener) mq.addEventListener('change', sync);
+      else if (mq.addListener) mq.addListener(sync);
     })();
     </script>
 </body>
