@@ -610,13 +610,12 @@ def main():
     with open(OUT_PATH, "w") as f:
         json.dump(results, f, indent=2)
 
-    wf = results["rule_waterfilling_optimal"]
-    print(f"[RULE] water-filling optimal: {wf['counterexamples']} counterexamples "
-          f"in {wf['portfolios_checked']} portfolios")
-
-    for key, label in [("rule_floor_cost", "P1  cost to lift the floor = w"),
-                       ("rule_criterion_index", "P2  windfall improves criterion w"),
-                       ("rule_waterfill_level", "P3  floor after t treasures")]:
+    # Numbering follows the article's propositions, not the order the checks
+    # happen to run in.
+    for key, label in [("rule_waterfill_level", "P1  floor after t treasures"),
+                       ("rule_waterfilling_optimal", "P2  greedy filling is optimal"),
+                       ("rule_floor_cost", "P3  cost to lift the floor = w"),
+                       ("rule_criterion_index", "P4  windfall improves criterion w")]:
         r = results[key]
         n = r.get("cases_checked", r.get("portfolios_checked"))
         print(f"[RULE] {label}: {r['counterexamples']} counterexamples in {n} cases")

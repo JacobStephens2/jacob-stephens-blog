@@ -41,11 +41,32 @@
          .viz surface, so it was falling back to the light-mode grey in both
          themes. Define the token at the root as well; .viz still overrides
          it on its own darker panels. */
-      :root { --viz-grid: #e1e0d9; }
-      @media (prefers-color-scheme: dark) {
-        html:not([data-theme="light"]) { --viz-grid: #2c2c2a; }
+      :root {
+        --viz-grid: #e1e0d9;
+        /* Four hues, hand-applied. No highlighter library, and no more
+           colors than the code actually has kinds of thing in it. Each one
+           clears 4.5:1 on the panel it sits on, in both themes. */
+        --syn-kw: #a03030;
+        --syn-fn: #1c5cab;
+        --syn-str: #2f6b3a;
+        --syn-num: #8a5a00;
       }
-      html[data-theme="dark"] { --viz-grid: #2c2c2a; }
+      @media (prefers-color-scheme: dark) {
+        html:not([data-theme="light"]) {
+          --viz-grid: #2c2c2a;
+          --syn-kw: #e88a8a;
+          --syn-fn: #7fb3f0;
+          --syn-str: #7fc99a;
+          --syn-num: #d9a441;
+        }
+      }
+      html[data-theme="dark"] {
+        --viz-grid: #2c2c2a;
+        --syn-kw: #e88a8a;
+        --syn-fn: #7fb3f0;
+        --syn-str: #7fc99a;
+        --syn-num: #d9a441;
+      }
 
       /* ---- chart tokens -------------------------------------------------
          Validated with the data-viz palette checker against this site's own
@@ -420,6 +441,61 @@
         .toc ol { columns: 1; }
       }
 
+      /* First code on this site, so the panel borrows the figure treatment:
+         same deep paper, same radius, and it scrolls sideways rather than
+         letting a long line push the page wide. */
+      .codeblock {
+        max-width: var(--max-width);
+        margin: 1.9rem 0 2.1rem;
+        padding: 0.95rem 0 1rem;
+        background: var(--paper-deep, #f8f3e8);
+        border-radius: 10px;
+      }
+      .code-label {
+        font-family: "Work Sans", sans-serif;
+        font-size: 0.76rem;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin: 0 0 0.6rem;
+        padding: 0 1.15rem;
+      }
+      .code-scroll { overflow-x: auto; padding: 0 1.15rem; }
+      .codeblock pre {
+        margin: 0;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas,
+                     "Liberation Mono", monospace;
+        font-size: 0.79rem;
+        line-height: 1.62;
+        white-space: pre;
+        color: var(--ink);
+        tab-size: 4;
+      }
+      .codeblock .k   { color: var(--syn-kw); }
+      .codeblock .fn  { color: var(--syn-fn); }
+      .codeblock .s   { color: var(--syn-str); }
+      .codeblock .num { color: var(--syn-num); }
+      /* stdout: the tier tag, the proposition it belongs to, and the count
+         that decides whether the claim survived. */
+      .codeblock .tag { color: var(--syn-fn); }
+      .codeblock .lbl { color: var(--ink); font-weight: 600; }
+      .codeblock .ok  { color: var(--syn-str); font-weight: 600; }
+      p > code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas,
+                     "Liberation Mono", monospace;
+        font-size: 0.88em;
+        padding: 0.08em 0.3em;
+        border-radius: 4px;
+        background: var(--paper-deep, #f8f3e8);
+      }
+      .codeblock figcaption {
+        font-size: 0.87rem;
+        line-height: 1.55;
+        color: var(--ink-soft);
+        margin: 0.85rem 0 0;
+        padding: 0 1.15rem;
+      }
+
       .keyidea {
         background: var(--paper-deep, #f8f3e8);
         border-radius: 10px;
@@ -514,7 +590,7 @@
 
 <body>
     <h1 class="title">The Price of a Point: Looking for New Strategy in Tigris &amp; Euphrates</h1>
-    <p class="post-meta">Jacob Stephens &middot; August 7, 2026 &middot; General &middot; AI-assisted &middot; 3,700 words &middot; 16 min read</p>
+    <p class="post-meta">Jacob Stephens &middot; August 7, 2026 &middot; General &middot; AI-assisted &middot; 4,000 words &middot; 17 min read</p>
     <p class="post-meta-nav"><a href="/posts/">All posts</a> &middot; <a href="/posts/#general">General</a> &middot; <a href="/posts/#ai-assisted">AI-assisted</a></p>
 
     <figure class="photo">
@@ -860,7 +936,52 @@
 
     <p>One Python file gives every number above. It uses numpy. It gives the same result every time, and it runs in about three seconds. Each function carries the label of the claim it can support.</p>
 
-    <p>All four propositions have short proofs. All four also have a brute-force test, because a short proof can hide a case. The tests are simple loops. They cover 12,005 portfolios for Proposition 2, 90,000 cases for Proposition 1, 4,096 for Proposition 3, and 24,576 for Proposition 4. There are no counterexamples.</p>
+    <p>Two functions carry the whole file. Everything else calls them.</p>
+
+    <figure class="codeblock">
+        <p class="code-label">tigris_sim.py</p>
+        <div class="code-scroll"><pre><code><span class="k">def</span> <span class="fn">leximin_key</span>(pts):
+    <span class="s">"""The comparison key: victory points sorted ascending.
+
+    Rulebook p. 14 compares lowest spheres, then second-lowest, and so on.
+    That is exactly lexicographic order on the ascending-sorted vector.
+    """</span>
+    <span class="k">return</span> np.sort(pts, axis=-<span class="num">1</span>)
+
+
+<span class="k">def</span> <span class="fn">leximin_cmp</span>(a, b):
+    <span class="s">"""-1 if portfolio `a` loses to `b`, +1 if it beats it, 0 if tied.
+
+    Elementwise on the sorted keys, first difference decides.
+    """</span>
+    ka, kb = np.sort(a), np.sort(b)
+    <span class="k">for</span> x, y <span class="k">in</span> <span class="fn">zip</span>(ka, kb):
+        <span class="k">if</span> x &lt; y:
+            <span class="k">return</span> -<span class="num">1</span>
+        <span class="k">if</span> x &gt; y:
+            <span class="k">return</span> <span class="num">1</span>
+    <span class="k">return</span> <span class="num">0</span></code></pre></div>
+    </figure>
+
+    <p>The scoring rule of the game is one sort. Sorting ascending <em>is</em> &ldquo;compare the lowest sphere, then the second lowest&rdquo;, so the rulebook sentence and the line of code are the same instruction.</p>
+
+    <p>That sort is also where color stops existing. Four totals go in carrying red, blue, green and black. They come out as positions 1 to 4. No line after it can ask which sphere a number came from, which is why color cannot change the comparison however much it decides what you are able to collect.</p>
+
+    <p><code>leximin_cmp</code> then walks the two keys together and returns at the first difference. Notice what it never does: it never reduces a portfolio to a single number. Nothing in the file calls <code>min()</code> on one. That is the trap from <a href="#floor">Floor multiplicity sets the price</a>, kept out by construction rather than by care, because <code>min()</code> is only criterion 1 and criterion 1 is the one criterion a windfall into a level floor cannot move.</p>
+
+    <p>All four propositions have short proofs. All four also have a brute-force test, because a short proof can hide a case. The tests are simple loops, and each one decides whether the claim held by calling the nine lines above. Run the file and they report like this.</p>
+
+    <figure class="codeblock">
+        <p class="code-label">stdout</p>
+        <div class="code-scroll"><pre><code><span class="tag">[RULE]</span> <span class="lbl">P1</span>  floor after t treasures: <span class="ok">0</span> counterexamples in <span class="num">90000</span> cases
+<span class="tag">[RULE]</span> <span class="lbl">P2</span>  greedy filling is optimal: <span class="ok">0</span> counterexamples in <span class="num">12005</span> cases
+<span class="tag">[RULE]</span> <span class="lbl">P3</span>  cost to lift the floor = w: <span class="ok">0</span> counterexamples in <span class="num">4096</span> cases
+<span class="tag">[RULE]</span> <span class="lbl">P4</span>  windfall improves criterion w: <span class="ok">0</span> counterexamples in <span class="num">24576</span> cases
+       worked example: <span class="num">[3, 5, 9, 5]</span> + <span class="num">6</span> treasures -&gt; level <span class="num">6</span> (spent <span class="num">5</span>, leftover <span class="num">1</span>), final <span class="num">[7, 6, 9, 6]</span></code></pre></div>
+        <figcaption>Each line is a separate exhaustive sweep over every portfolio in a bounded range. A proof and a search that disagreed would show up here as a number other than zero.</figcaption>
+    </figure>
+
+    <p>The worked example on the last line is the 3, 5, 9, 5 portfolio from <a href="#treasures">Treasures fill your portfolio like water</a>. The run that prints it is the run that draws the figure, so the two cannot drift apart.</p>
 
     <p>The simulation is <a href="/static/tigris-and-euphrates/tigris_sim.py">tigris_sim.py</a>. Its output is <a href="/static/tigris-and-euphrates/sim_results.json">sim_results.json</a>. A script writes the chart numbers into this page from that file. A check script fails if the two do not agree.</p>
 
