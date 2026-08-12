@@ -30,3 +30,15 @@ Personal website of Jacob Stephens (https://jacobstephens.net). A lightweight, s
 1. Create a directory under `posts/` with a hyphenated slug (e.g., `posts/my-new-post/`)
 2. Add an `index.html` following the template used by existing posts
 3. Add the post to the list in `posts/index.html`
+
+## Deployment
+
+Every push to `master` triggers `.github/workflows/deploy.yml`. The workflow
+connects to the production server with a deploy-only SSH key whose server-side
+entry is restricted to one forced command. That command validates the incoming
+tree, fast-forwards the clean live checkout at `/var/www/jacobstephens.net`, and
+runs `python3 tools/publish.py check` again after deployment.
+
+The server-side command and its Ansible installation playbook live in the
+`stephens-page-infra` repository. If a deployment fails, inspect the repository's
+Actions tab; the deployer prints the failed safety check or command there.
