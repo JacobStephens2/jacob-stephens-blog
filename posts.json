@@ -95,6 +95,16 @@
       "status": "published"
     },
     {
+      "slug": "mentor-collage",
+      "title": "Mentor Collage",
+      "date": "September 27, 2021",
+      "categories": [
+        "graphic-design",
+        "handwritten"
+      ],
+      "status": "published"
+    },
+    {
       "slug": "two-person-agile-product-development-flowchart",
       "title": "Two Person Agile Product Development Flowchart",
       "date": "July 3, 2021",
